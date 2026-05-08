@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — VPSХостинг.ru</title>
+  <meta name="description" content="Политика конфиденциальности сайта VPSХостинг.ru. Какие данные мы собираем, как используем и как защищаем информацию пользователей.">
+  <link rel="canonical" href="https://vps-hosting-ru.vercel.app/privacy/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #f97316;
+      --orange-dark: #ea6c0a;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+      --card: #131c2e;
+      --white: #ffffff;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { font-family: 'Unbounded', sans-serif; line-height: 1.25; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 900; margin-bottom: 1rem; }
+    h2 { font-size: clamp(1rem, 2.5vw, 1.2rem); font-weight: 700; margin-bottom: 0.75rem; margin-top: 2.5rem; color: var(--white); }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; color: var(--text-muted); }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
 
+    nav {
+      background: rgba(15,23,42,0.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px; max-width: 1100px; margin: 0 auto; height: 64px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-text { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+    .logo-text span { color: var(--orange); }
+    .nav-back { color: var(--text-muted); font-size: 0.85rem; }
+    .nav-back:hover { color: var(--orange); }
+
+    .page-hero {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--orange); }
+    .updated { font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; }
+
+    .content { padding: 48px 0 80px; }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    footer {
+      background: #070d1a;
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--text-muted); margin: 0 10px; }
+    footer a:hover { color: var(--orange); }
+    .footer-links { margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="#f97316"/>
+        <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+        <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+        <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+        <circle cx="30" cy="25.5" r="5" fill="white"/>
+        <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="logo-text">VPS<span>Хостинг</span></div>
+    </a>
+    <a href="/" class="nav-back">← На главную</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Главная</a> / Политика конфиденциальности</div>
+    <h1>Политика конфиденциальности</h1>
+    <p style="color: var(--text-muted); font-size: 1rem; max-width: 600px; margin-bottom: 0;">Настоящая политика описывает, какие данные собирает сайт VPSХостинг.ru, как они используются и как защищаются.</p>
+    <div class="updated">Последнее обновление: 8 мая 2026 г.</div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="container">
+
+    <h2>1. Общие положения</h2>
+    <p>Настоящая Политика конфиденциальности (далее — «Политика») распространяется на сайт VPSХостинг.ru, доступный по адресу <a href="https://vps-hosting-ru.vercel.app/">https://vps-hosting-ru.vercel.app/</a> (далее — «Сайт»).</p>
+    <p>Используя Сайт, вы соглашаетесь с условиями настоящей Политики. Если вы не согласны с какими-либо условиями, пожалуйста, прекратите использование Сайта.</p>
+    <p>По вопросам, связанным с обработкой персональных данных, вы можете обратиться к нам по адресу: <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a>.</p>
+
+    <hr class="section-divider">
+
+    <h2>2. Какие данные мы собираем</h2>
+    <p>Сайт не требует регистрации и не запрашивает у пользователей персональные данные напрямую. Тем не менее, в процессе работы Сайта могут автоматически собираться следующие технические данные:</p>
+    <ul>
+      <li>IP-адрес устройства (в анонимизированном виде)</li>
+      <li>Тип и версия браузера</li>
+      <li>Операционная система</li>
+      <li>Страницы Сайта, которые вы посещали, и время визита</li>
+      <li>Страница, с которой вы перешли на Сайт (реферер)</li>
+      <li>Приблизительное географическое местоположение (страна, регион)</li>
+    </ul>
+    <p>Эти данные собираются автоматически средствами хостинга (Vercel) и используются исключительно в статистических целях — для понимания аудитории и улучшения содержания Сайта.</p>
+
+    <hr class="section-divider">
+
+    <h2>3. Файлы cookie</h2>
+    <p>Сайт может использовать технические cookie-файлы, необходимые для корректной работы. Они не содержат персональных данных и не передаются третьим лицам.</p>
+    <p>Партнёрские ссылки на сайте могут устанавливать собственные cookie-файлы сторонних провайдеров (например, для отслеживания переходов). Мы не контролируем эти cookie — ознакомьтесь с политиками конфиденциальности соответствующих провайдеров.</p>
+    <p>Вы можете отключить cookie в настройках вашего браузера, однако это может повлиять на работу некоторых функций Сайта.</p>
+
+    <hr class="section-divider">
+
+    <h2>4. Партнёрские ссылки и третьи стороны</h2>
+    <p>Сайт содержит партнёрские (affiliate) ссылки на хостинг-провайдеров. При переходе по такой ссылке вы покидаете наш Сайт и переходите на сайт третьей стороны, на который распространяется её собственная политика конфиденциальности.</p>
+    <p>Мы не несём ответственности за сбор и обработку данных третьими сторонами. Рекомендуем ознакомиться с политиками конфиденциальности каждого провайдера перед оформлением услуг.</p>
+    <p>Партнёрские вознаграждения не влияют на редакционную независимость нашего рейтинга.</p>
+
+    <hr class="section-divider">
+
+    <h2>5. Аналитика</h2>
+    <p>Для анализа посещаемости Сайт может использовать сервисы веб-аналитики. Такие сервисы получают данные о посещениях в агрегированном и анонимизированном виде. Данные не позволяют идентифицировать конкретного пользователя.</p>
+
+    <hr class="section-divider">
+
+    <h2>6. Хранение и защита данных</h2>
+    <p>Сайт размещён на платформе Vercel (США). Технические данные о посещениях могут храниться на серверах Vercel в соответствии с их политикой конфиденциальности.</p>
+    <p>Мы принимаем разумные технические и организационные меры для защиты данных от несанкционированного доступа, изменения, раскрытия или уничтожения. Передача данных осуществляется по защищённому протоколу HTTPS.</p>
+
+    <hr class="section-divider">
+
+    <h2>7. Права пользователей</h2>
+    <p>Поскольку Сайт не собирает персональные данные напрямую, большинство прав субъектов данных (доступ, исправление, удаление) не применимы в классическом смысле.</p>
+    <p>Если вы считаете, что ваши данные каким-либо образом были обработаны Сайтом, или у вас есть вопросы — пожалуйста, свяжитесь с нами по адресу <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a>. Мы ответим в течение 30 дней.</p>
+
+    <hr class="section-divider">
+
+    <h2>8. Дети</h2>
+    <p>Сайт не предназначен для лиц младше 18 лет и не осуществляет намеренного сбора информации о детях. Если вы считаете, что ребёнок предоставил нам какие-либо данные, пожалуйста, свяжитесь с нами.</p>
+
+    <hr class="section-divider">
+
+    <h2>9. Изменения в Политике</h2>
+    <p>Мы оставляем за собой право вносить изменения в настоящую Политику. Актуальная версия всегда доступна на этой странице. Дата последнего обновления указана в начале документа.</p>
+    <p>Продолжение использования Сайта после внесения изменений означает ваше согласие с обновлённой Политикой.</p>
+
+    <hr class="section-divider">
+
+    <h2>10. Контакты</h2>
+    <p>По любым вопросам, связанным с настоящей Политикой конфиденциальности, обращайтесь:</p>
+    <p>📧 <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a></p>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Главная</a>
+    <a href="/about/">О нас</a>
+    <a href="/privacy/">Политика конфиденциальности</a>
+    <a href="mailto:petriliin76@gmail.com">Контакты</a>
+  </div>
+  <div>© 2026 VPSХостинг.ru — Все права защищены</div>
+</footer>
+
+</body>
+</html>
