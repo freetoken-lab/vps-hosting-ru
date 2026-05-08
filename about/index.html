@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — VPSХостинг.ru</title>
+  <meta name="description" content="О проекте VPSХостинг.ru — независимый рейтинг и обзоры VPS серверов для России. Кто мы и как составляем рейтинги провайдеров.">
+  <link rel="canonical" href="https://vps-hosting-ru.vercel.app/about/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #f97316;
+      --orange-dark: #ea6c0a;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+      --card: #131c2e;
+      --white: #ffffff;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { font-family: 'Unbounded', sans-serif; line-height: 1.25; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 900; margin-bottom: 1rem; }
+    h2 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; margin-bottom: 0.75rem; margin-top: 2rem; }
+    p { margin-bottom: 1rem; color: var(--text); }
+    ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; color: var(--text-muted); }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
 
+    nav {
+      background: rgba(15,23,42,0.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px; max-width: 1100px; margin: 0 auto; height: 64px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-text { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+    .logo-text span { color: var(--orange); }
+    .nav-back { color: var(--text-muted); font-size: 0.85rem; }
+    .nav-back:hover { color: var(--orange); }
+
+    .page-hero {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--orange); }
+
+    .content { padding: 48px 0 80px; }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .info-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .criteria-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .criteria-item .icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .criteria-item h3 { font-size: 0.9rem; color: var(--white); margin-bottom: 4px; }
+    .criteria-item p { font-size: 0.82rem; color: var(--text-muted); margin: 0; }
+
+    footer {
+      background: #070d1a;
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--text-muted); margin: 0 10px; }
+    footer a:hover { color: var(--orange); }
+    .footer-links { margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="#f97316"/>
+        <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+        <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+        <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+        <circle cx="30" cy="25.5" r="5" fill="white"/>
+        <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="logo-text">VPS<span>Хостинг</span></div>
+    </a>
+    <a href="/" class="nav-back">← На главную</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Главная</a> / О нас</div>
+    <h1>О проекте VPSХостинг.ru</h1>
+    <p style="color: var(--text-muted); font-size: 1rem; max-width: 600px;">Независимый ресурс для тех, кто выбирает VPS сервер в России и за рубежом. Без скрытой рекламы, без заказных обзоров.</p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="container">
+
+    <h2>Кто мы</h2>
+    <p>VPSХостинг.ru — независимый информационный проект, созданный для помощи российским пользователям в выборе виртуального сервера. Мы изучаем рынок VPS-хостинга, тестируем провайдеров и публикуем честные обзоры и сравнения.</p>
+    <p>Проект запущен в 2026 году командой технических специалистов, которые сами регулярно пользуются VPS для различных задач: от хостинга сайтов и торговых ботов до развёртывания собственных VPN-серверов для обхода блокировок РКН.</p>
+
+    <div class="info-card">
+      <p>📧 По вопросам сотрудничества и обратной связи: <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a></p>
+    </div>
+
+    <h2>Наша миссия</h2>
+    <p>Рынок VPS-хостинга огромен и непрозрачен. Цены, реальные характеристики серверов и качество поддержки нередко сильно расходятся с тем, что написано на сайте провайдера. Особенно это актуально для российских пользователей, которым важно знать:</p>
+    <ul>
+      <li>Можно ли оплатить хостинг картой МИР или через СБП</li>
+      <li>Работает ли провайдер с российскими клиентами без ограничений</li>
+      <li>Поддерживает ли сервер VPN-протоколы для обхода блокировок</li>
+      <li>Насколько реальная производительность соответствует заявленной</li>
+    </ul>
+    <p>Наша цель — дать исчерпывающий и честный ответ на все эти вопросы.</p>
+
+    <h2>Как мы составляем рейтинги</h2>
+    <p>При оценке каждого провайдера мы опираемся на следующие критерии:</p>
+
+    <div class="criteria-grid">
+      <div class="criteria-item">
+        <div class="icon">⚡</div>
+        <h3>Производительность</h3>
+        <p>Реальная скорость CPU, дисковый I/O (особенно NVMe vs SSD), скорость сети и задержки.</p>
+      </div>
+      <div class="criteria-item">
+        <div class="icon">🛡</div>
+        <h3>Надёжность</h3>
+        <p>Аптайм за последние 90 дней, наличие SLA, резервирование питания и сети.</p>
+      </div>
+      <div class="criteria-item">
+        <div class="icon">🌍</div>
+        <h3>Локации</h3>
+        <p>Выбор стран и дата-центров, пинг из России, доступность европейских серверов.</p>
+      </div>
+      <div class="criteria-item">
+        <div class="icon">💳</div>
+        <h3>Оплата из РФ</h3>
+        <p>Поддержка карт МИР, СБП, ЮMoney и криптовалюты без дополнительных комиссий.</p>
+      </div>
+      <div class="criteria-item">
+        <div class="icon">🔒</div>
+        <h3>Поддержка VPN</h3>
+        <p>Разрешены ли VPN-протоколы (WireGuard, VLESS, Shadowsocks) на зарубежных узлах.</p>
+      </div>
+      <div class="criteria-item">
+        <div class="icon">💬</div>
+        <h3>Поддержка клиентов</h3>
+        <p>Русскоязычная поддержка, скорость ответа, наличие чата и базы знаний на русском.</p>
+      </div>
+    </div>
+
+    <h2>Партнёрские ссылки</h2>
+    <p>Часть ссылок на нашем сайте являются партнёрскими (affiliate). Это означает, что если вы перейдёте по такой ссылке и оформите подписку, мы получим небольшое вознаграждение от провайдера — без какой-либо дополнительной стоимости для вас.</p>
+    <p>Партнёрские отношения не влияют на объективность наших оценок. Мы не размещаем в рейтинге провайдеров, которым не доверяем сами, и не меняем оценки под давлением партнёров. Если провайдер получил низкую оценку — она остаётся низкой, независимо от наличия партнёрской программы.</p>
+
+    <h2>Актуальность информации</h2>
+    <p>Мы регулярно обновляем материалы сайта: проверяем актуальность тарифов, переоцениваем провайдеров при изменении их условий и добавляем новых участников рейтинга. Дата последнего обновления каждой страницы указана в шапке материала.</p>
+    <p>Если вы заметили неточность или хотите сообщить об изменении условий у какого-либо провайдера — напишите нам на <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a>.</p>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Главная</a>
+    <a href="/about/">О нас</a>
+    <a href="/privacy/">Политика конфиденциальности</a>
+    <a href="mailto:petriliin76@gmail.com">Контакты</a>
+  </div>
+  <div>© 2026 VPSХостинг.ru — Сайт содержит партнёрские ссылки</div>
+</footer>
+
+</body>
+</html>
