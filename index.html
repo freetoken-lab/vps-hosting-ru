@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТОП-8 VPS серверов 2026 — Лучший VPS хостинг в России и за рубежом</title>
+  <meta name="description" content="Рейтинг лучших VPS серверов 2026 года для России. Аренда VPS хостинга от 299 руб/мес. Обзоры is*hosting, AdminVPS, Timeweb, Fornex, Beget. Сравнение цен, локаций, DDoS-защиты. Выбор VPS для VPN, обхода РКН и бизнеса.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vps-hosting-ru.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ТОП-8 VPS серверов 2026 — Лучший VPS хостинг в России и за рубежом">
+  <meta property="og:description" content="Рейтинг лучших VPS серверов 2026. Аренда VPS от 299 руб/мес. Обзоры провайдеров, сравнение тарифов, DDoS-защита, серверы в Европе и России.">
+  <meta property="og:url" content="https://vps-hosting-ru.vercel.app/">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #f97316;
+      --orange-dark: #ea6c0a;
+      --orange-light: #fff7ed;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --dark3: #334155;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+      --card: #131c2e;
+      --card2: #1a2540;
+      --white: #ffffff;
+      --green: #22c55e;
+      --red: #ef4444;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, h4 { font-family: 'Unbounded', sans-serif; line-height: 1.25; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 900; }
+    h2 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 700; margin-bottom: 1rem; }
+    h3 { font-size: clamp(1.1rem, 2.5vw, 1.3rem); font-weight: 600; margin-bottom: 0.75rem; }
+    h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    p { margin-bottom: 1rem; color: var(--text); }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* NAV */
+    nav {
+      background: rgba(15,23,42,0.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 64px;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+    }
+    .logo-text {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .logo-text span { color: var(--orange); }
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--orange); background: rgba(249,115,22,0.08); text-decoration: none; }
+    .nav-cta {
+      background: var(--orange);
+      color: var(--white) !important;
+      border-radius: 8px;
+      padding: 7px 14px !important;
+      font-weight: 600 !important;
+      font-size: 0.8rem !important;
+    }
+    .nav-cta:hover { background: var(--orange-dark) !important; color: var(--white) !important; }
+    .burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .burger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+
+    /* HERO */
+    .hero {
+      padding: 60px 0 50px;
+      background: linear-gradient(135deg, #0f172a 0%, #0c1525 60%, #1a0a00 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(249,115,22,0.12);
+      border: 1px solid rgba(249,115,22,0.3);
+      color: var(--orange);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .hero h1 { color: var(--white); margin-bottom: 18px; }
+    .hero h1 span { color: var(--orange); }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 20px;
+      text-align: center;
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 1.4rem;
+      color: var(--orange);
+    }
+    .hero-stat span { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* SECTION */
+    section { padding: 60px 0; }
+    section:nth-child(odd) { background: var(--dark); }
+    section:nth-child(even) { background: #0c1525; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .section-title .num {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    /* TOP LIST */
+    .provider-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .provider-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+    .provider-card.top1 { border-color: rgba(249,115,22,0.5); }
+    .provider-card.top1::before {
+      content: '★ ВЫБОР РЕДАКЦИИ';
+      position: absolute;
+      top: 0; right: 0;
+      background: var(--orange);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      font-family: 'Unbounded', sans-serif;
+      padding: 4px 12px;
+      border-radius: 0 var(--radius) 0 10px;
+    }
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .card-num {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 40px;
+    }
+    .card-title-block { flex: 1; }
+    .card-title-block h3 { margin: 0 0 4px; color: var(--white); font-size: 1.15rem; }
+    .card-tagline { color: var(--text-muted); font-size: 0.85rem; }
+    .card-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .card-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .badge {
+      background: rgba(249,115,22,0.1);
+      border: 1px solid rgba(249,115,22,0.2);
+      color: var(--orange);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 50px;
+    }
+    .badge.green { background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.2); color: var(--green); }
+    .badge.blue { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.2); color: #60a5fa; }
+    .card-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px; }
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .pros, .cons {
+      background: var(--card2);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .pros h4 { color: var(--green); font-size: 0.8rem; }
+    .cons h4 { color: var(--red); font-size: 0.8rem; }
+    .pros ul, .cons ul { padding-left: 1.2rem; margin: 0; }
+    .pros li, .cons li { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 3px; }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .card-price { font-size: 0.85rem; color: var(--text-muted); }
+    .card-price strong { color: var(--white); font-size: 1rem; }
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--orange-dark); text-decoration: none; color: white; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--orange);
+      border: 1px solid var(--orange);
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-secondary:hover { background: var(--orange); color: white; text-decoration: none; }
+
+    /* COMPARISON TABLE */
+    .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    thead tr { background: var(--card2); }
+    thead th {
+      padding: 12px 14px;
+      text-align: left;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(249,115,22,0.04); }
+    tbody td { padding: 12px 14px; color: var(--text); vertical-align: middle; }
+    tbody td:first-child { font-weight: 600; color: var(--white); }
+    .td-yes { color: var(--green); font-weight: 600; }
+    .td-no { color: var(--text-muted); }
+    .td-mark { color: var(--orange); font-weight: 700; }
+
+    /* INFO SECTIONS */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .info-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .info-card h3 { color: var(--white); font-size: 1rem; margin-bottom: 8px; }
+    .info-card p { font-size: 0.87rem; color: var(--text-muted); margin: 0; }
+
+    /* USE CASES */
+    .usecase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .usecase-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .usecase-card h4 { color: var(--orange); margin-bottom: 6px; }
+    .usecase-card p { font-size: 0.84rem; color: var(--text-muted); margin: 0; }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-q::after {
+      content: '+';
+      color: var(--orange);
+      font-size: 1.4rem;
+      font-weight: 400;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a {
+      display: none;
+      padding-top: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CHECKLIST */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(30,41,59,0.5);
+    }
+    .checklist li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* ALERT BOX */
+    .alert {
+      background: rgba(249,115,22,0.08);
+      border: 1px solid rgba(249,115,22,0.25);
+      border-left: 4px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .alert strong { color: var(--orange); }
+
+    /* SUMMARY CARD */
+    .summary-card {
+      background: linear-gradient(135deg, var(--card) 0%, #1a1530 100%);
+      border: 1px solid rgba(249,115,22,0.3);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .summary-card h2 { color: var(--white); margin-bottom: 12px; }
+    .summary-card p { color: var(--text-muted); max-width: 580px; margin: 0 auto 24px; }
+    .summary-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    footer {
+      background: #070d1a;
+      border-top: 1px solid var(--border);
+      padding: 48px 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .footer-brand p { font-size: 0.85rem; color: var(--text-muted); margin-top: 12px; line-height: 1.6; }
+    .footer-col h4 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: var(--text-muted); font-size: 0.85rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); text-decoration: none; }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .footer-bottom a { color: var(--text-muted); }
+    .footer-bottom a:hover { color: var(--orange); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--dark2); padding: 16px 20px; border-bottom: 1px solid var(--border); z-index: 99; }
+      .burger { display: block; }
+      .pros-cons { grid-template-columns: 1fr; }
+      .card-header { flex-wrap: wrap; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="#f97316"/>
+        <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+        <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+        <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+        <circle cx="30" cy="25.5" r="5" fill="white"/>
+        <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="logo-text">VPS<span>Хостинг</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#rating">Рейтинг</a></li>
+      <li><a href="#obzory">Обзоры</a></li>
+      <li><a href="#sravnenie">Сравнение</a></li>
+      <li><a href="#chto-takoe-vps">Что такое VPS</a></li>
+      <li><a href="#kak-vybrat">Как выбрать</a></li>
+      <li><a href="#arenda">Аренда VPS</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#rating" class="nav-cta">Выбрать VPS →</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">✅ Обновлено: май 2026</div>
+    <h1>ТОП-8 <span>VPS серверов</span> 2026 года —<br>Лучший хостинг для России и Европы</h1>
+    <p class="hero-sub">Честный рейтинг лучших VPS хостингов для аренды виртуального сервера. Сравниваем цены, локации, DDoS-защиту и поддержку. Выбор провайдера под любые задачи — от сайта до обхода блокировок РКН.</p>
+    <div class="hero-meta">
+      <span>👁 8 провайдеров</span>
+      <span>📊 Сравнение по 12 критериям</span>
+      <span>🛡 DDoS-защита</span>
+      <span>💳 Оплата из РФ</span>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>от 299 ₽</strong><span>Стартовый тариф</span></div>
+      <div class="hero-stat"><strong>40+</strong><span>Стран для серверов</span></div>
+      <div class="hero-stat"><strong>99,9%</strong><span>Гарантия аптайма</span></div>
+      <div class="hero-stat"><strong>24/7</strong><span>Поддержка</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RATING TOPLIST -->
+<section id="rating">
+  <div class="container">
+    <div class="section-title">
+      <span class="num">01</span>
+      <h2>Рейтинг лучших VPS серверов 2026</h2>
+    </div>
+    <p>Мы отобрали 8 провайдеров, которые стабильно работают для пользователей из России, принимают оплату в рублях и обеспечивают достаточную защиту и производительность для любых задач — от хостинга сайта до запуска собственного VPN.</p>
+
+    <!-- CARD 1 -->
+    <div class="provider-card top1" id="ishosting">
+      <div class="card-header">
+        <div class="card-num">1</div>
+        <div class="card-title-block">
+          <h3>is*hosting</h3>
+          <div class="card-tagline">Лучший зарубежный VPS с оплатой из России</div>
+        </div>
+        <div class="card-rating">⭐ 9.6</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">🌍 40+ стран</span>
+        <span class="badge">💳 Оплата из РФ</span>
+        <span class="badge green">🆓 Тест 7 дней</span>
+        <span class="badge">🛡 DDoS защита</span>
+        <span class="badge">⚡ NVMe SSD</span>
+        <span class="badge blue">KVM виртуализация</span>
+      </div>
+      <p class="card-desc">is*hosting — эстонский провайдер с одной из крупнейших международных сетей среди доступных из России хостингов. Серверы размещены в 44+ городах в 40+ странах, что делает его идеальным выбором для аренды VPS за границей. Особенно популярен среди пользователей, которым нужен VPS в Европе для установки собственного VPN или обхода РКН. Принимает оплату картами РФ, ЮMoney, СБП и криптовалютой.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Максимальное географическое покрытие — 40+ стран</li>
+            <li>KVM виртуализация с NVMe дисками</li>
+            <li>Бесплатный тест до 7 дней (Linux)</li>
+            <li>IPv6 /64 бесплатно, IPv4 по фиксированной цене</li>
+            <li>Поддержка всех VPN-протоколов на зарубежных серверах</li>
+            <li>Удобная оплата из России без VPN</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Техподдержка в основном на английском</li>
+            <li>Цены выше, чем у российских провайдеров</li>
+            <li>Тест Windows только 24 часа</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>$3.99/мес</strong> (~370 ₽)</div>
+        <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-primary">Попробовать бесплатно →</a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="provider-card" id="adminvps">
+      <div class="card-header">
+        <div class="card-num">2</div>
+        <div class="card-title-block">
+          <h3>AdminVPS</h3>
+          <div class="card-tagline">Лучший VPS в России и СНГ — соотношение цены и возможностей</div>
+        </div>
+        <div class="card-rating">⭐ 9.4</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">🇷🇺 Серверы в РФ</span>
+        <span class="badge">🌍 Германия, Нидерланды, Финляндия</span>
+        <span class="badge green">🆓 Тест 7 дней</span>
+        <span class="badge">🛡 Anti-DDoS</span>
+        <span class="badge">⚡ NVMe</span>
+        <span class="badge">🔄 Ежедневные бэкапы</span>
+      </div>
+      <p class="card-desc">AdminVPS — российский провайдер с международным присутствием. Предлагает серверы в Москве и Санкт-Петербурге (Tier III), а также в Германии, Нидерландах, Финляндии, Беларуси и Казахстане. Ежедневные автоматические бэкапы включены в тариф. KVM-виртуализация на NVMe обеспечивает предсказуемую производительность. Доступна мощная линейка GPU-серверов для AI/ML задач.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Ежедневные бэкапы включены бесплатно</li>
+            <li>Anti-DDoS и 24/7 поддержка на русском</li>
+            <li>Безлимитный трафик на ряде тарифов</li>
+            <li>Серверы Tier III в России</li>
+            <li>Гибкая оплата: карты, СБП, крипта</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Зарубежные локации ограничены 5 странами</li>
+            <li>Панель управления менее современная, чем у Timeweb</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>299 ₽/мес</strong></div>
+        <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-primary">Перейти на сайт →</a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="provider-card" id="timeweb">
+      <div class="card-header">
+        <div class="card-num">3</div>
+        <div class="card-title-block">
+          <h3>Timeweb Cloud</h3>
+          <div class="card-tagline">Облачный VPS с почасовой тарификацией и простым управлением</div>
+        </div>
+        <div class="card-rating">⭐ 9.2</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">🇷🇺 Россия + Европа</span>
+        <span class="badge">⏰ Почасовая оплата</span>
+        <span class="badge green">🖥 Удобная панель</span>
+        <span class="badge">🛡 DDoS L3/L4</span>
+        <span class="badge">⚡ SSD/NVMe</span>
+        <span class="badge blue">Kubernetes</span>
+      </div>
+      <p class="card-desc">Timeweb Cloud — облачная платформа от одного из крупнейших российских хостинг-провайдеров. Гибкая тарификация: можно платить за фактически использованные ресурсы по часам. Поддерживает Docker, Kubernetes, S3-хранилища и базы данных в облаке. Идеален для разработчиков и стартапов, которым важна скорость запуска и удобная интеграция с современными инструментами.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Почасовая тарификация — платите только за использованное</li>
+            <li>Самая удобная панель управления в рейтинге</li>
+            <li>Поддержка Docker, Kubernetes, S3</li>
+            <li>Широкий выбор образов ОС</li>
+            <li>Крупный и стабильный российский провайдер</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Серверы преимущественно в России</li>
+            <li>VPN-трафик может ограничиваться на российских узлах</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>290 ₽/мес</strong></div>
+        <a href="https://timeweb.cloud/?i=122157" target="_blank" rel="nofollow" class="btn-primary">Перейти на сайт →</a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="provider-card" id="fornex">
+      <div class="card-header">
+        <div class="card-num">4</div>
+        <div class="card-title-block">
+          <h3>Fornex</h3>
+          <div class="card-tagline">Надёжный европейский хостинг для серьёзных проектов</div>
+        </div>
+        <div class="card-rating">⭐ 9.0</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">🇪🇸 Испания (юрисдикция)</span>
+        <span class="badge">🌍 5 локаций</span>
+        <span class="badge green">🆓 Тест 7 дней</span>
+        <span class="badge">🛡 DDoS защита</span>
+        <span class="badge">⚡ SSD</span>
+        <span class="badge blue">ISPManager</span>
+      </div>
+      <p class="card-desc">Fornex — европейский провайдер (зарегистрирован в Испании) с серверами в России, Германии, Нидерландах, Швейцарии и Украине. Пользуется высокой репутацией среди российских интернет-компаний: Admitad, Pikabu, Lety Shops и другие крупные игроки доверяют свою инфраструктуру Fornex. Испанская юрисдикция означает минимальный риск блокировок со стороны РКН.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Европейская юрисдикция — минимальный риск блокировок</li>
+            <li>Высокая репутация среди крупных российских компаний</li>
+            <li>Разнообразие локаций в Европе</li>
+            <li>ISPManager и VestaCP в комплекте</li>
+            <li>Стабильная работа годами</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Цены выше бюджетных конкурентов</li>
+            <li>Не самый богатый выбор тарифов для начинающих</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>374 ₽/мес</strong></div>
+        <a href="https://fornex.com/c/fn8i35/" target="_blank" rel="nofollow" class="btn-primary">Перейти на сайт →</a>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="provider-card" id="ufohosting">
+      <div class="card-header">
+        <div class="card-num">5</div>
+        <div class="card-title-block">
+          <h3>Ufo.hosting</h3>
+          <div class="card-tagline">Глобальная сеть серверов по всему миру</div>
+        </div>
+        <div class="card-rating">⭐ 8.9</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">🌍 Глобальная сеть</span>
+        <span class="badge">⚡ NVMe SSD</span>
+        <span class="badge">🛡 DDoS защита</span>
+        <span class="badge blue">KVM</span>
+        <span class="badge">💳 Оплата из РФ</span>
+      </div>
+      <p class="card-desc">Ufo.hosting предлагает широкий выбор локаций по всему миру, что особенно ценно для пользователей, которым нужен VPS сервер за границей. NVMe диски обеспечивают высокую скорость I/O. Подходит как для хостинга сайтов и приложений, так и для создания собственного VPN-сервера с выбором оптимального региона для снижения задержек.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Большой выбор международных локаций</li>
+            <li>NVMe диски на всех тарифах</li>
+            <li>KVM виртуализация</li>
+            <li>Приём оплаты из России</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Поддержка менее оперативная, чем у топ-провайдеров</li>
+            <li>Документация частично на английском</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>490 ₽/мес</strong></div>
+        <a href="https://ufo.hosting/?from=934984" target="_blank" rel="nofollow" class="btn-primary">Перейти на сайт →</a>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="provider-card" id="beget">
+      <div class="card-header">
+        <div class="card-num">6</div>
+        <div class="card-title-block">
+          <h3>Beget</h3>
+          <div class="card-tagline">Автобэкапы, удобная панель, надёжность для бизнеса</div>
+        </div>
+        <div class="card-rating">⭐ 8.8</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">🇷🇺 Россия</span>
+        <span class="badge">🔄 Автобэкапы</span>
+        <span class="badge">🛡 DDoS</span>
+        <span class="badge">⚡ SSD NVMe</span>
+        <span class="badge green">S3 хранилище</span>
+      </div>
+      <p class="card-desc">Beget — один из крупнейших и наиболее стабильных российских хостинг-провайдеров. Известен удобной панелью управления, автоматическими бэкапами и S3-совместимым хранилищем. Подходит для корпоративных сайтов, интернет-магазинов и CRM-систем. Длительная история на рынке гарантирует стабильность и предсказуемость работы.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Один из самых надёжных провайдеров в России</li>
+            <li>Автоматические бэкапы и S3-хранилище</li>
+            <li>Удобная панель, подходит для новичков</li>
+            <li>Оплата рублями без проблем</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Только российские серверы — не подходит для VPN обхода РКН</li>
+            <li>Ограничения на некоторые типы трафика</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>350 ₽/мес</strong></div>
+        <a href="https://beget.com/ru" target="_blank" rel="nofollow" class="btn-primary">Перейти на сайт →</a>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="provider-card" id="spaceweb">
+      <div class="card-header">
+        <div class="card-num">7</div>
+        <div class="card-title-block">
+          <h3>Spaceweb</h3>
+          <div class="card-tagline">Надёжный VPS хостинг с хорошим соотношением цены и качества</div>
+        </div>
+        <div class="card-rating">⭐ 8.6</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">🇷🇺 Россия</span>
+        <span class="badge">⚡ SSD</span>
+        <span class="badge">🛡 DDoS</span>
+        <span class="badge">24/7 поддержка</span>
+      </div>
+      <p class="card-desc">Spaceweb — стабильный российский хостинг с хорошей репутацией, работает с 2005 года. Предлагает VPS/VDS серверы с KVM-виртуализацией, SSD-дисками и бесплатной защитой от DDoS-атак. Техническая поддержка доступна круглосуточно. Популярен среди малого и среднего бизнеса для хостинга сайтов, корпоративной почты и веб-приложений.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Более 15 лет на рынке — проверенная стабильность</li>
+            <li>24/7 поддержка на русском языке</li>
+            <li>Прозрачные тарифы без скрытых платежей</li>
+            <li>Бесплатный SSL и защита от DDoS</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Серверы только в России</li>
+            <li>Меньше облачных функций, чем у Timeweb</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>389 ₽/мес</strong></div>
+        <a href="https://sweb.ru/" target="_blank" rel="nofollow" class="btn-primary">Перейти на сайт →</a>
+      </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="provider-card" id="thehosting">
+      <div class="card-header">
+        <div class="card-num">8</div>
+        <div class="card-title-block">
+          <h3>The Hosting</h3>
+          <div class="card-tagline">Бюджетный VPS хостинг с хорошей базовой конфигурацией</div>
+        </div>
+        <div class="card-rating">⭐ 8.4</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge">💰 Бюджетный</span>
+        <span class="badge">⚡ SSD</span>
+        <span class="badge">🛡 DDoS</span>
+        <span class="badge blue">KVM</span>
+      </div>
+      <p class="card-desc">The Hosting — доступный вариант для тех, кто только начинает работу с VPS или ищет экономичное решение для небольшого проекта. Предлагает стандартный набор: KVM-виртуализация, SSD-диски, базовая DDoS-защита и техподдержка. Подходит для личных проектов, тестовых сред и небольших сайтов.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>✓ Плюсы</h4>
+          <ul>
+            <li>Доступные цены для начинающих</li>
+            <li>KVM виртуализация</li>
+            <li>Простая настройка и управление</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>✗ Минусы</h4>
+          <ul>
+            <li>Меньший выбор локаций</li>
+            <li>Техподдержка менее расширенная</li>
+            <li>Не подходит для крупных проектов</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-price">от <strong>250 ₽/мес</strong></div>
+        <a href="https://the.hosting/ru/" target="_blank" rel="nofollow" class="btn-primary">Перейти на сайт →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="sravnenie">
+  <div class="container">
+    <div class="section-title">
+      <span class="num">02</span>
+      <h2>Сравнительная таблица VPS провайдеров 2026</h2>
+    </div>
+    <p>Сравниваем всех 8 провайдеров по ключевым критериям выбора виртуального сервера.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Провайдер</th>
+            <th>Цена от</th>
+            <th>Локации</th>
+            <th>Диск</th>
+            <th>Виртуализация</th>
+            <th>DDoS</th>
+            <th>Тест</th>
+            <th>VPN/обход РКН</th>
+            <th>Оплата РФ</th>
+            <th>Поддержка</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>is*hosting</td>
+            <td class="td-mark">$3.99</td>
+            <td>40+ стран</td>
+            <td>NVMe</td>
+            <td>KVM</td>
+            <td class="td-yes">✓</td>
+            <td class="td-yes">7 дней</td>
+            <td class="td-yes">✓ Отлично</td>
+            <td class="td-yes">✓</td>
+            <td>EN/RU</td>
+          </tr>
+          <tr>
+            <td>AdminVPS</td>
+            <td>299 ₽</td>
+            <td>РФ + 5 стран ЕС</td>
+            <td>NVMe</td>
+            <td>KVM</td>
+            <td class="td-yes">✓</td>
+            <td class="td-yes">7 дней</td>
+            <td class="td-yes">✓ Хорошо (ЕС)</td>
+            <td class="td-yes">✓</td>
+            <td>RU 24/7</td>
+          </tr>
+          <tr>
+            <td>Timeweb Cloud</td>
+            <td>290 ₽</td>
+            <td>РФ + Финляндия</td>
+            <td>NVMe</td>
+            <td>KVM/Cloud</td>
+            <td class="td-yes">✓</td>
+            <td class="td-yes">Есть</td>
+            <td>⚠ Ограничен</td>
+            <td class="td-yes">✓</td>
+            <td>RU 24/7</td>
+          </tr>
+          <tr>
+            <td>Fornex</td>
+            <td>374 ₽</td>
+            <td>5 стран</td>
+            <td>SSD</td>
+            <td>KVM</td>
+            <td class="td-yes">✓</td>
+            <td class="td-yes">7 дней</td>
+            <td class="td-yes">✓ Хорошо</td>
+            <td class="td-yes">✓</td>
+            <td>RU/EN</td>
+          </tr>
+          <tr>
+            <td>Ufo.hosting</td>
+            <td>490 ₽</td>
+            <td>Глобальная</td>
+            <td>NVMe</td>
+            <td>KVM</td>
+            <td class="td-yes">✓</td>
+            <td class="td-no">–</td>
+            <td class="td-yes">✓ Хорошо</td>
+            <td class="td-yes">✓</td>
+            <td>RU/EN</td>
+          </tr>
+          <tr>
+            <td>Beget</td>
+            <td>350 ₽</td>
+            <td>Россия</td>
+            <td>NVMe</td>
+            <td>KVM</td>
+            <td class="td-yes">✓</td>
+            <td class="td-no">–</td>
+            <td class="td-no">✗ Ограничен</td>
+            <td class="td-yes">✓</td>
+            <td>RU 24/7</td>
+          </tr>
+          <tr>
+            <td>Spaceweb</td>
+            <td>389 ₽</td>
+            <td>Россия</td>
+            <td>SSD</td>
+            <td>KVM</td>
+            <td class="td-yes">✓</td>
+            <td class="td-no">–</td>
+            <td class="td-no">✗ Ограничен</td>
+            <td class="td-yes">✓</td>
+            <td>RU 24/7</td>
+          </tr>
+          <tr>
+            <td>The Hosting</td>
+            <td>250 ₽</td>
+            <td>Россия</td>
+            <td>SSD</td>
+            <td>KVM</td>
+            <td class="td-yes">✓</td>
+            <td class="td-no">–</td>
+            <td class="td-no">✗ Ограничен</td>
+            <td class="td-yes">✓</td>
+            <td>RU</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS VPS -->
+<section id="chto-takoe-vps">
+  <div class="container">
+    <div class="section-title">
+      <span class="num">03</span>
+      <h2>Что такое VPS сервер и зачем он нужен в России</h2>
+    </div>
+    <p><strong>VPS (Virtual Private Server, виртуальный приватный сервер)</strong> — это технология виртуализации, при которой один физический сервер делится на несколько изолированных виртуальных машин. Каждый VPS имеет выделенные ресурсы: ядра CPU, оперативную память и дисковое пространство, которые не зависят от других пользователей на том же физическом сервере.</p>
+    <p>Часто можно встретить термин <strong>VDS (Virtual Dedicated Server)</strong> — в России эти понятия используются как синонимы. Технически VDS подразумевает более высокий уровень изоляции (KVM-виртуализация), тогда как VPS исторически мог означать OpenVZ, но на практике большинство провайдеров используют эти названия взаимозаменяемо.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-icon">🖥</div>
+        <h3>VPS vs Виртуальный хостинг</h3>
+        <p>На виртуальном хостинге сотни сайтов делят один набор ресурсов. VPS гарантирует вам выделенные CPU, RAM и диск — другие пользователи не влияют на производительность вашего сайта.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">⚙️</div>
+        <h3>VPS vs Выделенный сервер</h3>
+        <p>Выделенный сервер (dedicated) — это физическая машина только для вас. Дороже и мощнее. VPS — оптимальный баланс между стоимостью и возможностями для большинства задач.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">☁️</div>
+        <h3>VPS vs Облачный сервер</h3>
+        <p>Облачный VPS — это тот же VPS, но с возможностью мгновенного масштабирования ресурсов и почасовой оплатой. Timeweb Cloud — пример такого решения для российского рынка.</p>
+      </div>
+    </div>
+
+    <h3>Особые случаи использования VPS в России</h3>
+    <p>В России VPS приобрёл особое значение в связи с действиями Роскомнадзора (РКН). Вот конкретные задачи, которые решает аренда VPS для российских пользователей:</p>
+
+    <div class="usecase-grid">
+      <div class="usecase-card">
+        <h4>🔒 Собственный VPN для обхода блокировок РКН</h4>
+        <p>Установив WireGuard, Xray или AmneziaWG на зарубежный VPS (Нидерланды, Германия, Финляндия), вы получаете персональный VPN-сервер, который практически невозможно заблокировать — в отличие от коммерческих сервисов.</p>
+      </div>
+      <div class="usecase-card">
+        <h4>📡 Прокси-сервер для команды или семьи</h4>
+        <p>VPS позволяет настроить Shadowsocks или VLESS-сервер и раздать конфиги коллегам или близким — без ежемесячных подписок на VPN-сервисы для каждого пользователя.</p>
+      </div>
+      <div class="usecase-card">
+        <h4>🌐 Хостинг сайта без цензуры</h4>
+        <p>Размещение сайта на зарубежном VPS избавляет от риска блокировки по требованию РКН и обеспечивает доступность для международной аудитории без ограничений.</p>
+      </div>
+      <div class="usecase-card">
+        <h4>💹 Торговые боты и Forex</h4>
+        <p>Торговые стратегии требуют бесперебойной работы 24/7. VPS в Европе обеспечивает стабильное подключение к зарубежным брокерам и минимальную задержку при исполнении ордеров.</p>
+      </div>
+      <div class="usecase-card">
+        <h4>🤖 Telegram-боты и автоматизация</h4>
+        <p>Размещение Telegram-ботов, парсеров и автоматизированных скриптов на VPS обеспечивает работу без перебоев даже при нестабильном домашнем интернете.</p>
+      </div>
+      <div class="usecase-card">
+        <h4>🔐 Безопасное хранение данных</h4>
+        <p>Собственный файловый сервер за рубежом — надёжный способ хранить чувствительные данные за пределами российской юрисдикции, защищая их от возможных требований регуляторов.</p>
+      </div>
+      <div class="usecase-card">
+        <h4>🎮 Игровые серверы</h4>
+        <p>Запуск выделенных игровых серверов Minecraft, CS и других онлайн-игр для своего комьюнити без привязки к платформам, которые могут блокировать российских пользователей.</p>
+      </div>
+      <div class="usecase-card">
+        <h4>🏢 Корпоративная инфраструктура</h4>
+        <p>CRM, корпоративная почта, GitLab, облачное хранилище — всё это можно развернуть на VPS и контролировать самостоятельно, не завися от облачных сервисов, которые ушли из России.</p>
+      </div>
+    </div>
+
+    <div class="alert">
+      <strong>💡 Важно для российских пользователей:</strong> С 2022 года многие западные облачные сервисы (Microsoft Azure, Google Cloud, AWS) ограничили работу с российскими клиентами. VPS у независимых европейских провайдеров — надёжная альтернатива для тех, кому необходима зарубежная инфраструктура.
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO CHOOSE -->
+<section id="kak-vybrat">
+  <div class="container">
+    <div class="section-title">
+      <span class="num">04</span>
+      <h2>Как выбрать VPS сервер: пошаговое руководство</h2>
+    </div>
+    <p>Правильный выбор VPS зависит от ваших задач, бюджета и технических требований. Следуйте этому чеклисту, чтобы не переплатить и не ошибиться с провайдером.</p>
+
+    <h3>Шаг 1: Определите задачу</h3>
+    <p>Первый вопрос — для чего вам нужен VPS? Это принципиально влияет на выбор локации и конфигурации:</p>
+    <ul class="checklist">
+      <li><strong>VPN / обход РКН</strong> → обязательно зарубежный VPS (Нидерланды, Финляндия, Германия). Лучший выбор: is*hosting, Fornex.</li>
+      <li><strong>Сайт / интернет-магазин для России</strong> → российский VPS для минимального пинга. Лучший выбор: AdminVPS, Timeweb, Beget.</li>
+      <li><strong>Торговые боты / Forex</strong> → VPS в Европе рядом с биржей. Лучший выбор: is*hosting, AdminVPS (Германия).</li>
+      <li><strong>Telegram-бот / автоматизация</strong> → любой стабильный VPS. Достаточно минимального тарифа.</li>
+      <li><strong>Корпоративные приложения</strong> → российский VPS Tier III с ежедневными бэкапами. AdminVPS, Beget.</li>
+    </ul>
+
+    <h3>Шаг 2: Выберите конфигурацию</h3>
+    <p>Вот минимальные рекомендации по ресурсам для типичных задач:</p>
+    <div class="table-wrap" style="margin-bottom: 24px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Задача</th>
+            <th>CPU</th>
+            <th>RAM</th>
+            <th>Диск</th>
+            <th>Трафик</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>VPN-сервер (1-5 пользователей)</td><td>1 ядро</td><td>512 МБ</td><td>10 ГБ SSD</td><td>1 ТБ</td></tr>
+          <tr><td>Сайт на WordPress</td><td>1-2 ядра</td><td>1-2 ГБ</td><td>20-40 ГБ SSD</td><td>2 ТБ</td></tr>
+          <tr><td>Интернет-магазин (1С-Битрикс)</td><td>2-4 ядра</td><td>4-8 ГБ</td><td>60+ ГБ NVMe</td><td>Безлимит</td></tr>
+          <tr><td>Торговый бот / Forex</td><td>1-2 ядра</td><td>1-2 ГБ</td><td>20 ГБ SSD</td><td>500 ГБ</td></tr>
+          <tr><td>Telegram-бот / парсер</td><td>1 ядро</td><td>512 МБ–1 ГБ</td><td>10 ГБ</td><td>200 ГБ</td></tr>
+          <tr><td>Игровой сервер (Minecraft)</td><td>2-4 ядра</td><td>4-8 ГБ</td><td>30-60 ГБ</td><td>Безлимит</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Шаг 3: На что обращать внимание при выборе</h3>
+    <ul class="checklist">
+      <li><strong>Тип виртуализации:</strong> KVM предпочтительнее OpenVZ — полная изоляция, возможность менять ядро ОС, лучшая безопасность.</li>
+      <li><strong>Тип диска:</strong> NVMe значительно быстрее SSD для операций чтения/записи. Критично для баз данных и высоконагруженных приложений.</li>
+      <li><strong>DDoS-защита:</strong> даже базовая фильтрация L3/L4 необходима, чтобы ваш сервер не «лёг» от ботнет-атак. Уточните, включена ли она в цену.</li>
+      <li><strong>Гарантия аптайма (SLA):</strong> ищите провайдеров с SLA 99.9% и выше. Это означает не более 8.7 часов простоя в год.</li>
+      <li><strong>Резервное копирование:</strong> автоматические ежедневные бэкапы — обязательное требование для продуктивных серверов. AdminVPS включает их бесплатно.</li>
+      <li><strong>Техническая поддержка:</strong> для российских пользователей важна русскоязычная поддержка 24/7. Проверьте, есть ли она перед покупкой.</li>
+      <li><strong>Тестовый период:</strong> лучшие провайдеры (is*hosting, AdminVPS, Fornex) предоставляют 7 дней на тестирование бесплатно.</li>
+      <li><strong>Оплата из России:</strong> убедитесь, что провайдер принимает карты МИР, СБП или ЮMoney — это важно при работе с зарубежными сервисами.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- RENT VS BUY -->
+<section id="arenda">
+  <div class="container">
+    <div class="section-title">
+      <span class="num">05</span>
+      <h2>Аренда VPS: преимущества, риски и сравнение с покупкой сервера</h2>
+    </div>
+
+    <h3>Что такое аренда VPS</h3>
+    <p><strong>Аренда VPS</strong> — это модель, при которой вы ежемесячно платите провайдеру за использование виртуального сервера. Провайдер обслуживает физическое оборудование, дата-центр, электропитание и сетевую инфраструктуру, а вы получаете полный контроль над своей виртуальной машиной по SSH или через панель управления.</p>
+
+    <div class="pros-cons" style="margin-bottom: 24px;">
+      <div class="pros">
+        <h4>✓ Преимущества аренды VPS</h4>
+        <ul>
+          <li>Нет капитальных затрат на оборудование</li>
+          <li>Начать можно от 250-300 рублей в месяц</li>
+          <li>Масштабируйте ресурсы в любой момент</li>
+          <li>Провайдер отвечает за физическое железо</li>
+          <li>Смените провайдера или локацию без потери данных</li>
+          <li>Бесперебойное электропитание и охлаждение включены</li>
+          <li>Доступен тестовый период без риска</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <h4>✗ Риски и недостатки</h4>
+        <ul>
+          <li>Ежемесячные расходы накапливаются годами</li>
+          <li>Зависимость от политики провайдера</li>
+          <li>Провайдер теоретически может получить доступ к данным</li>
+          <li>Соседи на сервере могут создавать «шум»</li>
+          <li>Риск блокировки IP-адреса за действия других</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Аренда VPS vs Покупка собственного сервера</h3>
+    <p>Покупка физического сервера может казаться выгоднее на длинном горизонте, но это иллюзия для большинства случаев:</p>
+
+    <div class="table-wrap" style="margin-bottom: 24px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Критерий</th>
+            <th>Аренда VPS</th>
+            <th>Покупка сервера</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Начальные вложения</td><td class="td-yes">от 300 ₽</td><td class="td-no">от 50 000 ₽</td></tr>
+          <tr><td>Техническое обслуживание</td><td class="td-yes">Провайдер берёт на себя</td><td class="td-no">Самостоятельно</td></tr>
+          <tr><td>Масштабирование</td><td class="td-yes">Мгновенно, в панели</td><td class="td-no">Покупка нового железа</td></tr>
+          <tr><td>Надёжность питания</td><td class="td-yes">UPS + дизельный генератор</td><td class="td-no">Зависит от ваших условий</td></tr>
+          <tr><td>Физический доступ к данным</td><td class="td-no">Провайдер имеет доступ</td><td class="td-yes">Только вы</td></tr>
+          <tr><td>Локация сервера</td><td class="td-yes">Любая страна мира</td><td class="td-no">Только там, где вы</td></tr>
+          <tr><td>Риск устаревания железа</td><td class="td-yes">Нет</td><td class="td-no">Высокий</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert">
+      <strong>💡 Вывод:</strong> Для подавляющего большинства частных пользователей и малого бизнеса аренда VPS значительно выгоднее и удобнее покупки собственного сервера. Покупка оправдана только при объёме данных и нагрузке, для которых нужно несколько выделенных серверов постоянно.
+    </div>
+
+    <h3>VPS бесплатно: что предлагают провайдеры</h3>
+    <p>Несколько провайдеров из нашего рейтинга предлагают ознакомительные периоды, которые позволяют бесплатно протестировать VPS сервер:</p>
+    <ul class="checklist">
+      <li><strong>is*hosting</strong> — бесплатный тест Linux-сервера до 7 дней, Windows — до 24 часов.</li>
+      <li><strong>AdminVPS</strong> — тестовый период 7 дней при регистрации нового аккаунта.</li>
+      <li><strong>Fornex</strong> — пробный период 7 дней на отдельные тарифы.</li>
+      <li>Полностью бесплатных VPS на постоянной основе с достаточными ресурсами для реальных задач практически не существует — будьте осторожны с такими предложениями.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- VIRTUAL HOSTING -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="num">06</span>
+      <h2>Виртуальный VPS хостинг — чем отличается от обычного</h2>
+    </div>
+    <p>Термин <strong>«виртуальный VPS хостинг»</strong> используется для обозначения тарифов начального уровня, где ресурсы аналогичны VPS, но управление упрощено через стандартные хостинг-панели (cPanel, ISPManager). Это промежуточный вариант между виртуальным хостингом и «классическим» VPS.</p>
+    <p>В отличие от обычного виртуального хостинга (shared hosting), виртуальный VPS хостинг предоставляет:</p>
+    <ul class="checklist">
+      <li>Гарантированные выделенные ресурсы — CPU, RAM, диск не делятся с соседями</li>
+      <li>Полную изоляцию: проблемы других сайтов не влияют на вашу работу</li>
+      <li>Root-доступ или расширенные привилегии в панели управления</li>
+      <li>Возможность установки любого ПО под ваши нужды</li>
+      <li>Независимый IP-адрес и настраиваемые параметры безопасности</li>
+    </ul>
+    <p>Такие тарифы предлагают Timeweb Cloud, Beget и AdminVPS — они позволяют работать в привычной панели управления, сохраняя все преимущества VPS.</p>
+  </div>
+</section>
+
+<!-- USE CASES PAGES -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="num">07</span>
+      <h2>VPS для конкретных задач</h2>
+    </div>
+    <p>Мы подготовили детальные руководства по выбору VPS для конкретных сценариев использования:</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-icon">🔒</div>
+        <h3><a href="/vps-dlya-vpn/">VPS для VPN</a></h3>
+        <p>Как настроить собственный VPN на VPS. WireGuard, Xray, AmneziaWG. Лучшие локации для обхода РКН.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">✈️</div>
+        <h3><a href="/vps-dlya-telegram/">VPS для Телеграм</a></h3>
+        <p>Хостинг Telegram-ботов, клиентов Userbot и парсеров. Минимальные требования и настройка.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">📈</div>
+        <h3><a href="/vps-dlya-treydinga/">VPS для Трейдинга</a></h3>
+        <p>VPS для торговых роботов и MT4/MT5 на биржах. Минимальный пинг к торговым серверам.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">📡</div>
+        <h3><a href="/vps-dlya-routera/">VPS для Роутера</a></h3>
+        <p>Связка VPS + роутер для защиты всей домашней сети. OpenWRT и Keenetic.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">💹</div>
+        <h3><a href="/vps-dlya-forex/">VPS для Forex</a></h3>
+        <p>Лучшие VPS для форекс-трейдинга. Серверы рядом с ликвидностью. Сравнение провайдеров.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🖥</div>
+        <h3><a href="/vps-dlya-pk/">VPS для ПК</a></h3>
+        <p>Облачный компьютер Windows в браузере. Удалённый рабочий стол из любой точки мира.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICAL TIPS -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="num">08</span>
+      <h2>Практические советы по безопасности и настройке VPS</h2>
+    </div>
+    <p>Получив доступ к VPS серверу, важно правильно его настроить с первых минут. Вот чеклист первичной конфигурации:</p>
+    <ul class="checklist">
+      <li><strong>Смените порт SSH (22 → нестандартный):</strong> снизит количество брутфорс-атак на 99%.</li>
+      <li><strong>Отключите вход по паролю, используйте SSH-ключи:</strong> гораздо безопаснее парольной аутентификации.</li>
+      <li><strong>Настройте файрвол (UFW/iptables):</strong> закройте все порты, кроме необходимых.</li>
+      <li><strong>Установите fail2ban:</strong> автоматически блокирует IP после нескольких неудачных попыток входа.</li>
+      <li><strong>Регулярно обновляйте ОС:</strong> sudo apt update && apt upgrade — хотя бы раз в неделю.</li>
+      <li><strong>Настройте мониторинг:</strong> Netdata или Zabbix покажут нагрузку и предупредят о проблемах.</li>
+      <li><strong>Сделайте тестовый бэкап:</strong> убедитесь, что резервные копии работают и восстанавливаются корректно.</li>
+      <li><strong>Установите SSL-сертификат (Let's Encrypt):</strong> для любого веб-сервиса — обязательно.</li>
+    </ul>
+
+    <div class="alert">
+      <strong>🔐 Важно для VPN на VPS:</strong> Если вы устанавливаете VPN (WireGuard, Xray) на зарубежный VPS, используйте протоколы с маскировкой трафика: VLESS+Reality или AmneziaWG. Чистый WireGuard может быть заблокирован ТСПУ на российской стороне. Проверяйте работоспособность при подключении через мобильный интернет МТС/Билайн — именно эти операторы применяют наиболее агрессивную DPI-фильтрацию.
+    </div>
+
+    <h3>Лучшие страны для VPS при использовании из России (2026)</h3>
+    <p>Выбор локации сервера влияет на скорость соединения и надёжность обхода блокировок:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Страна</th><th>Пинг из Москвы</th><th>Юрисдикция</th><th>Для VPN</th><th>Лучший провайдер</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🇫🇮 Финляндия</td><td>~20 мс</td><td>ЕС</td><td class="td-yes">✓ Отлично</td><td>AdminVPS, Timeweb</td></tr>
+          <tr><td>🇩🇪 Германия</td><td>~35 мс</td><td>ЕС</td><td class="td-yes">✓ Отлично</td><td>AdminVPS, Fornex, is*hosting</td></tr>
+          <tr><td>🇳🇱 Нидерланды</td><td>~40 мс</td><td>ЕС</td><td class="td-yes">✓ Отлично</td><td>is*hosting, Fornex, AdminVPS</td></tr>
+          <tr><td>🇱🇻 Латвия</td><td>~15 мс</td><td>ЕС</td><td class="td-yes">✓ Хорошо</td><td>is*hosting</td></tr>
+          <tr><td>🇰🇿 Казахстан</td><td>~25 мс</td><td>СНГ</td><td>⚠ Частично</td><td>AdminVPS, is*hosting</td></tr>
+          <tr><td>🇨🇭 Швейцария</td><td>~45 мс</td><td>Нейтральная</td><td class="td-yes">✓ Хорошо</td><td>Fornex, is*hosting</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <span class="num">09</span>
+      <h2>Итоги: Какой VPS выбрать в 2026 году</h2>
+    </div>
+    <p>Рынок VPS-хостинга в 2026 году предлагает широкий выбор для российских пользователей — от бюджетных серверов в России до международных платформ с десятками локаций по всему миру.</p>
+    <ul class="checklist">
+      <li><strong>Для VPN и обхода РКН:</strong> is*hosting (40+ стран, тест 7 дней) или AdminVPS (Германия/Нидерланды, на русском 24/7).</li>
+      <li><strong>Для сайта или интернет-магазина в России:</strong> Timeweb Cloud (удобная панель, почасовая оплата) или Beget (надёжность и автобэкапы).</li>
+      <li><strong>Для Forex и торговых ботов:</strong> is*hosting или AdminVPS с серверами рядом с европейскими биржами.</li>
+      <li><strong>Для корпоративных задач с надёжностью Tier III:</strong> AdminVPS или Beget.</li>
+      <li><strong>Для европейской юрисдикции и крупных проектов:</strong> Fornex (Испания, репутация среди крупных российских компаний).</li>
+      <li><strong>Бюджетный старт:</strong> The Hosting или AdminVPS от 250-299 ₽/мес.</li>
+    </ul>
+    <div class="summary-card">
+      <h2>Готовы попробовать VPS бесплатно?</h2>
+      <p>Лучшие провайдеры из нашего рейтинга предлагают тестовый период до 7 дней без риска. Начните с is*hosting для зарубежного VPS или AdminVPS для сервера в России.</p>
+      <div class="summary-btns">
+        <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-primary">is*hosting — тест 7 дней →</a>
+        <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-secondary">AdminVPS — от 299 ₽ →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-title">
+      <span class="num">10</span>
+      <h2>Часто задаваемые вопросы о VPS</h2>
+    </div>
+
+    <div class="faq-item open">
+      <div class="faq-q">Что такое VPS сервер простыми словами?</div>
+      <div class="faq-a">VPS (Virtual Private Server) — это виртуальный компьютер, работающий на удалённом физическом сервере. Вы получаете выделенные ресурсы (процессор, память, диск), root-доступ и полный контроль, как если бы у вас был собственный сервер — но за гораздо меньшие деньги, потому что один физический сервер делится между несколькими виртуальными машинами с полной изоляцией.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Чем VPS отличается от VDS?</div>
+      <div class="faq-a">В России эти термины используются практически как синонимы. Технически VDS (Virtual Dedicated Server) подразумевает более высокий уровень изоляции через KVM-виртуализацию, тогда как VPS исторически мог работать на OpenVZ. Сегодня большинство провайдеров предлагают KVM-сервера и называют их и VPS, и VDS одновременно. При выборе смотрите на тип виртуализации (KVM предпочтительнее), а не на название.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Можно ли получить VPS бесплатно?</div>
+      <div class="faq-a">Полностью бесплатных VPS с достаточными ресурсами для реальных задач практически не существует. Большинство провайдеров предлагают тестовые периоды: is*hosting и AdminVPS — 7 дней бесплатно, Fornex — также 7 дней. Некоторые платформы (Oracle Cloud Free Tier) предлагают базовые сервера навсегда бесплатно, но с очень ограниченными ресурсами и без гарантии для российских пользователей.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Можно ли установить VPN на VPS для обхода блокировок РКН?</div>
+      <div class="faq-a">Да, это один из самых популярных сценариев использования зарубежного VPS в России. Установите WireGuard, Xray с VLESS+Reality или AmneziaWG на сервер в Германии, Нидерландах или Финляндии — и получите персональный VPN, который невозможно заблокировать так же легко, как коммерческие сервисы. Для обхода ТСПУ рекомендуем использовать протоколы с маскировкой трафика: VLESS+Reality или AmneziaWG лучше чистого WireGuard.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Как оплатить VPS за рубежом картой из России в 2026 году?</div>
+      <div class="faq-a">Большинство провайдеров из нашего рейтинга специально адаптированы для российских пользователей: принимают карты МИР, СБП, ЮMoney и криптовалюту (Bitcoin, USDT). is*hosting, AdminVPS, Fornex — все принимают оплату из РФ без необходимости использовать иностранные карты или VPN для оплаты. Если у вас есть карта иностранного банка, оплата проходит ещё проще.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Что лучше: арендовать VPS или купить собственный сервер?</div>
+      <div class="faq-a">Для 95% пользователей аренда VPS выгоднее и удобнее. Собственный сервер требует больших начальных вложений (от 50 000 ₽), постоянного обслуживания, надёжного питания и хорошего канала связи. Аренда VPS начинается от 250-300 рублей в месяц, провайдер обеспечивает надёжное питание, охлаждение и сетевое подключение. Покупка сервера оправдана только при очень высоких нагрузках, когда стоимость аренды нескольких мощных серверов превышает стоимость собственного железа.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Какой VPS выбрать для Forex-трейдинга?</div>
+      <div class="faq-a">Для Forex-трейдинга важны минимальная задержка (пинг) до торговых серверов брокера и стабильная работа 24/7. Выбирайте VPS в Германии или Нидерландах — там сосредоточена большинство европейских торговых инфраструктур. is*hosting и AdminVPS предлагают сервера во Франкфурте и Амстердаме. Минимальная конфигурация: 1 ядро CPU, 1 ГБ RAM, SSD диск.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Что такое KVM-виртуализация и почему она важна?</div>
+      <div class="faq-a">KVM (Kernel-based Virtual Machine) — технология аппаратной виртуализации, которая обеспечивает полную изоляцию вашего сервера от соседей. В отличие от OpenVZ, KVM позволяет выбирать любое ядро Linux или установить Windows, использовать любые сетевые протоколы (включая WireGuard) и гарантирует, что ресурсы других пользователей никак не влияют на вашу виртуальную машину. Все провайдеры из нашего рейтинга используют KVM.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Насколько безопасно хранить данные на VPS?</div>
+      <div class="faq-a">Безопасность VPS зависит от двух факторов: политики провайдера и вашей конфигурации. Провайдер технически имеет доступ к серверу, однако надёжные провайдеры соблюдают политику конфиденциальности. Для максимальной безопасности шифруйте данные на уровне приложений (например, VeraCrypt), используйте SSH-ключи вместо паролей и храните чувствительные данные в зашифрованном виде. Провайдеры в ЕС подпадают под GDPR и имеют более строгие обязательства по защите данных.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Может ли РКН заблокировать мой VPS?</div>
+      <div class="faq-a">Прямой блокировки IP-адреса вашего VPS РКН не производит, если на нём не размещён запрещённый контент. Могут блокироваться протоколы VPN (WireGuard, OpenVPN) на уровне трафика ТСПУ, но сам сервер при этом остаётся доступным. Для надёжного доступа к зарубежному VPS через VPN используйте маскировку трафика: VLESS+Reality, AmneziaWG или Shadowsocks.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="38" rx="9" fill="#f97316"/>
+            <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+            <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+            <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+            <circle cx="30" cy="25.5" r="5" fill="white"/>
+            <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="logo-text">VPS<span>Хостинг</span></div>
+        </a>
+        <p>Независимый рейтинг VPS серверов для России. Мы помогаем выбрать лучший хостинг под ваши задачи и бюджет.</p>
+        <p style="margin-top: 8px;">📧 <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>VPS по назначению</h4>
+        <ul>
+          <li><a href="/vps-dlya-vpn/">VPS для VPN</a></li>
+          <li><a href="/vps-dlya-telegram/">VPS для Телеграм</a></li>
+          <li><a href="/vps-dlya-treydinga/">VPS для Трейдинга</a></li>
+          <li><a href="/vps-dlya-routera/">VPS для Роутера</a></li>
+          <li><a href="/vps-dlya-forex/">VPS для Forex</a></li>
+          <li><a href="/vps-dlya-pk/">VPS для ПК</a></li>
+          <li><a href="/vps-dlya-openclaw/">VPS для Openclaw</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Провайдеры</h4>
+        <ul>
+          <li><a href="https://ishosting.com/affiliate/NTEyMSM2" rel="nofollow">is*hosting</a></li>
+          <li><a href="https://my.adminvps.ru/aff.php?aff=28491" rel="nofollow">AdminVPS</a></li>
+          <li><a href="https://timeweb.cloud/?i=122157" rel="nofollow">Timeweb Cloud</a></li>
+          <li><a href="https://fornex.com/c/fn8i35/" rel="nofollow">Fornex</a></li>
+          <li><a href="https://ufo.hosting/?from=934984" rel="nofollow">Ufo.hosting</a></li>
+          <li><a href="https://beget.com/ru" rel="nofollow">Beget</a></li>
+          <li><a href="https://sweb.ru/" rel="nofollow">Spaceweb</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="/about/">О нас</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+          <li><a href="#chto-takoe-vps">Что такое VPS</a></li>
+          <li><a href="#kak-vybrat">Как выбрать VPS</a></li>
+          <li><a href="#arenda">Аренда VPS</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 VPSХостинг.ru — Все права защищены</div>
+      <div>
+        <a href="/about/">О нас</a> &nbsp;·&nbsp;
+        <a href="/privacy/">Политика конфиденциальности</a> &nbsp;·&nbsp;
+        <a href="mailto:petriliin76@gmail.com">Контакты</a>
+      </div>
+      <div style="font-size: 0.75rem; color: #475569;">Сайт содержит партнёрские ссылки. Мы получаем комиссию без доп. стоимости для вас.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Burger menu
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
