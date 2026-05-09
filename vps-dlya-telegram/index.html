@@ -1,1 +1,810 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPS для Telegram 2026 — Лучший сервер для Телеграм в России</title>
+  <meta name="description" content="Рейтинг лучших VPS для Telegram в 2026 году. Аренда VPS сервера для Телеграм бота от 299 ₽/мес — обзоры провайдеров, сравнение тарифов, настройка прокси и ботов. Работа с Telegram в России.">
+  <link rel="canonical" href="https://vps-hosting-ru.vercel.app/vps-dlya-telegram/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #f97316;
+      --orange-dark: #ea6c0a;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+      --card: #131c2e;
+      --card2: #1a2540;
+      --white: #ffffff;
+      --green: #22c55e;
+      --red: #ef4444;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, h4 { font-family: 'Unbounded', sans-serif; line-height: 1.25; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; margin-bottom: 1rem; }
+    h2 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); font-weight: 700; margin-bottom: 0.85rem; }
+    h3 { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 600; margin-bottom: 0.65rem; }
+    h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    p { margin-bottom: 1rem; color: var(--text); }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    nav { background: rgba(15,23,42,0.97); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; max-width: 1000px; margin: 0 auto; height: 64px; gap: 12px; }
+    .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-text { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+    .logo-text span { color: var(--orange); }
+    .nav-links { display: flex; gap: 2px; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+    .nav-links a { color: var(--text-muted); font-size: 0.78rem; font-weight: 500; padding: 6px 10px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--orange); background: rgba(249,115,22,0.08); text-decoration: none; }
+    .nav-cta { background: var(--orange); color: var(--white) !important; border-radius: 8px; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--orange-dark) !important; }
+    .burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .burger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; }
+    .hero { padding: 52px 0 44px; background: linear-gradient(135deg, #0f172a 0%, #0c1525 60%, #001a1a 100%); position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(249,115,22,0.1) 0%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3); color: var(--orange); font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; margin-bottom: 14px; }
+    .hero h1 { color: var(--white); }
+    .hero h1 span { color: var(--orange); }
+    .hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 650px; margin-bottom: 24px; }
+    .hero-meta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-muted); }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+    .breadcrumb { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 18px; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--orange); }
+    section { padding: 52px 0; }
+    section:nth-child(even) { background: #0c1525; }
+    .section-label { font-family: 'Unbounded', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .toplist-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 14px; display: grid; grid-template-columns: 48px 1fr auto; gap: 16px; align-items: center; transition: border-color 0.2s, transform 0.2s; }
+    .toplist-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+    .toplist-card.top1 { border-color: rgba(249,115,22,0.45); }
+    .card-number { font-family: 'Unbounded', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .card-body { min-width: 0; }
+    .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
+    .card-name { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1rem; color: var(--white); }
+    .ribbon { font-size: 0.62rem; font-weight: 700; font-family: 'Unbounded', sans-serif; padding: 3px 9px; border-radius: 50px; white-space: nowrap; background: var(--orange); color: white; }
+    .ribbon.green { background: #16a34a; }
+    .ribbon.blue { background: #2563eb; }
+    .ribbon.purple { background: #7c3aed; }
+    .ribbon.slate { background: #374151; }
+    .ribbon.teal { background: #0369a1; }
+    .card-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.5; }
+    .card-features { display: flex; flex-wrap: wrap; gap: 6px; }
+    .feat { font-size: 0.75rem; color: var(--text-muted); background: var(--card2); border: 1px solid var(--border); padding: 3px 9px; border-radius: 50px; white-space: nowrap; }
+    .card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; flex-shrink: 0; }
+    .card-rating { font-family: 'Unbounded', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--orange); white-space: nowrap; }
+    .btn-cta { background: var(--orange); color: white; padding: 9px 18px; border-radius: 8px; font-weight: 600; font-size: 0.82rem; transition: background 0.2s; white-space: nowrap; display: inline-block; }
+    .btn-cta:hover { background: var(--orange-dark); text-decoration: none; color: white; }
+    .review-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; margin-bottom: 20px; }
+    .review-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+    .review-num { font-family: 'Unbounded', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--orange); width: 36px; flex-shrink: 0; }
+    .review-title-block h3 { color: var(--white); margin: 0 0 2px; }
+    .review-subtitle { font-size: 0.8rem; color: var(--text-muted); }
+    .review-rating-badge { margin-left: auto; font-family: 'Unbounded', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--orange); flex-shrink: 0; }
+    .review-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.75; }
+    .key-features { background: var(--card2); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; }
+    .key-features h4 { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .kf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 4px 16px; }
+    .kf-item { font-size: 0.82rem; color: var(--text); padding: 3px 0; }
+    .kf-item span { color: var(--text-muted); }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .pros, .cons { background: var(--dark2); border-radius: 8px; padding: 12px 14px; }
+    .pros h4 { color: var(--green); font-size: 0.78rem; margin-bottom: 6px; }
+    .cons h4 { color: var(--red); font-size: 0.78rem; margin-bottom: 6px; }
+    .pros ul, .cons ul { padding-left: 1.1rem; margin: 0; }
+    .pros li, .cons li { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 3px; }
+    .review-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .review-price { font-size: 0.85rem; color: var(--text-muted); }
+    .review-price strong { color: var(--white); font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.81rem; }
+    thead tr { background: var(--card2); }
+    thead th { padding: 11px 13px; text-align: left; color: var(--text-muted); font-weight: 600; font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; border-bottom: 1px solid var(--border); }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(249,115,22,0.03); }
+    tbody td { padding: 11px 13px; color: var(--text); vertical-align: middle; }
+    tbody td:first-child { font-weight: 600; color: var(--white); }
+    .td-yes { color: var(--green); font-weight: 600; }
+    .td-no { color: var(--text-muted); }
+    .td-mark { color: var(--orange); font-weight: 700; }
+    .alert { background: rgba(249,115,22,0.07); border: 1px solid rgba(249,115,22,0.2); border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 16px 20px; margin: 20px 0; font-size: 0.88rem; color: var(--text-muted); }
+    .alert strong { color: var(--orange); }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+    .info-card { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: var(--radius); padding: 18px; }
+    .info-card .icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .info-card h4 { color: var(--white); font-size: 0.9rem; margin-bottom: 5px; }
+    .info-card p { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 8px 0 8px 26px; position: relative; color: var(--text-muted); font-size: 0.88rem; border-bottom: 1px solid rgba(30,41,59,0.5); }
+    .checklist li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+    .checklist li:last-child { border-bottom: none; }
+    .step-list { list-style: none; padding: 0; counter-reset: steps; }
+    .step-list li { counter-increment: steps; padding: 14px 0 14px 52px; position: relative; border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
+    .step-list li:last-child { border-bottom: none; }
+    .step-list li::before { content: counter(steps); position: absolute; left: 0; top: 12px; width: 32px; height: 32px; background: var(--orange); color: white; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 0.8rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .step-list li strong { color: var(--white); display: block; margin-bottom: 4px; }
+    .code-block { background: #0a0f1e; border: 1px solid #1e293b; border-radius: 8px; padding: 12px 16px; font-family: 'Courier New', monospace; font-size: 0.8rem; color: #94a3b8; margin: 10px 0; overflow-x: auto; }
+    .code-block .prompt { color: var(--orange); }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-family: 'Unbounded', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--white); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-q::after { content: '+'; color: var(--orange); font-size: 1.3rem; font-weight: 400; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { display: none; padding-top: 10px; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+    .summary-cta { background: linear-gradient(135deg, var(--card) 0%, #001a2c 100%); border: 1px solid rgba(249,115,22,0.3); border-radius: var(--radius); padding: 28px 32px; text-align: center; margin: 36px 0; }
+    .summary-cta h2 { color: var(--white); margin-bottom: 10px; font-size: 1.3rem; }
+    .summary-cta p { color: var(--text-muted); max-width: 520px; margin: 0 auto 20px; font-size: 0.9rem; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-secondary { background: transparent; color: var(--orange); border: 1px solid var(--orange); padding: 9px 18px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; display: inline-block; }
+    .btn-secondary:hover { background: var(--orange); color: white; text-decoration: none; }
+    .conclusion-card { background: var(--card); border: 1px solid rgba(249,115,22,0.25); border-radius: var(--radius); padding: 28px; }
+    .conclusion-card h2 { color: var(--white); margin-bottom: 14px; }
+    footer { background: #070d1a; border-top: 1px solid var(--border); padding: 36px 0 20px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: 28px; margin-bottom: 32px; }
+    .footer-brand p { font-size: 0.83rem; color: var(--text-muted); margin-top: 10px; }
+    .footer-col h4 { font-family: 'Unbounded', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 7px; }
+    .footer-col a { color: var(--text-muted); font-size: 0.83rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.78rem; color: var(--text-muted); }
+    .footer-bottom a { color: var(--text-muted); }
+    .footer-bottom a:hover { color: var(--orange); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--dark2); padding: 14px 20px; border-bottom: 1px solid var(--border); z-index: 99; }
+      .burger { display: block; }
+      .toplist-card { grid-template-columns: 40px 1fr; }
+      .card-right { flex-direction: row; align-items: center; grid-column: 1 / -1; justify-content: flex-end; }
+      .pros-cons { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .toplist-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="#f97316"/>
+        <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+        <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+        <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+        <circle cx="30" cy="25.5" r="5" fill="white"/>
+        <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="logo-text">VPS<span>Хостинг</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#rating">Рейтинг</a></li>
+      <li><a href="#obzory">Обзоры</a></li>
+      <li><a href="#sravnenie">Сравнение</a></li>
+      <li><a href="#tarify">Тарифы</a></li>
+      <li><a href="#arenda">Аренда VPS</a></li>
+      <li><a href="#nastrojka">Настройка</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#rating" class="nav-cta">Выбрать VPS →</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Главная</a> / VPS для Telegram</div>
+    <div class="hero-badge">✅ Обновлено: май 2026</div>
+    <h1>Лучший <span>VPS для Telegram</span> в 2026 году</h1>
+    <p class="hero-sub">С февраля 2026 года Telegram в России работает нестабильно — мессенджер частично заблокирован и испытывает серьёзные замедления у большинства операторов. В этом материале вы узнаете, какие VPS серверы для Телеграма лучше всего подходят для размещения ботов, настройки прокси и восстановления стабильного доступа — с персональной поддержкой и арендой от 299 рублей в месяц.</p>
+    <div class="hero-meta">
+      <span>🖥 8 провайдеров</span>
+      <span>🌍 Серверы в Европе</span>
+      <span>🤖 Боты и прокси</span>
+      <span>💳 Оплата из РФ</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY VPS FOR TELEGRAM -->
+<section>
+  <div class="container">
+    <div class="section-label">Контекст</div>
+    <h2>Telegram в России в 2026 году: что происходит</h2>
+    <p>В феврале 2026 года Роскомнадзор существенно ограничил работу Telegram на территории России. У большинства операторов — Ростелеком, МТС, Билайн, Мегафон — мессенджер работает с перебоями: сообщения доходят с задержкой, медиафайлы не загружаются, голосовые и видеозвонки недоступны. Ситуация затронула как обычных пользователей, так и бизнес, использующий Telegram-ботов и каналы для коммуникации с клиентами.</p>
+    <p>VPS-сервер становится практичным решением для нескольких сценариев одновременно: настройки персонального прокси для Telegram, круглосуточного хостинга ботов без зависимости от домашнего интернета, а также развёртывания Telegram-клиентов для автоматизации процессов.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="icon">🔌</div>
+        <h4>MTProto Proxy</h4>
+        <p>Собственный MTProto-прокси на зарубежном VPS обеспечивает стабильный доступ к Telegram, минуя ограничения на уровне оператора.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🤖</div>
+        <h4>Хостинг ботов 24/7</h4>
+        <p>VPS для Телеграм бота работает круглосуточно независимо от вашего домашнего соединения. Бот не теряет сообщения и отвечает мгновенно.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">👤</div>
+        <h4>Userbot и автоматизация</h4>
+        <p>Userbot (Pyrogram, Telethon) на VPS позволяет автоматизировать работу с аккаунтами: рассылки, парсинг, мониторинг каналов.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🔒</div>
+        <h4>SOCKS5 прокси</h4>
+        <p>Простой SOCKS5-прокси на VPS в Европе даёт стабильный канал для Telegram без сложной настройки — достаточно вписать адрес в настройках приложения.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPLIST -->
+<section id="rating">
+  <div class="container">
+    <div class="section-label">Рейтинг</div>
+    <h2>ТОП-8 VPS серверов для Telegram в 2026 году</h2>
+    <p style="color:var(--text-muted); margin-bottom: 28px;">Для хостинга Telegram-ботов и прокси важны стабильный аптайм, зарубежная локация с хорошим пингом и надёжная сеть. Все провайдеры ниже принимают оплату из России и протестированы на совместимость с инфраструктурой Telegram.</p>
+
+    <div class="toplist-card top1">
+      <div class="card-number">1</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">is*hosting</span><span class="ribbon">★ Выбор редакции</span></div>
+        <p class="card-desc">44 страны, NVMe и KVM — идеальный VPS для Telegram с максимальным выбором локаций и тестом 7 дней без предоплаты.</p>
+        <div class="card-features"><span class="feat">🌍 44 страны</span><span class="feat">⚡ NVMe SSD</span><span class="feat">🖥 KVM</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">💳 Оплата из РФ</span><span class="feat">🤖 Боты и прокси</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.6/10</div><a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">2</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">AdminVPS</span><span class="ribbon green">Поддержка 24/7</span></div>
+        <p class="card-desc">Серверы в Германии и Нидерландах, русская поддержка и бесплатные ежедневные бэкапы — лучший выбор для бизнес-ботов и критичных сервисов.</p>
+        <div class="card-features"><span class="feat">🇩🇪 Германия</span><span class="feat">🇳🇱 Нидерланды</span><span class="feat">🔄 Бэкапы включены</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">🇷🇺 Поддержка 24/7</span><span class="feat">⚡ NVMe</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.4/10</div><a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">3</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Timeweb Cloud</span><span class="ribbon teal">Финляндия</span></div>
+        <p class="card-desc">VPS в Финляндии (~20 мс из Москвы) с почасовой оплатой и удобной панелью — оптимально для быстрого старта ботов и прокси.</p>
+        <div class="card-features"><span class="feat">🇫🇮 Финляндия</span><span class="feat">⏰ Почасовая оплата</span><span class="feat">⚡ NVMe</span><span class="feat">🖥 Удобная панель</span><span class="feat">🇷🇺 Поддержка 24/7</span><span class="feat">🛡 DDoS</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.1/10</div><a href="https://timeweb.cloud/?i=122157" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">4</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Fornex</span><span class="ribbon blue">ЕС юрисдикция</span></div>
+        <p class="card-desc">Испанская юрисдикция и серверы в Германии, Нидерландах и Швейцарии — надёжно и стабильно для долгосрочных Telegram-проектов.</p>
+        <div class="card-features"><span class="feat">🇪🇸 Испания (юрисдикция)</span><span class="feat">🇩🇪🇳🇱🇨🇭 3 локации ЕС</span><span class="feat">🛡 DDoS защита</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">🖥 KVM</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.9/10</div><a href="https://fornex.com/c/fn8i35/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">5</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Ufo.hosting</span><span class="ribbon purple">Глобальная сеть</span></div>
+        <p class="card-desc">Широкий выбор локаций по всему миру — подберите сервер ближе к аудитории вашего бота для минимальной задержки ответов.</p>
+        <div class="card-features"><span class="feat">🌏 Глобальные локации</span><span class="feat">⚡ NVMe SSD</span><span class="feat">🛡 DDoS защита</span><span class="feat">🖥 KVM</span><span class="feat">💳 Оплата из РФ</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.8/10</div><a href="https://ufo.hosting/?from=934984" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">6</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Beget</span><span class="ribbon slate">Надёжность</span></div>
+        <p class="card-desc">Крупный стабильный российский провайдер с автобэкапами — хорошо подходит для ботов, работающих с российскими пользователями без зарубежного трафика.</p>
+        <div class="card-features"><span class="feat">🇷🇺 Россия</span><span class="feat">🔄 Автобэкапы</span><span class="feat">⚡ NVMe</span><span class="feat">🛡 DDoS</span><span class="feat">🇷🇺 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.5/10</div><a href="https://beget.com/ru" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">7</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Spaceweb</span><span class="ribbon slate">Стабильность</span></div>
+        <p class="card-desc">Проверенный хостинг с 2005 года — прозрачные тарифы и поддержка 24/7. Подходит для ботов на российских серверах без особых требований к локации.</p>
+        <div class="card-features"><span class="feat">🇷🇺 Россия</span><span class="feat">⚡ SSD</span><span class="feat">🛡 DDoS</span><span class="feat">🖥 KVM</span><span class="feat">💬 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.3/10</div><a href="https://sweb.ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">8</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">The Hosting</span><span class="ribbon slate">Бюджетный старт</span></div>
+        <p class="card-desc">Самый доступный вариант для первого бота или тестового прокси — минимальные расходы при знакомстве с технологией VPS.</p>
+        <div class="card-features"><span class="feat">💰 от 250 ₽/мес</span><span class="feat">⚡ SSD</span><span class="feat">🖥 KVM</span><span class="feat">🛡 DDoS</span><span class="feat">🇷🇺 Поддержка</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.0/10</div><a href="https://the.hosting/ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="obzory">
+  <div class="container">
+    <div class="section-label">Обзоры</div>
+    <h2>Подробные обзоры провайдеров</h2>
+    <p style="color:var(--text-muted); margin-bottom: 28px;">Детальный разбор каждого провайдера — ключевые характеристики, плюсы, минусы и рекомендации для задач, связанных с Telegram.</p>
+
+    <!-- 1 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">1</div><div class="review-title-block"><h3>is*hosting</h3><div class="review-subtitle">Лучший выбор для Telegram: 44 страны, NVMe, тест 7 дней</div></div><div class="review-rating-badge">⭐ 9.6/10</div></div>
+      <p class="review-desc">is*hosting — эстонский провайдер с серверами в 44 странах. Для задач Telegram это означает возможность выбрать оптимальную точку присутствия: Нидерланды и Германия дают хорошую связность с серверами Telegram, а Финляндия и Латвия — минимальный пинг из России. KVM-виртуализация позволяет устанавливать любые зависимости для Python-ботов (aiogram, python-telegram-bot), Userbot-фреймворков (Pyrogram, Telethon) и MTProto-прокси без каких-либо ограничений. VPS сервер для Телеграм бота на is*hosting — доступен с первой минуты после регистрации, без предоплаты на период теста.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>44 страны, 50+ городов</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Базовая фильтрация</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней (Linux)</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, СБП, крипта</span></div>
+        <div class="kf-item">🤖 Telegram: <span>Без ограничений</span></div>
+        <div class="kf-item">📞 Поддержка: <span>EN / частично RU</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Максимальный выбор локаций для Telegram</li><li>Нет ограничений на Telegram-трафик</li><li>NVMe-диски для быстрого I/O ботов</li><li>Тест 7 дней без карты</li><li>IPv6 /64 включён бесплатно</li><li>Оплата криптовалютой</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Поддержка преимущественно на английском</li><li>Немного дороже российских провайдеров</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>~370 ₽/мес</strong> ($3.99)</div><a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">2</div><div class="review-title-block"><h3>AdminVPS</h3><div class="review-subtitle">Русская поддержка 24/7 + бесплатные бэкапы для бизнес-ботов</div></div><div class="review-rating-badge">⭐ 9.4/10</div></div>
+      <p class="review-desc">AdminVPS — российский провайдер с серверами в Германии, Нидерландах и Финляндии. Ежедневные автобэкапы в базовой цене — критически важно для ботов с базами данных пользователей, где потеря данных недопустима. Поддержка на русском языке 24/7 оперативно поможет с настройкой окружения для любого Telegram-фреймворка. Серверы Tier III гарантируют аптайм 99.9% — бот не пропустит ни одного сообщения.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>РФ, DE, NL, FI, BY, KZ</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Anti-DDoS включён</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней</span></div>
+        <div class="kf-item">🔄 Бэкапы: <span>Ежедневные, бесплатно</span></div>
+        <div class="kf-item">🏢 Дата-центр: <span>Tier III</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Поддержка на русском языке 24/7</li><li>Ежедневные бэкапы без доплаты</li><li>Серверы в Германии и Нидерландах</li><li>Tier III — аптайм 99.9%</li><li>Оплата СБП, картой РФ, криптой</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Меньше европейских локаций, чем у is*hosting</li><li>Панель управления устаревшая</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>299 ₽/мес</strong></div><a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">3</div><div class="review-title-block"><h3>Timeweb Cloud</h3><div class="review-subtitle">Финляндия, почасовая оплата и лучшая панель управления</div></div><div class="review-rating-badge">⭐ 9.1/10</div></div>
+      <p class="review-desc">Timeweb Cloud выделяется самой удобной панелью управления в рейтинге: развернуть сервер с Ubuntu и запустить Telegram-бота можно в несколько кликов без командной строки. Финляндия — ближайшая к России европейская локация с пингом ~20 мс из Москвы. Почасовая тарификация удобна для тестирования: запустите сервер, проверьте работу бота и заплатите лишь за несколько часов.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия, Финляндия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM / Cloud</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">⏰ Тарификация: <span>Почасовая</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>L3/L4</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, СБП</span></div>
+        <div class="kf-item">📊 Панель: <span>Собственная, удобная</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Финляндия — минимальный пинг из России</li><li>Лучшая панель управления в рейтинге</li><li>Почасовая оплата для тестирования</li><li>Docker и готовые образы для ботов</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только одна европейская локация</li><li>Ограниченный трафик на стартовых тарифах</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>290 ₽/мес</strong></div><a href="https://timeweb.cloud/?i=122157" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">4</div><div class="review-title-block"><h3>Fornex</h3><div class="review-subtitle">Европейская юрисдикция для долгосрочных проектов</div></div><div class="review-rating-badge">⭐ 8.9/10</div></div>
+      <p class="review-desc">Fornex — испанский провайдер (по юрисдикции) с серверами в Германии, Нидерландах и Швейцарии. Подходит для серьёзных Telegram-проектов, где важна стабильность и репутация провайдера: сервис используется крупными российскими интернет-компаниями годами. Тест 7 дней доступен при регистрации — удобно для проверки стабильности соединения с серверами Telegram.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>DE, NL, CH, RU, UA</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Включён</span></div>
+        <div class="kf-item">⚖️ Юрисдикция: <span>Испания (ЕС)</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней</span></div>
+        <div class="kf-item">🤖 Telegram: <span>Без ограничений</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU / EN</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Европейская юрисдикция (Испания)</li><li>Надёжная репутация среди крупных компаний</li><li>3 европейских локации</li><li>Стабильная работа многие годы</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Цены выше бюджетных конкурентов</li><li>Диски SSD, а не NVMe</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>374 ₽/мес</strong></div><a href="https://fornex.com/c/fn8i35/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 5 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">5</div><div class="review-title-block"><h3>Ufo.hosting</h3><div class="review-subtitle">Глобальная сеть для Telegram-ботов с международной аудиторией</div></div><div class="review-rating-badge">⭐ 8.8/10</div></div>
+      <p class="review-desc">Ufo.hosting предлагает серверы по всему миру, что актуально для ботов с аудиторией за пределами России: выберите локацию ближе к пользователям — в Азии, Европе или Америке — для снижения задержки ответов. NVMe-диски обеспечивают быстрый доступ к базам данных ботов даже при высоких нагрузках.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Глобальная сеть</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Включён</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, крипта</span></div>
+        <div class="kf-item">🆓 Тест: <span>—</span></div>
+        <div class="kf-item">🤖 Telegram: <span>Без ограничений</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU / EN</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Большой выбор международных локаций</li><li>NVMe-диски на всех тарифах</li><li>Оплата из России</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Нет тестового периода</li><li>Поддержка менее оперативная</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>490 ₽/мес</strong></div><a href="https://ufo.hosting/?from=934984" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 6 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">6</div><div class="review-title-block"><h3>Beget</h3><div class="review-subtitle">Надёжный российский хостинг для простых ботов</div></div><div class="review-rating-badge">⭐ 8.5/10</div></div>
+      <p class="review-desc">Beget — один из самых стабильных российских провайдеров с автобэкапами и S3-хранилищем. Подходит для Telegram-ботов, которые не требуют зарубежного IP: например, корпоративные боты, работающие через российские каналы связи или уже имеющие настроенный прокси. NVMe-диски обеспечивают быструю работу баз данных SQLite и PostgreSQL.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🔄 Бэкапы: <span>Автоматические</span></div>
+        <div class="kf-item">☁️ S3: <span>Хранилище включено</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Включён</span></div>
+        <div class="kf-item">💳 Оплата: <span>Все способы РФ</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Один из самых надёжных провайдеров в России</li><li>Автобэкапы и S3-хранилище включены</li><li>Удобная панель, подходит для новичков</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>Для прямого доступа к Telegram нужен прокси</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>350 ₽/мес</strong></div><a href="https://beget.com/ru" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 7 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">7</div><div class="review-title-block"><h3>Spaceweb</h3><div class="review-subtitle">Стабильный хостинг с 2005 года для российских ботов</div></div><div class="review-rating-badge">⭐ 8.3/10</div></div>
+      <p class="review-desc">Spaceweb предлагает KVM-серверы с SSD-дисками и бесплатной DDoS-защитой. Все серверы в России, поэтому для стабильного доступа к Telegram потребуется настроить прокси прямо на сервере. Прозрачные тарифы без скрытых платежей и поддержка 24/7 на русском делают провайдера надёжным выбором для некритичных Telegram-сервисов.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Бесплатно</span></div>
+        <div class="kf-item">🔐 SSL: <span>Бесплатный</span></div>
+        <div class="kf-item">💳 Оплата: <span>Все способы РФ</span></div>
+        <div class="kf-item">🏢 На рынке: <span>С 2005 года</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>15+ лет на рынке — проверенная стабильность</li><li>Прозрачные тарифы без сюрпризов</li><li>Бесплатный SSL и DDoS-защита</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>Нет масштабирования и облачных функций</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>389 ₽/мес</strong></div><a href="https://sweb.ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 8 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">8</div><div class="review-title-block"><h3>The Hosting</h3><div class="review-subtitle">Бюджетный старт для первого бота</div></div><div class="review-rating-badge">⭐ 8.0/10</div></div>
+      <p class="review-desc">The Hosting — самый доступный вариант для тех, кто только начинает работу с Telegram-ботами и хочет минимизировать расходы на старте. Базовый KVM-сервер с SSD справится с ботом с небольшой аудиторией. Для серьёзных коммерческих проектов рекомендуем рассмотреть провайдеров из топ-5 с более широкими возможностями.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Базовая</span></div>
+        <div class="kf-item">💰 Цена: <span>от 250 ₽/мес</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ</span></div>
+        <div class="kf-item">⚡ Запуск: <span>Быстрый деплой</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Самая низкая цена в рейтинге</li><li>KVM-виртуализация</li><li>Простой и быстрый старт</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>Ограниченный потенциал масштабирования</li><li>Поддержка менее расширенная</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>250 ₽/мес</strong></div><a href="https://the.hosting/ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="sravnenie">
+  <div class="container">
+    <div class="section-label">Сравнение</div>
+    <h2>Сравнение VPS провайдеров для Telegram</h2>
+    <p>Для задач, связанных с Telegram, два параметра имеют первостепенное значение: наличие зарубежных серверов (без них бот или прокси не смогут стабильно обращаться к API Telegram из России в 2026 году) и аптайм. Остальные критерии — диск, тарификация, бэкапы — влияют на удобство работы и стоимость.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Провайдер</th><th>Цена от</th><th>Зарубежные локации</th><th>Диск</th><th>KVM</th><th>Аптайм SLA</th><th>Тест</th><th>Бэкапы</th><th>Поддержка RU</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>is*hosting</td><td class="td-mark">~370 ₽</td><td class="td-yes">44 страны</td><td>NVMe</td><td class="td-yes">✓</td><td>99.9%</td><td class="td-yes">7 дней</td><td>Платно</td><td class="td-no">Частично</td></tr>
+          <tr><td>AdminVPS</td><td class="td-mark">299 ₽</td><td class="td-yes">DE, NL, FI</td><td>NVMe</td><td class="td-yes">✓</td><td>99.9%</td><td class="td-yes">7 дней</td><td class="td-yes">✓ Бесплатно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>Timeweb Cloud</td><td>290 ₽</td><td class="td-yes">Финляндия</td><td>NVMe</td><td class="td-yes">✓</td><td>99.9%</td><td class="td-yes">Есть</td><td>Платно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>Fornex</td><td>374 ₽</td><td class="td-yes">DE, NL, CH</td><td>SSD</td><td class="td-yes">✓</td><td>99.9%</td><td class="td-yes">7 дней</td><td>Платно</td><td class="td-yes">✓</td></tr>
+          <tr><td>Ufo.hosting</td><td>490 ₽</td><td class="td-yes">Глобально</td><td>NVMe</td><td class="td-yes">✓</td><td>99.9%</td><td class="td-no">—</td><td>Платно</td><td class="td-no">Частично</td></tr>
+          <tr><td>Beget</td><td>350 ₽</td><td class="td-no">—</td><td>NVMe</td><td class="td-yes">✓</td><td>99.9%</td><td class="td-no">—</td><td class="td-yes">✓ Бесплатно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>Spaceweb</td><td>389 ₽</td><td class="td-no">—</td><td>SSD</td><td class="td-yes">✓</td><td>99.9%</td><td class="td-no">—</td><td>Платно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>The Hosting</td><td>250 ₽</td><td class="td-no">—</td><td>SSD</td><td class="td-yes">✓</td><td>—</td><td class="td-no">—</td><td>Платно</td><td class="td-yes">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert"><strong>💡 Вывод:</strong> Для Telegram-бота или прокси, которым нужен стабильный доступ к API, выбирайте провайдеров из топ-5 с зарубежными серверами. Beget и Spaceweb подойдут только если ваш бот работает через отдельный прокси-слой или у него нет требований к зарубежному IP.</div>
+  </div>
+</section>
+
+<!-- TARIFFS -->
+<section id="tarify">
+  <div class="container">
+    <div class="section-label">Тарифы</div>
+    <h2>VPS тарифы для Telegram: сколько ресурсов нужно</h2>
+    <p>Тарифные планы VPS-хостинга определяют доступные ресурсы: объём оперативной памяти, процессорные мощности, дисковое пространство и пропускную способность. Для Telegram-ботов и прокси требования относительно скромные, но они зависят от типа задачи и масштаба аудитории.</p>
+    <p>Простой бот на Python с аудиторией до 1 000 пользователей уместится на минимальном тарифе за 300 рублей. Бот с базой данных, медиафайлами и 10 000+ активными пользователями потребует минимум 2 ГБ RAM и NVMe-диск. MTProto-прокси для нескольких десятков пользователей занимает менее 100 МБ RAM и практически не нагружает CPU.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Провайдер</th><th>Стартовый тариф</th><th>CPU</th><th>RAM</th><th>Диск</th><th>Трафик</th><th>Тип оплаты</th><th>Бэкапы</th></tr></thead>
+        <tbody>
+          <tr><td>is*hosting</td><td class="td-mark">~370 ₽/мес</td><td>1 vCPU</td><td>512 МБ</td><td>10 ГБ NVMe</td><td>1 ТБ</td><td>Помесячно</td><td>Платно</td></tr>
+          <tr><td>AdminVPS</td><td class="td-mark">299 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>15 ГБ NVMe</td><td>Безлимит</td><td>Помесячно</td><td class="td-yes">✓ Бесплатно</td></tr>
+          <tr><td>Timeweb Cloud</td><td>290 ₽/мес</td><td>1 vCPU</td><td>512 МБ</td><td>15 ГБ NVMe</td><td>200 ГБ</td><td class="td-mark">⏰ Почасовая</td><td>Платно</td></tr>
+          <tr><td>Fornex</td><td>374 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ SSD</td><td>1 ТБ</td><td>Помесячно</td><td>Платно</td></tr>
+          <tr><td>Ufo.hosting</td><td>490 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ NVMe</td><td>1 ТБ</td><td>Помесячно</td><td>Платно</td></tr>
+          <tr><td>Beget</td><td>350 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ NVMe</td><td>1 ТБ</td><td>Помесячно</td><td class="td-yes">✓ Бесплатно</td></tr>
+          <tr><td>Spaceweb</td><td>389 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ SSD</td><td>1 ТБ</td><td>Помесячно</td><td>Платно</td></tr>
+          <tr><td>The Hosting</td><td>250 ₽/мес</td><td>1 vCPU</td><td>512 МБ</td><td>10 ГБ SSD</td><td>500 ГБ</td><td>Помесячно</td><td>Платно</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--text-muted); font-size:0.88rem; margin-top: 12px;">AdminVPS предлагает лучшее соотношение цены и ресурсов: 1 ГБ RAM, NVMe и бесплатные ежедневные бэкапы за 299 ₽. Для Telegram-бота с базой данных это оптимальный выбор на старте. Timeweb Cloud удобен почасовой оплатой — протестируйте бота за несколько часов и платите только за реальное использование.</p>
+    <div class="alert"><strong>💡 Минимальные ресурсы по задачам:</strong> MTProto-прокси — 512 МБ RAM, 1 vCPU. Простой бот (Python/Node.js) — 512 МБ–1 ГБ RAM. Бот с БД и медиа — от 2 ГБ RAM, NVMe. Userbot (Pyrogram/Telethon) — 1 ГБ RAM. Несколько ботов на одном сервере — от 2 ГБ RAM.</div>
+  </div>
+</section>
+
+<!-- RENT -->
+<section id="arenda">
+  <div class="container">
+    <div class="section-label">Аренда VPS</div>
+    <h2>Аренда VPS для Telegram: преимущества и риски</h2>
+    <p>Аренда VPS для Telegram — это аренда виртуального сервера у хостинг-провайдера, на котором вы размещаете бота, прокси или клиент Telegram. Сервер работает 24/7 независимо от состояния вашего домашнего интернета или мобильного устройства. Ниже — ключевые преимущества и реальные риски этого подхода.</p>
+    <div class="info-grid">
+      <div class="info-card"><div class="icon">⏰</div><h4>Работа 24/7</h4><p>Сервер не зависит от вашего домашнего интернета, мобильного устройства или отключения электричества. Бот отвечает на сообщения круглосуточно.</p></div>
+      <div class="info-card"><div class="icon">🌍</div><h4>Зарубежный IP</h4><p>VPS в Европе обеспечивает стабильный доступ к API Telegram из России даже при ограничениях на уровне операторов связи.</p></div>
+      <div class="info-card"><div class="icon">📈</div><h4>Масштабируемость</h4><p>По мере роста аудитории бота вы можете мгновенно увеличить RAM и CPU без переноса проекта — прямо в панели управления.</p></div>
+      <div class="info-card"><div class="icon">💾</div><h4>Хранение данных</h4><p>База данных, медиафайлы и логи бота хранятся на надёжном серверном SSD с регулярными бэкапами, а не на вашем ноутбуке.</p></div>
+    </div>
+
+    <h3>Риски аренды VPS для Telegram</h3>
+    <p>Перед принятием решения об аренде стоит учесть следующие особенности и возможные сложности:</p>
+    <ul class="checklist">
+      <li><strong>Требуются базовые знания Linux:</strong> настройка бота на VPS предполагает работу с командной строкой. Однако современные инструменты (Docker, готовые образы, панели управления Timeweb) значительно упрощают этот процесс для новичков.</li>
+      <li><strong>Регулярные расходы:</strong> аренда подразумевает ежемесячные платежи. При минимальном тарифе за 300 ₽/мес годовые расходы составят около 3 600 рублей. Оцените соотношение с ценностью проекта заранее.</li>
+      <li><strong>Безопасность сервера:</strong> открытый SSH-порт по умолчанию привлекает автоматические атаки ботов. Необходимо минимально настроить безопасность: сменить порт, установить fail2ban и использовать SSH-ключи вместо паролей.</li>
+      <li><strong>Зависимость от провайдера:</strong> при проблемах у провайдера (технические работы, DDoS на дата-центр) бот будет недоступен. Выбирайте провайдеров с SLA 99.9% и историей стабильной работы.</li>
+      <li><strong>Политика использования (ToS):</strong> уточните у провайдера, не ограничивает ли ToS работу автоматизированных скриптов или Telegram-ботов. Большинство провайдеров из рейтинга не накладывают таких ограничений.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="nastrojka">
+  <div class="container">
+    <div class="section-label">Настройка</div>
+    <h2>Как настроить VPS для Telegram: пошаговое руководство</h2>
+    <p>После получения VPS выполните следующие шаги, чтобы развернуть бота или прокси для Telegram. Руководство рассчитано на Ubuntu 22.04 LTS — рекомендуемую ОС для большинства задач.</p>
+
+    <ol class="step-list">
+      <li>
+        <strong>Подключитесь к серверу и обновите систему</strong>
+        Используйте SSH для подключения, затем обновите пакеты:
+        <div class="code-block"><span class="prompt">$</span> ssh root@ВАШ_IP && apt update && apt upgrade -y</div>
+        После обновления перезагрузите сервер: <code style="background:#0a0f1e; padding:2px 7px; border-radius:4px; font-size:0.8rem; color:#f97316;">reboot</code>
+      </li>
+      <li>
+        <strong>Установите Python и зависимости для бота</strong>
+        Большинство современных Telegram-ботов написаны на Python:
+        <div class="code-block"><span class="prompt">$</span> apt install python3 python3-pip python3-venv -y<br><span class="prompt">$</span> pip3 install aiogram  <span style="color:#475569;"># или python-telegram-bot</span></div>
+        Для Node.js-ботов: <code style="background:#0a0f1e; padding:2px 7px; border-radius:4px; font-size:0.8rem; color:#f97316;">apt install nodejs npm -y</code>
+      </li>
+      <li>
+        <strong>Загрузите код бота и настройте переменные окружения</strong>
+        Загрузите код через Git или SFTP, создайте файл с токеном бота:
+        <div class="code-block"><span class="prompt">$</span> git clone https://github.com/ваш-репозиторий/bot.git && cd bot<br><span class="prompt">$</span> echo "BOT_TOKEN=ваш_токен" > .env</div>
+        Никогда не храните токен прямо в коде — только в переменных окружения или файле .env, добавленном в .gitignore.
+      </li>
+      <li>
+        <strong>Запустите бота как системный сервис</strong>
+        Используйте systemd или screen для запуска бота в фоне с автозапуском после перезагрузки:
+        <div class="code-block"><span class="prompt">$</span> nano /etc/systemd/system/mybot.service</div>
+        Вставьте в файл описание сервиса, затем:
+        <div class="code-block"><span class="prompt">$</span> systemctl enable mybot && systemctl start mybot</div>
+      </li>
+      <li>
+        <strong>Настройте MTProto-прокси или SOCKS5 (опционально)</strong>
+        Для прокси для Telegram на VPS — установка MTProto-сервера одной командой:
+        <div class="code-block"><span class="prompt">$</span> curl -fsSL https://github.com/alexbers/mtprotoproxy/releases/latest/download/install.sh | bash</div>
+        После установки вы получите ссылку вида <code style="background:#0a0f1e; padding:2px 7px; border-radius:4px; font-size:0.8rem; color:#f97316;">tg://proxy?server=IP&port=443&secret=...</code> — добавьте её в настройки Telegram на мобильном или ПК.
+      </li>
+      <li>
+        <strong>Настройте базовую безопасность сервера</strong>
+        Минимальный набор для защиты от автоматических атак:
+        <div class="code-block"><span class="prompt">$</span> apt install ufw fail2ban -y<br><span class="prompt">$</span> ufw allow 2222/tcp && ufw allow 443/tcp && ufw enable</div>
+        Смените стандартный порт SSH с 22 на 2222 в файле <code style="background:#0a0f1e; padding:2px 7px; border-radius:4px; font-size:0.8rem; color:#f97316;">/etc/ssh/sshd_config</code>.
+      </li>
+    </ol>
+
+    <h3 style="margin-top:32px;">Способы запуска Telegram-бота на VPS</h3>
+    <p style="color:var(--text-muted);">Существует несколько подходов к размещению бота — выбор зависит от ваших технических навыков и требований к надёжности.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Способ</th><th>Сложность</th><th>Надёжность</th><th>Автозапуск</th><th>Рекомендован для</th></tr></thead>
+        <tbody>
+          <tr><td>systemd сервис</td><td class="td-yes">Средняя</td><td class="td-mark">⭐ Высокая</td><td class="td-yes">✓ Да</td><td>Производственные боты</td></tr>
+          <tr><td>Docker контейнер</td><td>Средняя</td><td class="td-mark">⭐ Высокая</td><td class="td-yes">✓ Да</td><td>Сложные боты с зависимостями</td></tr>
+          <tr><td>screen / tmux</td><td class="td-yes">Низкая</td><td>Средняя</td><td class="td-no">✗ Нет</td><td>Тестирование и разработка</td></tr>
+          <tr><td>supervisor</td><td>Средняя</td><td class="td-mark">⭐ Высокая</td><td class="td-yes">✓ Да</td><td>Несколько ботов на одном сервере</td></tr>
+          <tr><td>nohup &amp;</td><td class="td-yes">Низкая</td><td class="td-no">Низкая</td><td class="td-no">✗ Нет</td><td>Не рекомендуется</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert"><strong>💡 Рекомендация:</strong> Для большинства ботов оптимален запуск через <strong>systemd</strong> — он встроен в Ubuntu, обеспечивает автоматический рестарт при падении бота и работает без дополнительных зависимостей. Docker удобен, если у вас уже есть опыт работы с контейнерами или бот требует специфического окружения.</div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="summary-cta">
+    <h2>Готовы запустить Telegram-бота на VPS?</h2>
+    <p>Начните с бесплатного теста. is*hosting и AdminVPS предоставляют 7 дней без предоплаты — достаточно, чтобы развернуть бота и убедиться в стабильности соединения.</p>
+    <div class="cta-btns">
+      <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">is*hosting — тест 7 дней →</a>
+      <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-secondary">AdminVPS — от 299 ₽ →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Часто задаваемые вопросы</h2>
+
+    <div class="faq-item open">
+      <div class="faq-q">Зачем нужен VPS для Telegram-бота, если можно запустить на компьютере?</div>
+      <div class="faq-a">Бот на домашнем компьютере работает только пока компьютер включён и имеет интернет-соединение. VPS обеспечивает работу 24/7 без вашего участия — бот отвечает на сообщения в любое время суток, не теряет сообщения при перезагрузке ПК и не зависит от качества домашнего интернета. Для коммерческого бота, обрабатывающего заказы или поддержку клиентов, это принципиально важно.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Какие минимальные характеристики VPS нужны для Telegram-бота?</div>
+      <div class="faq-a">Для простого бота на Python (aiogram, python-telegram-bot) с аудиторией до 1 000 пользователей достаточно: 1 vCPU, 512 МБ RAM, 10 ГБ SSD. Для бота с базой данных, файловым хранилищем или высокой нагрузкой — от 1 ГБ RAM и NVMe-диска. Для VPS сервера для Телеграм бота с несколькими модулями или множеством одновременных разговоров — от 2 ГБ RAM.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Нужен ли зарубежный VPS для Telegram-бота в России в 2026 году?</div>
+      <div class="faq-a">В 2026 году — да, для большинства сценариев. С введением ограничений на Telegram российские серверы испытывают сложности при обращении к API Telegram. Бот на зарубежном VPS (Финляндия, Германия, Нидерланды) обращается к API напрямую без ограничений. Альтернатива — российский VPS с настроенным прокси-слоем, но это усложняет архитектуру.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Что такое прокси для Telegram на VPS и как это работает?</div>
+      <div class="faq-a">Прокси для Telegram на VPS — это сервер-посредник, установленный на вашем зарубежном VPS, который принимает подключения от вашего устройства и передаёт их серверам Telegram. MTProto-прокси работает на протоколе самого Telegram и выглядит как обычный Telegram-трафик. SOCKS5-прокси — более универсальный вариант, работает не только с Telegram. Оба варианта обеспечивают стабильный доступ к мессенджеру независимо от состояния сети на уровне оператора.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Можно ли запустить несколько ботов на одном VPS?</div>
+      <div class="faq-a">Да, несколько ботов отлично уживаются на одном VPS. Каждый бот — это отдельный процесс Python или Node.js. На сервере с 2 ГБ RAM можно комфортно запустить 3–5 ботов средней сложности одновременно. Для управления несколькими ботами удобно использовать supervisor — он автоматически перезапустит любой упавший процесс и ведёт отдельные лог-файлы для каждого бота.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Сколько стоит VPS для Telegram бота в месяц?</div>
+      <div class="faq-a">Минимальный VPS для Telegram-бота стоит от 250 до 490 рублей в месяц в зависимости от провайдера и локации. AdminVPS предлагает серверы в Германии от 299 ₽, is*hosting — от ~370 ₽ с серверами в 44 странах. Для большинства простых ботов это полностью достаточно — переходить на более дорогой тариф имеет смысл только при росте аудитории свыше 5 000–10 000 активных пользователей.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section>
+  <div class="container">
+    <div class="section-label">Заключение</div>
+    <div class="conclusion-card">
+      <h2>Итоги: Лучший VPS для Telegram в 2026 году</h2>
+      <p>В условиях ограничений на работу Telegram в России VPS становится не просто удобством, а необходимостью для тех, кто использует мессенджер для бизнеса, автоматизации или просто хочет надёжного доступа без перебоев. Зарубежный VPS с хорошим пингом решает проблему на уровне инфраструктуры, не зависящей от решений российских операторов связи.</p>
+      <p>Выбор конкретного провайдера зависит от вашей задачи. Наш итоговый выбор по категориям:</p>
+      <ul class="checklist">
+        <li><strong>Лучший VPS для Telegram в целом:</strong> is*hosting — 44 страны, NVMe, тест 7 дней, оплата из РФ.</li>
+        <li><strong>Лучший для бизнес-ботов с русской поддержкой:</strong> AdminVPS — Германия и Нидерланды, бесплатные бэкапы, 24/7 на русском, от 299 ₽.</li>
+        <li><strong>Лучший для быстрого старта:</strong> Timeweb Cloud — почасовая оплата, удобная панель, Финляндия ~20 мс.</li>
+        <li><strong>Лучший с европейской юрисдикцией:</strong> Fornex — Испания, серверы в трёх странах ЕС, тест 7 дней.</li>
+        <li><strong>Лучший для международных ботов:</strong> Ufo.hosting — глобальная сеть, NVMe, выбор локации ближе к аудитории.</li>
+        <li><strong>Самый бюджетный:</strong> The Hosting — от 250 ₽, KVM, для первого бота и знакомства с технологией.</li>
+      </ul>
+      <p>Если вы запускаете первый бот или прокси — воспользуйтесь бесплатным тестом у is*hosting или AdminVPS. За 7 дней вы развернёте бота, убедитесь в стабильности соединения с Telegram API и примете взвешенное решение без финансовых рисков.</p>
+      <div class="cta-btns" style="margin-top:20px; justify-content:flex-start;">
+        <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">is*hosting — тест 7 дней →</a>
+        <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-secondary">AdminVPS — от 299 ₽ →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="38" rx="9" fill="#f97316"/>
+            <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+            <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+            <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+            <circle cx="30" cy="25.5" r="5" fill="white"/>
+            <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="logo-text">VPS<span>Хостинг</span></div>
+        </a>
+        <p>Независимый рейтинг VPS серверов для России.<br>📧 <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>VPS по назначению</h4>
+        <ul>
+          <li><a href="/vps-dlya-vpn/">VPS для VPN</a></li>
+          <li><a href="/vps-dlya-telegram/">VPS для Телеграм</a></li>
+          <li><a href="/vps-dlya-treydinga/">VPS для Трейдинга</a></li>
+          <li><a href="/vps-dlya-routera/">VPS для Роутера</a></li>
+          <li><a href="/vps-dlya-forex/">VPS для Forex</a></li>
+          <li><a href="/vps-dlya-pk/">VPS для ПК</a></li>
+          <li><a href="/vps-dlya-openclaw/">VPS для Openclaw</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Провайдеры</h4>
+        <ul>
+          <li><a href="https://ishosting.com/affiliate/NTEyMSM2" rel="nofollow">is*hosting</a></li>
+          <li><a href="https://my.adminvps.ru/aff.php?aff=28491" rel="nofollow">AdminVPS</a></li>
+          <li><a href="https://timeweb.cloud/?i=122157" rel="nofollow">Timeweb Cloud</a></li>
+          <li><a href="https://fornex.com/c/fn8i35/" rel="nofollow">Fornex</a></li>
+          <li><a href="https://ufo.hosting/?from=934984" rel="nofollow">Ufo.hosting</a></li>
+          <li><a href="https://beget.com/ru" rel="nofollow">Beget</a></li>
+          <li><a href="https://sweb.ru/" rel="nofollow">Spaceweb</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about/">О нас</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 VPSХостинг.ru</div>
+      <div><a href="/about/">О нас</a> · <a href="/privacy/">Конфиденциальность</a> · <a href="mailto:petriliin76@gmail.com">Контакты</a></div>
+      <div style="font-size:0.72rem; color:#475569;">Сайт содержит партнёрские ссылки</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burgerBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
