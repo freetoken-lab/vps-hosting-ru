@@ -1,1 +1,800 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPS для Трейдинга 2026 — Лучшие сервера для торговых роботов</title>
+  <meta name="description" content="Рейтинг лучших VPS для трейдинга в 2026 году. Аренда VPS сервера для MT4/MT5 и торговых роботов от 299 ₽/мес — обзоры провайдеров, сравнение тарифов, минимальный пинг до торговых серверов.">
+  <link rel="canonical" href="https://vps-hosting-ru.vercel.app/vps-dlya-treydinga/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #f97316;
+      --orange-dark: #ea6c0a;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+      --card: #131c2e;
+      --card2: #1a2540;
+      --white: #ffffff;
+      --green: #22c55e;
+      --red: #ef4444;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, h4 { font-family: 'Unbounded', sans-serif; line-height: 1.25; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; margin-bottom: 1rem; }
+    h2 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); font-weight: 700; margin-bottom: 0.85rem; }
+    h3 { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 600; margin-bottom: 0.65rem; }
+    h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    p { margin-bottom: 1rem; color: var(--text); }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    nav { background: rgba(15,23,42,0.97); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; max-width: 1000px; margin: 0 auto; height: 64px; gap: 12px; }
+    .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-text { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+    .logo-text span { color: var(--orange); }
+    .nav-links { display: flex; gap: 2px; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+    .nav-links a { color: var(--text-muted); font-size: 0.78rem; font-weight: 500; padding: 6px 10px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--orange); background: rgba(249,115,22,0.08); text-decoration: none; }
+    .nav-cta { background: var(--orange); color: var(--white) !important; border-radius: 8px; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--orange-dark) !important; }
+    .burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .burger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; }
+    .hero { padding: 52px 0 44px; background: linear-gradient(135deg, #0f172a 0%, #0c1525 60%, #001a0a 100%); position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(249,115,22,0.1) 0%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3); color: var(--orange); font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; margin-bottom: 14px; }
+    .hero h1 { color: var(--white); }
+    .hero h1 span { color: var(--orange); }
+    .hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 650px; margin-bottom: 24px; }
+    .hero-meta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-muted); }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+    .breadcrumb { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 18px; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--orange); }
+    section { padding: 52px 0; }
+    section:nth-child(even) { background: #0c1525; }
+    .section-label { font-family: 'Unbounded', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .toplist-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 14px; display: grid; grid-template-columns: 48px 1fr auto; gap: 16px; align-items: center; transition: border-color 0.2s, transform 0.2s; }
+    .toplist-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+    .toplist-card.top1 { border-color: rgba(249,115,22,0.45); }
+    .card-number { font-family: 'Unbounded', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .card-body { min-width: 0; }
+    .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
+    .card-name { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1rem; color: var(--white); }
+    .ribbon { font-size: 0.62rem; font-weight: 700; font-family: 'Unbounded', sans-serif; padding: 3px 9px; border-radius: 50px; white-space: nowrap; background: var(--orange); color: white; }
+    .ribbon.green { background: #16a34a; }
+    .ribbon.blue { background: #2563eb; }
+    .ribbon.purple { background: #7c3aed; }
+    .ribbon.slate { background: #374151; }
+    .ribbon.teal { background: #0369a1; }
+    .card-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.5; }
+    .card-features { display: flex; flex-wrap: wrap; gap: 6px; }
+    .feat { font-size: 0.75rem; color: var(--text-muted); background: var(--card2); border: 1px solid var(--border); padding: 3px 9px; border-radius: 50px; white-space: nowrap; }
+    .card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; flex-shrink: 0; }
+    .card-rating { font-family: 'Unbounded', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--orange); white-space: nowrap; }
+    .btn-cta { background: var(--orange); color: white; padding: 9px 18px; border-radius: 8px; font-weight: 600; font-size: 0.82rem; transition: background 0.2s; white-space: nowrap; display: inline-block; }
+    .btn-cta:hover { background: var(--orange-dark); text-decoration: none; color: white; }
+    .review-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; margin-bottom: 20px; }
+    .review-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+    .review-num { font-family: 'Unbounded', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--orange); width: 36px; flex-shrink: 0; }
+    .review-title-block h3 { color: var(--white); margin: 0 0 2px; }
+    .review-subtitle { font-size: 0.8rem; color: var(--text-muted); }
+    .review-rating-badge { margin-left: auto; font-family: 'Unbounded', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--orange); flex-shrink: 0; }
+    .review-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.75; }
+    .key-features { background: var(--card2); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; }
+    .key-features h4 { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .kf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 4px 16px; }
+    .kf-item { font-size: 0.82rem; color: var(--text); padding: 3px 0; }
+    .kf-item span { color: var(--text-muted); }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .pros, .cons { background: var(--dark2); border-radius: 8px; padding: 12px 14px; }
+    .pros h4 { color: var(--green); font-size: 0.78rem; margin-bottom: 6px; }
+    .cons h4 { color: var(--red); font-size: 0.78rem; margin-bottom: 6px; }
+    .pros ul, .cons ul { padding-left: 1.1rem; margin: 0; }
+    .pros li, .cons li { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 3px; }
+    .review-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .review-price { font-size: 0.85rem; color: var(--text-muted); }
+    .review-price strong { color: var(--white); font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.81rem; }
+    thead tr { background: var(--card2); }
+    thead th { padding: 11px 13px; text-align: left; color: var(--text-muted); font-weight: 600; font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; border-bottom: 1px solid var(--border); }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(249,115,22,0.03); }
+    tbody td { padding: 11px 13px; color: var(--text); vertical-align: middle; }
+    tbody td:first-child { font-weight: 600; color: var(--white); }
+    .td-yes { color: var(--green); font-weight: 600; }
+    .td-no { color: var(--text-muted); }
+    .td-mark { color: var(--orange); font-weight: 700; }
+    .alert { background: rgba(249,115,22,0.07); border: 1px solid rgba(249,115,22,0.2); border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 16px 20px; margin: 20px 0; font-size: 0.88rem; color: var(--text-muted); }
+    .alert strong { color: var(--orange); }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+    .info-card { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: var(--radius); padding: 18px; }
+    .info-card .icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .info-card h4 { color: var(--white); font-size: 0.9rem; margin-bottom: 5px; }
+    .info-card p { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 8px 0 8px 26px; position: relative; color: var(--text-muted); font-size: 0.88rem; border-bottom: 1px solid rgba(30,41,59,0.5); }
+    .checklist li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+    .checklist li:last-child { border-bottom: none; }
+    .step-list { list-style: none; padding: 0; counter-reset: steps; }
+    .step-list li { counter-increment: steps; padding: 14px 0 14px 52px; position: relative; border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
+    .step-list li:last-child { border-bottom: none; }
+    .step-list li::before { content: counter(steps); position: absolute; left: 0; top: 12px; width: 32px; height: 32px; background: var(--orange); color: white; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 0.8rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .step-list li strong { color: var(--white); display: block; margin-bottom: 4px; }
+    .code-block { background: #0a0f1e; border: 1px solid #1e293b; border-radius: 8px; padding: 12px 16px; font-family: 'Courier New', monospace; font-size: 0.8rem; color: #94a3b8; margin: 10px 0; overflow-x: auto; }
+    .code-block .prompt { color: var(--orange); }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-family: 'Unbounded', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--white); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-q::after { content: '+'; color: var(--orange); font-size: 1.3rem; font-weight: 400; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { display: none; padding-top: 10px; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+    .summary-cta { background: linear-gradient(135deg, var(--card) 0%, #001a0a 100%); border: 1px solid rgba(249,115,22,0.3); border-radius: var(--radius); padding: 28px 32px; text-align: center; margin: 36px 0; }
+    .summary-cta h2 { color: var(--white); margin-bottom: 10px; font-size: 1.3rem; }
+    .summary-cta p { color: var(--text-muted); max-width: 520px; margin: 0 auto 20px; font-size: 0.9rem; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-secondary { background: transparent; color: var(--orange); border: 1px solid var(--orange); padding: 9px 18px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; display: inline-block; }
+    .btn-secondary:hover { background: var(--orange); color: white; text-decoration: none; }
+    .conclusion-card { background: var(--card); border: 1px solid rgba(249,115,22,0.25); border-radius: var(--radius); padding: 28px; }
+    .conclusion-card h2 { color: var(--white); margin-bottom: 14px; }
+    footer { background: #070d1a; border-top: 1px solid var(--border); padding: 36px 0 20px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: 28px; margin-bottom: 32px; }
+    .footer-brand p { font-size: 0.83rem; color: var(--text-muted); margin-top: 10px; }
+    .footer-col h4 { font-family: 'Unbounded', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 7px; }
+    .footer-col a { color: var(--text-muted); font-size: 0.83rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.78rem; color: var(--text-muted); }
+    .footer-bottom a { color: var(--text-muted); }
+    .footer-bottom a:hover { color: var(--orange); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--dark2); padding: 14px 20px; border-bottom: 1px solid var(--border); z-index: 99; }
+      .burger { display: block; }
+      .toplist-card { grid-template-columns: 40px 1fr; }
+      .card-right { flex-direction: row; align-items: center; grid-column: 1 / -1; justify-content: flex-end; }
+      .pros-cons { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .toplist-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="#f97316"/>
+        <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+        <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+        <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+        <circle cx="30" cy="25.5" r="5" fill="white"/>
+        <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="logo-text">VPS<span>Хостинг</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#rating">Рейтинг</a></li>
+      <li><a href="#obzory">Обзоры</a></li>
+      <li><a href="#sravnenie">Сравнение</a></li>
+      <li><a href="#tarify">Тарифы</a></li>
+      <li><a href="#arenda">Аренда VPS</a></li>
+      <li><a href="#nastrojka">Настройка</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#rating" class="nav-cta">Выбрать VPS →</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Главная</a> / VPS для Трейдинга</div>
+    <div class="hero-badge">✅ Обновлено: май 2026</div>
+    <h1>Лучшие <span>VPS для трейдинга</span> в 2026 году</h1>
+    <p class="hero-sub">В этом материале вы узнаете, какие VPS-серверы лучше всего подходят для трейдинга в 2026 году — для работы торговых роботов, платформ MT4/MT5 и алготрейдинга с минимальными задержками. Мы рассмотрим популярных провайдеров, их особенности и преимущества, чтобы помочь вам выбрать оптимальный вариант с поддержкой и арендой от 299 рублей в месяц.</p>
+    <div class="hero-meta">
+      <span>🖥 8 провайдеров</span>
+      <span>⚡ Низкий пинг</span>
+      <span>🤖 MT4 / MT5</span>
+      <span>💳 Оплата из РФ</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY VPS FOR TRADING -->
+<section>
+  <div class="container">
+    <div class="section-label">Зачем VPS трейдеру</div>
+    <h2>Почему трейдеры выбирают VPS</h2>
+    <p>Торговые роботы и советники требуют бесперебойной работы 24 часа в сутки, 5 дней в неделю. Любой сбой интернета дома или случайное выключение компьютера может привести к пропущенным сигналам, незакрытым позициям и реальным финансовым потерям. VPS для трейдинга полностью исключает эти риски: сервер работает в профессиональном дата-центре с резервным питанием и каналами связи независимо от того, что происходит у вас дома.</p>
+    <p>Второй ключевой фактор — задержка исполнения ордеров. Разница в несколько миллисекунд между вашим сервером и торговым сервером брокера напрямую влияет на качество исполнения, особенно в высокочастотных стратегиях и скальпинге. VPS для торгового робота в Германии или Нидерландах даёт пинг 1–5 мс до большинства европейских брокеров против 40–80 мс с домашнего соединения.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="icon">⚡</div>
+        <h4>Минимальный пинг</h4>
+        <p>VPS рядом с торговым сервером брокера сокращает задержку исполнения ордеров до 1–5 мс. Критично для скальпинга и HFT-стратегий.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🔄</div>
+        <h4>Работа 24/5</h4>
+        <p>Торговый робот работает непрерывно — независимо от вашего интернета, электричества или состояния компьютера. Позиции под контролем всегда.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🛡</div>
+        <h4>Защита от сбоев</h4>
+        <p>Профессиональные дата-центры с резервным питанием и каналами. SLA 99.9% означает не более 8.7 часов простоя в год — против нескольких десятков у домашнего ПК.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🖥</div>
+        <h4>MT4 / MT5 / cTrader</h4>
+        <p>На VPS запускается любая торговая платформа с Windows — MetaTrader 4, MetaTrader 5, cTrader, ATAS, Quik и любые советники (EA) без ограничений.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPLIST -->
+<section id="rating">
+  <div class="container">
+    <div class="section-label">Рейтинг</div>
+    <h2>ТОП-8 VPS для трейдинга в 2026 году</h2>
+    <p style="color:var(--text-muted); margin-bottom: 28px;">Для трейдинга ключевые критерии — низкий пинг до торговых серверов, поддержка Windows, стабильный аптайм 99.9%+ и достаточные ресурсы для MT4/MT5. Все провайдеры ниже соответствуют этим требованиям и принимают оплату из России.</p>
+
+    <div class="toplist-card top1">
+      <div class="card-number">1</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">is*hosting</span><span class="ribbon">★ Выбор редакции</span></div>
+        <p class="card-desc">44 страны, Windows VPS, NVMe и KVM — максимальный выбор локаций для размещения рядом с любым брокером мира. Тест 7 дней бесплатно.</p>
+        <div class="card-features"><span class="feat">🌍 44 страны</span><span class="feat">🖥 Windows VPS</span><span class="feat">⚡ NVMe SSD</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">💳 Оплата из РФ</span><span class="feat">📊 MT4/MT5</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.6/10</div><a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">2</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">AdminVPS</span><span class="ribbon green">Лучший пинг из РФ</span></div>
+        <p class="card-desc">Серверы в Германии (Франкфурт) и Нидерландах — лучшая связность с европейскими брокерами, русская поддержка 24/7 и ежедневные бэкапы.</p>
+        <div class="card-features"><span class="feat">🇩🇪 Франкфурт</span><span class="feat">🇳🇱 Нидерланды</span><span class="feat">⚡ NVMe</span><span class="feat">🔄 Бэкапы включены</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">🇷🇺 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.4/10</div><a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">3</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Fornex</span><span class="ribbon blue">ЕС юрисдикция</span></div>
+        <p class="card-desc">Испанская юрисдикция и серверы в Германии, Нидерландах, Швейцарии — надёжная инфраструктура для серьёзных торговых стратегий.</p>
+        <div class="card-features"><span class="feat">🇩🇪🇳🇱🇨🇭 3 локации ЕС</span><span class="feat">⚖️ Испания (юрисдикция)</span><span class="feat">🛡 DDoS защита</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">🖥 KVM</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.1/10</div><a href="https://fornex.com/c/fn8i35/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">4</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Timeweb Cloud</span><span class="ribbon teal">Удобная панель</span></div>
+        <p class="card-desc">Облачный VPS с удобной панелью управления и почасовой оплатой — хорош для тестирования стратегий без долгосрочных обязательств.</p>
+        <div class="card-features"><span class="feat">🇫🇮 Финляндия</span><span class="feat">🇷🇺 Россия</span><span class="feat">⏰ Почасовая оплата</span><span class="feat">⚡ NVMe</span><span class="feat">🖥 Удобная панель</span><span class="feat">🇷🇺 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.8/10</div><a href="https://timeweb.cloud/?i=122157" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">5</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Ufo.hosting</span><span class="ribbon purple">Глобальная сеть</span></div>
+        <p class="card-desc">Глобальные локации на выбор — разместите сервер рядом с торговым сервером вашего брокера в любой точке мира для минимального пинга.</p>
+        <div class="card-features"><span class="feat">🌏 Глобальные локации</span><span class="feat">⚡ NVMe SSD</span><span class="feat">🛡 DDoS защита</span><span class="feat">🖥 KVM</span><span class="feat">💳 Оплата из РФ</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.7/10</div><a href="https://ufo.hosting/?from=934984" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">6</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Beget</span><span class="ribbon slate">Российские биржи</span></div>
+        <p class="card-desc">Надёжный российский провайдер с минимальным пингом до Московской биржи — оптимален для торговли на MOEX через QUIK или собственные решения.</p>
+        <div class="card-features"><span class="feat">🇷🇺 Россия (MOEX)</span><span class="feat">🔄 Автобэкапы</span><span class="feat">⚡ NVMe</span><span class="feat">🛡 DDoS</span><span class="feat">🇷🇺 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.5/10</div><a href="https://beget.com/ru" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">7</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Spaceweb</span><span class="ribbon slate">Стабильность</span></div>
+        <p class="card-desc">15+ лет на рынке, прозрачные тарифы и поддержка 24/7 — надёжный выбор для торговли на российских площадках без лишних рисков.</p>
+        <div class="card-features"><span class="feat">🇷🇺 Россия</span><span class="feat">⚡ SSD</span><span class="feat">🛡 DDoS</span><span class="feat">🖥 KVM</span><span class="feat">💬 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.2/10</div><a href="https://sweb.ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">8</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">The Hosting</span><span class="ribbon slate">Бюджетный старт</span></div>
+        <p class="card-desc">Минимальные расходы для знакомства с алготрейдингом на VPS — подходит для первых экспериментов с советниками MT4 и небольших объёмов.</p>
+        <div class="card-features"><span class="feat">💰 от 250 ₽/мес</span><span class="feat">⚡ SSD</span><span class="feat">🖥 KVM</span><span class="feat">🛡 DDoS</span><span class="feat">🇷🇺 Поддержка</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 7.9/10</div><a href="https://the.hosting/ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="obzory">
+  <div class="container">
+    <div class="section-label">Обзоры</div>
+    <h2>Подробные обзоры провайдеров</h2>
+    <p style="color:var(--text-muted); margin-bottom: 28px;">Детальный разбор каждого провайдера с учётом специфики трейдинга: пинг до ключевых биржевых площадок, поддержка Windows и торговых платформ, надёжность инфраструктуры.</p>
+
+    <!-- 1 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">1</div><div class="review-title-block"><h3>is*hosting</h3><div class="review-subtitle">Максимальный выбор локаций для любого брокера мира</div></div><div class="review-rating-badge">⭐ 9.6/10</div></div>
+      <p class="review-desc">is*hosting — эстонский провайдер с серверами в 44 странах. Для трейдера это означает возможность разместить VPS в любом финансовом центре мира: Франкфурт (Xetra, Deutsche Börse), Лондон (LSE), Нью-Йорк (NYSE, NASDAQ), Чикаго (CME), Токио (TSE). Windows VPS доступен на всех ключевых локациях — можно запустить MetaTrader 4 или 5 в привычной среде без эмуляции. Тест до 7 дней позволяет проверить пинг до торгового сервера вашего конкретного брокера до первой оплаты.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>44 страны, фин. центры мира</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Базовая фильтрация</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней (Linux) / 24ч (Win)</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, СБП, крипта</span></div>
+        <div class="kf-item">📊 Платформы: <span>MT4, MT5, cTrader</span></div>
+        <div class="kf-item">📞 Поддержка: <span>EN / частично RU</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Серверы во всех ключевых биржевых центрах</li><li>Windows VPS для MT4/MT5</li><li>NVMe-диски на всех тарифах</li><li>Бесплатный тест 7 дней</li><li>IPv6 /64 в комплекте</li><li>Оплата криптовалютой</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Поддержка преимущественно на английском</li><li>Windows-тариф дороже Linux</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>~370 ₽/мес</strong> ($3.99)</div><a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">2</div><div class="review-title-block"><h3>AdminVPS</h3><div class="review-subtitle">Франкфурт и Нидерланды — минимальный пинг до европейских брокеров</div></div><div class="review-rating-badge">⭐ 9.4/10</div></div>
+      <p class="review-desc">AdminVPS предлагает серверы во Франкфурте — одном из главных финансовых центров Европы, где расположены серверы большинства популярных Forex-брокеров и торговые системы крупнейших банков. Пинг с VPS во Франкфурте до торговых серверов большинства европейских брокеров составляет 1–3 мс. Ежедневные бэкапы в базовом тарифе обеспечивают сохранность настроек советников и истории торгов. VPS сервер для трейдинга здесь поддерживает Windows, что необходимо для запуска MT4/MT5.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Франкфурт, Амстердам, Хельсинки</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Anti-DDoS включён</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней</span></div>
+        <div class="kf-item">🔄 Бэкапы: <span>Ежедневные, бесплатно</span></div>
+        <div class="kf-item">🏢 Дата-центр: <span>Tier III</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Франкфурт — главный биржевой центр Европы</li><li>1–3 мс до торговых серверов европейских брокеров</li><li>Поддержка Windows VPS</li><li>Ежедневные бэкапы без доплаты</li><li>Поддержка 24/7 на русском</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Меньше локаций, чем у is*hosting</li><li>Устаревший интерфейс панели</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>299 ₽/мес</strong></div><a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">3</div><div class="review-title-block"><h3>Fornex</h3><div class="review-subtitle">Серьёзная инфраструктура ЕС для профессиональных трейдеров</div></div><div class="review-rating-badge">⭐ 9.1/10</div></div>
+      <p class="review-desc">Fornex — провайдер с испанской юрисдикцией и серверами в Германии, Нидерландах и Швейцарии. Швейцарская локация особенно интересна для торговли через швейцарские банки и брокеров. Надёжная репутация среди крупных российских финансовых компаний подтверждает стабильность инфраструктуры. Тест 7 дней доступен — проверьте пинг до серверов вашего конкретного брокера перед покупкой.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>DE, NL, CH, RU, UA</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Включён</span></div>
+        <div class="kf-item">⚖️ Юрисдикция: <span>Испания (ЕС)</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней</span></div>
+        <div class="kf-item">📊 Платформы: <span>MT4, MT5</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU / EN</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Швейцарская локация для Swiss-брокеров</li><li>Европейская юрисдикция (Испания)</li><li>Проверенная репутация годами</li><li>3 европейских локации на выбор</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>SSD, а не NVMe на стартовых тарифах</li><li>Цены выше бюджетных конкурентов</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>374 ₽/мес</strong></div><a href="https://fornex.com/c/fn8i35/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">4</div><div class="review-title-block"><h3>Timeweb Cloud</h3><div class="review-subtitle">Почасовая оплата для тестирования торговых стратегий</div></div><div class="review-rating-badge">⭐ 8.8/10</div></div>
+      <p class="review-desc">Timeweb Cloud привлекателен для трейдеров, которые хотят протестировать советника или новую стратегию без месячных обязательств. Запустите Windows VPS, прогоните советник на исторических данных, оцените исполнение — и заплатите лишь за несколько часов работы. Финляндская локация подходит для торговли через брокеров с серверами в Хельсинки и Стокгольме.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия, Финляндия</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">⏰ Тарификация: <span>Почасовая</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>L3/L4</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, СБП</span></div>
+        <div class="kf-item">📊 Платформы: <span>MT4, MT5, QUIK</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Почасовая оплата для коротких тестов</li><li>Удобная панель, быстрый деплой Windows</li><li>Поддержка 24/7 на русском</li><li>NVMe на всех тарифах</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только одна европейская локация</li><li>Ограниченный трафик на стартовых тарифах</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>290 ₽/мес</strong></div><a href="https://timeweb.cloud/?i=122157" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 5 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">5</div><div class="review-title-block"><h3>Ufo.hosting</h3><div class="review-subtitle">Глобальные локации для любого брокера и биржи</div></div><div class="review-rating-badge">⭐ 8.7/10</div></div>
+      <p class="review-desc">Ufo.hosting охватывает глобальную сеть локаций — включая Азию и Америку, что актуально для трейдеров, работающих на азиатских биржах (TSE, HKEX, SGX) или американских площадках (NYSE, CME). NVMe-диски обеспечивают быстрое чтение файлов истории MT4/MT5 при тестировании стратегий. Оплата из России доступна без иностранных карт.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Глобальная сеть</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Включён</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, крипта</span></div>
+        <div class="kf-item">🆓 Тест: <span>—</span></div>
+        <div class="kf-item">📊 Платформы: <span>MT4, MT5, cTrader</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU / EN</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Локации в Азии и Америке для соответствующих бирж</li><li>NVMe-диски для быстрого бэктестинга</li><li>Оплата из России</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Нет тестового периода</li><li>Поддержка менее оперативная</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>490 ₽/мес</strong></div><a href="https://ufo.hosting/?from=934984" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 6 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">6</div><div class="review-title-block"><h3>Beget</h3><div class="review-subtitle">Минимальный пинг до Московской биржи (MOEX)</div></div><div class="review-rating-badge">⭐ 8.5/10</div></div>
+      <p class="review-desc">Beget — надёжный российский провайдер с серверами в Москве. Для трейдеров, работающих на Московской бирже через QUIK, Transaq или собственные алгоритмы — это лучший выбор по пингу: 1–5 мс до торговых шлюзов MOEX против 40+ мс с зарубежного VPS. Автоматические ежедневные бэкапы защищают конфигурации торговых систем и базы данных тиков.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия (Москва)</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🔄 Бэкапы: <span>Автоматические</span></div>
+        <div class="kf-item">☁️ S3: <span>Хранилище включено</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Включён</span></div>
+        <div class="kf-item">📊 Платформы: <span>QUIK, MT5, Transaq</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Минимальный пинг до MOEX из всех провайдеров</li><li>Автобэкапы и S3-хранилище включены</li><li>Надёжность 10+ лет на рынке</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>Не подходит для западных Forex-брокеров</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>350 ₽/мес</strong></div><a href="https://beget.com/ru" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 7 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">7</div><div class="review-title-block"><h3>Spaceweb</h3><div class="review-subtitle">Стабильный хостинг для торговли на российских площадках</div></div><div class="review-rating-badge">⭐ 8.2/10</div></div>
+      <p class="review-desc">Spaceweb предлагает VPS с KVM-виртуализацией и поддержкой Windows. Серверы расположены в России — подходит для трейдинга на MOEX, СПБ Бирже и через российских брокеров. Прозрачные тарифы без скрытых платежей и поддержка 24/7 делают провайдера надёжным выбором для трейдеров, ценящих предсказуемость расходов.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Бесплатно</span></div>
+        <div class="kf-item">🔐 SSL: <span>Бесплатный</span></div>
+        <div class="kf-item">💳 Оплата: <span>Все способы РФ</span></div>
+        <div class="kf-item">📊 Платформы: <span>QUIK, MT4, MT5</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>15+ лет на рынке — проверенная стабильность</li><li>Поддержка Windows VPS</li><li>Прозрачные тарифы без скрытых платежей</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>SSD вместо NVMe на базовых тарифах</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>389 ₽/мес</strong></div><a href="https://sweb.ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 8 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">8</div><div class="review-title-block"><h3>The Hosting</h3><div class="review-subtitle">Бюджетный старт для первых шагов в алготрейдинге</div></div><div class="review-rating-badge">⭐ 7.9/10</div></div>
+      <p class="review-desc">The Hosting — доступный вариант для трейдеров, которые только начинают знакомство с автоматическими стратегиями и хотят проверить работу советника на небольших объёмах. Базовый KVM-сервер справится с одним-двумя советниками MT4 без высоких требований к скорости исполнения. Для активной торговли с требованиями к пингу и аптайму рекомендуем рассмотреть провайдеров из топ-5.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 ОС: <span>Windows + Linux</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Базовая</span></div>
+        <div class="kf-item">💰 Цена: <span>от 250 ₽/мес</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ</span></div>
+        <div class="kf-item">📊 Платформы: <span>MT4, MT5</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Самая низкая цена в рейтинге</li><li>KVM-виртуализация</li><li>Поддержка Windows</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>Нет гарантий аптайма SLA</li><li>Не подходит для активного трейдинга</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>250 ₽/мес</strong></div><a href="https://the.hosting/ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="sravnenie">
+  <div class="container">
+    <div class="section-label">Сравнение</div>
+    <h2>Сравнение VPS провайдеров для трейдинга</h2>
+    <p>Для трейдинга наиболее важны три параметра: наличие европейских локаций рядом с торговыми серверами брокеров, поддержка Windows для MetaTrader и надёжность аптайма. Ниже — полная сравнительная таблица по всем восьми провайдерам рейтинга.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Провайдер</th><th>Цена от</th><th>Европейские локации</th><th>Windows</th><th>Диск</th><th>Аптайм SLA</th><th>Тест</th><th>Бэкапы</th><th>Поддержка RU</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>is*hosting</td><td class="td-mark">~370 ₽</td><td class="td-yes">DE, NL, GB, FR + 40 стран</td><td class="td-yes">✓</td><td>NVMe</td><td>99.9%</td><td class="td-yes">7 дней</td><td>Платно</td><td class="td-no">Частично</td></tr>
+          <tr><td>AdminVPS</td><td class="td-mark">299 ₽</td><td class="td-yes">Франкфурт, Амстердам</td><td class="td-yes">✓</td><td>NVMe</td><td>99.9%</td><td class="td-yes">7 дней</td><td class="td-yes">✓ Бесплатно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>Fornex</td><td>374 ₽</td><td class="td-yes">DE, NL, CH</td><td class="td-yes">✓</td><td>SSD</td><td>99.9%</td><td class="td-yes">7 дней</td><td>Платно</td><td class="td-yes">✓</td></tr>
+          <tr><td>Timeweb Cloud</td><td>290 ₽</td><td class="td-yes">Финляндия</td><td class="td-yes">✓</td><td>NVMe</td><td>99.9%</td><td class="td-yes">Есть</td><td>Платно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>Ufo.hosting</td><td>490 ₽</td><td class="td-yes">Глобально</td><td class="td-yes">✓</td><td>NVMe</td><td>99.9%</td><td class="td-no">—</td><td>Платно</td><td class="td-no">Частично</td></tr>
+          <tr><td>Beget</td><td>350 ₽</td><td class="td-no">—</td><td class="td-yes">✓</td><td>NVMe</td><td>99.9%</td><td class="td-no">—</td><td class="td-yes">✓ Бесплатно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>Spaceweb</td><td>389 ₽</td><td class="td-no">—</td><td class="td-yes">✓</td><td>SSD</td><td>99.9%</td><td class="td-no">—</td><td>Платно</td><td class="td-yes">✓ 24/7</td></tr>
+          <tr><td>The Hosting</td><td>250 ₽</td><td class="td-no">—</td><td class="td-yes">✓</td><td>SSD</td><td class="td-no">—</td><td class="td-no">—</td><td>Платно</td><td class="td-yes">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert"><strong>💡 Вывод:</strong> Для Forex и международного трейдинга выбирайте провайдеров из топ-5 с европейскими серверами. Для торговли на Московской бирже (MOEX) Beget и Spaceweb дадут лучший пинг — их серверы физически расположены в московских дата-центрах рядом с торговой инфраструктурой MOEX.</div>
+  </div>
+</section>
+
+<!-- TARIFFS -->
+<section id="tarify">
+  <div class="container">
+    <div class="section-label">Тарифы</div>
+    <h2>VPS тарифы для трейдинга: сколько ресурсов нужно</h2>
+    <p>Тарифные планы VPS-хостинга определяют доступные ресурсы: объём оперативной памяти, процессорные мощности, дисковое пространство и пропускную способность. Для трейдинга требования к ресурсам зависят от торговой платформы и количества одновременно работающих советников.</p>
+    <p>MetaTrader 4 на одном советнике потребляет около 200–300 МБ RAM. MT5 с несколькими стратегиями — от 1 ГБ. Windows Server как ОС сам по себе занимает 1–1.5 ГБ RAM, поэтому для Windows VPS минимальный рабочий тариф — 2 ГБ. Для Linux-based торговых систем (Python, C++) достаточно 1 ГБ RAM.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Провайдер</th><th>Стартовый тариф</th><th>CPU</th><th>RAM</th><th>Диск</th><th>Трафик</th><th>Windows</th><th>Бэкапы</th></tr></thead>
+        <tbody>
+          <tr><td>is*hosting</td><td class="td-mark">~370 ₽/мес</td><td>1 vCPU</td><td>512 МБ</td><td>10 ГБ NVMe</td><td>1 ТБ</td><td class="td-yes">✓</td><td>Платно</td></tr>
+          <tr><td>AdminVPS</td><td class="td-mark">299 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>15 ГБ NVMe</td><td>Безлимит</td><td class="td-yes">✓</td><td class="td-yes">✓ Бесплатно</td></tr>
+          <tr><td>Fornex</td><td>374 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ SSD</td><td>1 ТБ</td><td class="td-yes">✓</td><td>Платно</td></tr>
+          <tr><td>Timeweb Cloud</td><td>290 ₽/мес</td><td>1 vCPU</td><td>512 МБ</td><td>15 ГБ NVMe</td><td>200 ГБ</td><td class="td-yes">✓</td><td>Платно</td></tr>
+          <tr><td>Ufo.hosting</td><td>490 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ NVMe</td><td>1 ТБ</td><td class="td-yes">✓</td><td>Платно</td></tr>
+          <tr><td>Beget</td><td>350 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ NVMe</td><td>1 ТБ</td><td class="td-yes">✓</td><td class="td-yes">✓ Бесплатно</td></tr>
+          <tr><td>Spaceweb</td><td>389 ₽/мес</td><td>1 vCPU</td><td>1 ГБ</td><td>20 ГБ SSD</td><td>1 ТБ</td><td class="td-yes">✓</td><td>Платно</td></tr>
+          <tr><td>The Hosting</td><td>250 ₽/мес</td><td>1 vCPU</td><td>512 МБ</td><td>10 ГБ SSD</td><td>500 ГБ</td><td class="td-yes">✓</td><td>Платно</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--text-muted); font-size:0.88rem; margin-top: 12px;">Для Windows VPS с MetaTrader рекомендуемый минимум — 2 ГБ RAM. На стартовых тарифах в 512 МБ–1 ГБ Windows работает нестабильно. Уточняйте у провайдера наличие тарифов от 2 ГБ RAM под Windows — они стоят несколько дороже, но обеспечивают комфортную работу торговых платформ.</p>
+    <div class="alert"><strong>💡 Рекомендуемые конфигурации:</strong> MT4 + 1–2 советника — 2 ГБ RAM, 1–2 vCPU, SSD 30 ГБ. MT5 + несколько стратегий — 4 ГБ RAM, 2 vCPU, NVMe 40 ГБ. Python/C++ торговый робот на Linux — 1 ГБ RAM, 1 vCPU достаточно. Бэктестинг на исторических данных — NVMe обязателен для скорости.</div>
+  </div>
+</section>
+
+<!-- RENT -->
+<section id="arenda">
+  <div class="container">
+    <div class="section-label">Аренда VPS</div>
+    <h2>Аренда VPS для трейдинга: преимущества и риски</h2>
+    <p>Аренда VPS для трейдинга — это аренда виртуального сервера, на котором круглосуточно работает ваша торговая платформа, советник или алгоритм. Стоимость аренды — небольшая часть торгового бюджета, которая страхует от куда более значительных потерь из-за технических сбоев.</p>
+    <div class="info-grid">
+      <div class="info-card"><div class="icon">⚡</div><h4>Скорость исполнения</h4><p>Ордера исполняются быстрее: VPS рядом с брокером даёт пинг 1–5 мс против 40–80 мс с домашнего интернета. Критично для скальпинга и HFT.</p></div>
+      <div class="info-card"><div class="icon">🔋</div><h4>Бесперебойность</h4><p>Профессиональный дата-центр с ИБП и дизельным генератором. Отключение света дома не затронет открытые позиции.</p></div>
+      <div class="info-card"><div class="icon">📊</div><h4>Стабильное соединение</h5><p>Оптоволоконные каналы дата-центра с резервированием против домашнего интернета с разрывами и скачками задержки.</p></div>
+      <div class="info-card"><div class="icon">🔧</div><h4>Масштабирование</h4><p>По мере развития стратегий увеличивайте RAM и CPU без переноса платформы — прямо в панели управления провайдера.</p></div>
+    </div>
+
+    <h3>Риски аренды VPS для трейдинга</h3>
+    <ul class="checklist">
+      <li><strong>Задержка провайдера:</strong> даже у лучших VPS бывают кратковременные технические работы. Всегда имейте резервный план: алерты на телефон при остановке советника, автоматическое закрытие позиций по стоп-лоссу.</li>
+      <li><strong>Зависимость от сети провайдера:</strong> редкие, но возможные проблемы с пирингом между VPS-провайдером и брокером могут временно увеличить пинг. Выбирайте провайдеров с прямым пирингом к крупным финансовым дата-центрам (Equinix LD4, FR2).</li>
+      <li><strong>Безопасность RDP-доступа:</strong> Windows VPS доступен по Remote Desktop Protocol (RDP). Порт 3389 по умолчанию подвергается постоянным атаками. Смените порт RDP на нестандартный и используйте сложный пароль или VPN для подключения.</li>
+      <li><strong>Стоимость Windows-лицензии:</strong> Windows VPS стоит дороже Linux — провайдеры включают лицензию Microsoft в тариф. Учитывайте это при расчёте затрат: разница обычно составляет 500–1 500 ₽/мес в зависимости от конфигурации.</li>
+      <li><strong>Регулярные расходы:</strong> аренда VPS — постоянная статья расходов. При стартовом тарифе 300–500 ₽/мес годовые затраты составят 3 600–6 000 ₽ — небольшая страховка на фоне торгового депозита.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="nastrojka">
+  <div class="container">
+    <div class="section-label">Настройка</div>
+    <h2>Как настроить VPS для трейдинга: пошаговое руководство</h2>
+    <p>После получения доступа к Windows VPS следуйте этим шагам, чтобы запустить торговую платформу и советников в минимальные сроки.</p>
+
+    <ol class="step-list">
+      <li>
+        <strong>Подключитесь к Windows VPS через Remote Desktop</strong>
+        На Windows: нажмите Win+R, введите <code style="background:#0a0f1e; padding:2px 7px; border-radius:4px; font-size:0.8rem; color:#f97316;">mstsc</code>, укажите IP-адрес сервера и учётные данные из письма провайдера. На macOS — приложение Microsoft Remote Desktop. Убедитесь, что соединение установлено и рабочий стол Windows загрузился.
+      </li>
+      <li>
+        <strong>Обновите Windows и установите браузер</strong>
+        Первым делом запустите Windows Update для закрытия уязвимостей. Затем установите браузер (Chrome или Firefox) — стандартный IE на серверных версиях Windows не подходит для скачивания платформ.
+        <div class="code-block"><span style="color:#94a3b8;">Панель управления → Windows Update → Проверить наличие обновлений</span></div>
+      </li>
+      <li>
+        <strong>Скачайте и установите MetaTrader</strong>
+        Перейдите на сайт вашего брокера и скачайте установщик MT4 или MT5 непосредственно с сервера (не с домашнего ПК). Установите платформу, авторизуйтесь в торговом счёте брокера. Проверьте, что котировки поступают и соединение с брокером активно.
+      </li>
+      <li>
+        <strong>Скопируйте советники (EA) на сервер</strong>
+        Перенесите файлы советников через Remote Desktop: скопируйте файлы на домашнем ПК → вставьте в буфер обмена → вставьте на VPS в папку MT4/Experts или MT5/Experts. Перезапустите платформу и убедитесь, что советники отображаются в дереве навигации.
+      </li>
+      <li>
+        <strong>Проверьте пинг до торгового сервера брокера</strong>
+        Откройте Command Prompt и проверьте пинг:
+        <div class="code-block"><span style="color:#f97316;">C:\></span> ping торговый-сервер-брокера.com</div>
+        Для Forex-брокеров с серверами во Франкфурте пинг должен быть менее 5 мс с VPS в Германии. Если пинг высокий — свяжитесь с брокером для уточнения адреса ближайшего торгового сервера.
+      </li>
+      <li>
+        <strong>Настройте безопасность RDP</strong>
+        Смените стандартный порт RDP (3389 → нестандартный) в реестре Windows, включите брандмауэр и настройте автоматическую блокировку после нескольких неудачных попыток входа:
+        <div class="code-block"><span style="color:#94a3b8;">Диспетчер сервера → Локальная политика безопасности → Блокировка учётной записи</span></div>
+      </li>
+    </ol>
+
+    <h3 style="margin-top:32px;">Пинг VPS до ключевых торговых площадок</h3>
+    <p style="color:var(--text-muted);">Выбор локации VPS напрямую влияет на скорость исполнения ордеров. В таблице ниже — примерный пинг с VPS в разных локациях до основных биржевых центров.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Локация VPS</th><th>До MOEX (Москва)</th><th>До Xetra (Франкфурт)</th><th>До LSE (Лондон)</th><th>До NYSE (Нью-Йорк)</th><th>Подходит для</th></tr></thead>
+        <tbody>
+          <tr><td>🇩🇪 Франкфурт</td><td>~35 мс</td><td class="td-mark">~1 мс</td><td>~10 мс</td><td>~85 мс</td><td class="td-yes">✓ Forex ЕС, Xetra</td></tr>
+          <tr><td>🇳🇱 Амстердам</td><td>~40 мс</td><td>~5 мс</td><td class="td-mark">~7 мс</td><td>~80 мс</td><td class="td-yes">✓ Forex ЕС, LSE</td></tr>
+          <tr><td>🇫🇮 Хельсинки</td><td class="td-mark">~20 мс</td><td>~30 мс</td><td>~35 мс</td><td>~100 мс</td><td class="td-yes">✓ Nordic биржи</td></tr>
+          <tr><td>🇨🇭 Цюрих</td><td>~45 мс</td><td>~8 мс</td><td>~12 мс</td><td>~90 мс</td><td class="td-yes">✓ Swiss брокеры</td></tr>
+          <tr><td>🇷🇺 Москва</td><td class="td-mark">~1 мс</td><td>~35 мс</td><td>~45 мс</td><td>~110 мс</td><td class="td-yes">✓ MOEX, Сбербанк, ВТБ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert"><strong>💡 Совет:</strong> Уточните у вашего брокера физический адрес торгового сервера или ближайший дата-центр (Equinix LD4 в Лондоне, FR2 во Франкфурте, NY4/NY5 в Нью-Йорке) — и выбирайте VPS в том же дата-центре или городе. Многие брокеры публикуют адреса своих серверов в разделе FAQ или технической поддержки.</div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="summary-cta">
+    <h2>Готовы запустить торгового робота на VPS?</h2>
+    <p>Начните с бесплатного теста. is*hosting даёт 7 дней на зарубежный сервер, AdminVPS — также 7 дней с поддержкой на русском. Проверьте пинг до вашего брокера до первой оплаты.</p>
+    <div class="cta-btns">
+      <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">is*hosting — тест 7 дней →</a>
+      <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-secondary">AdminVPS — от 299 ₽ →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Часто задаваемые вопросы</h2>
+
+    <div class="faq-item open">
+      <div class="faq-q">Зачем нужен VPS для трейдинга, если можно торговать с домашнего ПК?</div>
+      <div class="faq-a">Домашний ПК зависит от электричества, качества интернета и вашего присутствия. Если пропадёт свет или интернет во время открытой позиции — советник не сможет выставить стоп-лосс или закрыть сделку. VPS в профессиональном дата-центре работает 24/5 с резервным питанием и несколькими каналами связи. Кроме того, VPS рядом с брокером даёт в 10–40 раз меньше задержку исполнения ордеров — что напрямую влияет на результаты скальпинг-стратегий.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Какой VPS выбрать для MT4 и MT5?</div>
+      <div class="faq-a">Для MetaTrader 4 и MT5 необходим Windows VPS с минимум 2 ГБ RAM (1 ГБ занимает сама Windows Server, ещё 300–500 МБ — платформа с советником). Для активного трейдинга с несколькими стратегиями рекомендуется 4 ГБ RAM. По локации — выбирайте сервер в том же городе, где находится торговый сервер вашего брокера: обычно это Франкфурт, Лондон или Амстердам для европейских Forex-брокеров.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Что такое VPS для торгового робота и чем он отличается от обычного хостинга?</div>
+      <div class="faq-a">VPS для торгового робота — это виртуальный сервер с Windows или Linux, на котором круглосуточно работает ваш советник или алгоритм. От обычного хостинга он отличается наличием root-доступа (или RDP для Windows), выделенными ресурсами CPU и RAM и возможностью устанавливать любое ПО, включая MetaTrader, cTrader или собственные торговые системы на Python/C++.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Какой пинг нужен для успешного трейдинга?</div>
+      <div class="faq-a">Требования к пингу зависят от стратегии. Для долгосрочных стратегий (позиционная торговля, swing-трейдинг) достаточно пинга до 50–100 мс — даже российский VPS подойдёт. Для внутридневной торговли и скальпинга критичен пинг до 10–20 мс. Для высокочастотного трейдинга (HFT) необходим пинг менее 5 мс, что достигается только при размещении VPS в том же дата-центре, что и торговый сервер брокера.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Можно ли запустить несколько советников MT4 на одном VPS?</div>
+      <div class="faq-a">Да, несколько советников запускаются на одном VPS без проблем — каждый работает как отдельный поток внутри MetaTrader. На сервере с 4 ГБ RAM можно комфортно запустить 3–5 экземпляров MT4/MT5 с различными советниками одновременно. Для большого количества стратегий или параллельного бэктестинга рекомендуется тариф от 8 ГБ RAM с несколькими vCPU.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Сколько стоит аренда VPS для трейдинга в месяц?</div>
+      <div class="faq-a">Стартовая стоимость Linux VPS для торгового алгоритма — от 299 ₽ (AdminVPS). Windows VPS для MetaTrader обычно стоит на 500–1 000 ₽ дороже из-за лицензии Microsoft. Типичная конфигурация для комфортной работы MT4/MT5 (2–4 ГБ RAM) обойдётся в 800–2 000 ₽/мес в зависимости от провайдера и локации. Это небольшая постоянная статья расходов на фоне потенциальных потерь от технических сбоев.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section>
+  <div class="container">
+    <div class="section-label">Заключение</div>
+    <div class="conclusion-card">
+      <h2>Итоги: Лучший VPS для трейдинга в 2026 году</h2>
+      <p>VPS для трейдинга — это не роскошь, а базовый инструмент для серьёзного трейдера. Стоимость аренды в несколько сотен рублей в месяц несопоставима с рисками незакрытых позиций из-за домашних технических сбоев. При правильном выборе провайдера и локации вы также получаете значительное преимущество в скорости исполнения ордеров.</p>
+      <p>Наш итоговый выбор по категориям:</p>
+      <ul class="checklist">
+        <li><strong>Лучший VPS для трейдинга в целом:</strong> is*hosting — 44 локации включая все финансовые центры, Windows, NVMe, тест 7 дней.</li>
+        <li><strong>Лучший для Forex с русской поддержкой:</strong> AdminVPS — Франкфурт и Амстердам, 1–3 мс до европейских брокеров, бэкапы бесплатно, от 299 ₽.</li>
+        <li><strong>Лучший для серьёзных стратегий:</strong> Fornex — Швейцария, Германия, Нидерланды, европейская юрисдикция, надёжная репутация.</li>
+        <li><strong>Лучший для тестирования стратегий:</strong> Timeweb Cloud — почасовая оплата, удобная панель, быстрый деплой Windows.</li>
+        <li><strong>Лучший для MOEX и российских биржей:</strong> Beget — московские серверы, 1–5 мс до шлюзов MOEX, автобэкапы.</li>
+        <li><strong>Самый бюджетный старт:</strong> The Hosting — от 250 ₽, KVM, для первого знакомства с алготрейдингом.</li>
+      </ul>
+      <p>Если вы только начинаете работать с торговыми роботами на VPS — воспользуйтесь бесплатным тестом у is*hosting или AdminVPS. За 7 дней вы установите MetaTrader, перенесёте советников, проверите пинг до брокера и убедитесь в стабильности работы до первой оплаты.</p>
+      <div class="cta-btns" style="margin-top:20px; justify-content:flex-start;">
+        <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">is*hosting — тест 7 дней →</a>
+        <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-secondary">AdminVPS — от 299 ₽ →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="38" rx="9" fill="#f97316"/>
+            <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+            <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+            <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+            <circle cx="30" cy="25.5" r="5" fill="white"/>
+            <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="logo-text">VPS<span>Хостинг</span></div>
+        </a>
+        <p>Независимый рейтинг VPS серверов для России.<br>📧 <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>VPS по назначению</h4>
+        <ul>
+          <li><a href="/vps-dlya-vpn/">VPS для VPN</a></li>
+          <li><a href="/vps-dlya-telegram/">VPS для Телеграм</a></li>
+          <li><a href="/vps-dlya-treydinga/">VPS для Трейдинга</a></li>
+          <li><a href="/vps-dlya-routera/">VPS для Роутера</a></li>
+          <li><a href="/vps-dlya-forex/">VPS для Forex</a></li>
+          <li><a href="/vps-dlya-pk/">VPS для ПК</a></li>
+          <li><a href="/vps-dlya-openclaw/">VPS для Openclaw</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Провайдеры</h4>
+        <ul>
+          <li><a href="https://ishosting.com/affiliate/NTEyMSM2" rel="nofollow">is*hosting</a></li>
+          <li><a href="https://my.adminvps.ru/aff.php?aff=28491" rel="nofollow">AdminVPS</a></li>
+          <li><a href="https://timeweb.cloud/?i=122157" rel="nofollow">Timeweb Cloud</a></li>
+          <li><a href="https://fornex.com/c/fn8i35/" rel="nofollow">Fornex</a></li>
+          <li><a href="https://ufo.hosting/?from=934984" rel="nofollow">Ufo.hosting</a></li>
+          <li><a href="https://beget.com/ru" rel="nofollow">Beget</a></li>
+          <li><a href="https://sweb.ru/" rel="nofollow">Spaceweb</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about/">О нас</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 VPSХостинг.ru</div>
+      <div><a href="/about/">О нас</a> · <a href="/privacy/">Конфиденциальность</a> · <a href="mailto:petriliin76@gmail.com">Контакты</a></div>
+      <div style="font-size:0.72rem; color:#475569;">Сайт содержит партнёрские ссылки</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burgerBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
