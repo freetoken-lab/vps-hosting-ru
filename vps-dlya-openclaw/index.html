@@ -1,1 +1,848 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPS для OpenClaw 2026 — Лучшиe сервeра для AI-агента</title>
+  <meta name="description" content="Рейтинг лучших VPS для OpenClaw в 2026 году. Хостинг самостоятельного AI-агента от 299 ₽/мес — требования к серверу, обзоры провайдеров, пошаговая установка и оптимизация. VPS с OpenClaw для Telegram, WhatsApp и браузерной автоматизации.">
+  <link rel="canonical" href="https://vps-hosting-ru.vercel.app/vps-dlya-openclaw/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #f97316;
+      --orange-dark: #ea6c0a;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+      --card: #131c2e;
+      --card2: #1a2540;
+      --white: #ffffff;
+      --green: #22c55e;
+      --red: #ef4444;
+      --purple: #8b5cf6;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, h4 { font-family: 'Unbounded', sans-serif; line-height: 1.25; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; margin-bottom: 1rem; }
+    h2 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); font-weight: 700; margin-bottom: 0.85rem; }
+    h3 { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 600; margin-bottom: 0.65rem; }
+    h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    p { margin-bottom: 1rem; color: var(--text); }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    nav { background: rgba(15,23,42,0.97); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; max-width: 1000px; margin: 0 auto; height: 64px; gap: 12px; }
+    .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-text { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+    .logo-text span { color: var(--orange); }
+    .nav-links { display: flex; gap: 2px; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+    .nav-links a { color: var(--text-muted); font-size: 0.78rem; font-weight: 500; padding: 6px 10px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--orange); background: rgba(249,115,22,0.08); text-decoration: none; }
+    .nav-cta { background: var(--orange); color: var(--white) !important; border-radius: 8px; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--orange-dark) !important; }
+    .burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .burger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; }
+    .hero { padding: 52px 0 44px; background: linear-gradient(135deg, #0f172a 0%, #0c1525 60%, #120a1a 100%); position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.3); color: #c4b5fd; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; margin-bottom: 14px; }
+    .hero h1 { color: var(--white); }
+    .hero h1 span { color: var(--orange); }
+    .hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 650px; margin-bottom: 24px; }
+    .hero-meta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-muted); }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+    .breadcrumb { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 18px; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--orange); }
+    section { padding: 52px 0; }
+    section:nth-child(even) { background: #0c1525; }
+    .section-label { font-family: 'Unbounded', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .toplist-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 14px; display: grid; grid-template-columns: 48px 1fr auto; gap: 16px; align-items: center; transition: border-color 0.2s, transform 0.2s; }
+    .toplist-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+    .toplist-card.top1 { border-color: rgba(249,115,22,0.45); }
+    .card-number { font-family: 'Unbounded', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .card-body { min-width: 0; }
+    .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
+    .card-name { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1rem; color: var(--white); }
+    .ribbon { font-size: 0.62rem; font-weight: 700; font-family: 'Unbounded', sans-serif; padding: 3px 9px; border-radius: 50px; white-space: nowrap; background: var(--orange); color: white; }
+    .ribbon.green { background: #16a34a; }
+    .ribbon.blue { background: #2563eb; }
+    .ribbon.purple { background: #7c3aed; }
+    .ribbon.slate { background: #374151; }
+    .ribbon.teal { background: #0369a1; }
+    .card-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.5; }
+    .card-features { display: flex; flex-wrap: wrap; gap: 6px; }
+    .feat { font-size: 0.75rem; color: var(--text-muted); background: var(--card2); border: 1px solid var(--border); padding: 3px 9px; border-radius: 50px; white-space: nowrap; }
+    .card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; flex-shrink: 0; }
+    .card-rating { font-family: 'Unbounded', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--orange); white-space: nowrap; }
+    .btn-cta { background: var(--orange); color: white; padding: 9px 18px; border-radius: 8px; font-weight: 600; font-size: 0.82rem; transition: background 0.2s; white-space: nowrap; display: inline-block; }
+    .btn-cta:hover { background: var(--orange-dark); text-decoration: none; color: white; }
+    .review-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; margin-bottom: 20px; }
+    .review-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+    .review-num { font-family: 'Unbounded', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--orange); width: 36px; flex-shrink: 0; }
+    .review-title-block h3 { color: var(--white); margin: 0 0 2px; }
+    .review-subtitle { font-size: 0.8rem; color: var(--text-muted); }
+    .review-rating-badge { margin-left: auto; font-family: 'Unbounded', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--orange); flex-shrink: 0; }
+    .review-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.75; }
+    .key-features { background: var(--card2); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; }
+    .key-features h4 { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .kf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 4px 16px; }
+    .kf-item { font-size: 0.82rem; color: var(--text); padding: 3px 0; }
+    .kf-item span { color: var(--text-muted); }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .pros, .cons { background: var(--dark2); border-radius: 8px; padding: 12px 14px; }
+    .pros h4 { color: var(--green); font-size: 0.78rem; margin-bottom: 6px; }
+    .cons h4 { color: var(--red); font-size: 0.78rem; margin-bottom: 6px; }
+    .pros ul, .cons ul { padding-left: 1.1rem; margin: 0; }
+    .pros li, .cons li { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 3px; }
+    .review-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .review-price { font-size: 0.85rem; color: var(--text-muted); }
+    .review-price strong { color: var(--white); font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.81rem; }
+    thead tr { background: var(--card2); }
+    thead th { padding: 11px 13px; text-align: left; color: var(--text-muted); font-weight: 600; font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; border-bottom: 1px solid var(--border); }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(249,115,22,0.03); }
+    tbody td { padding: 11px 13px; color: var(--text); vertical-align: middle; }
+    tbody td:first-child { font-weight: 600; color: var(--white); }
+    .td-yes { color: var(--green); font-weight: 600; }
+    .td-no { color: var(--text-muted); }
+    .td-mark { color: var(--orange); font-weight: 700; }
+    .alert { background: rgba(249,115,22,0.07); border: 1px solid rgba(249,115,22,0.2); border-left: 4px solid var(--orange); border-radius: var(--radius); padding: 16px 20px; margin: 20px 0; font-size: 0.88rem; color: var(--text-muted); }
+    .alert strong { color: var(--orange); }
+    .alert.purple { background: rgba(139,92,246,0.07); border-color: rgba(139,92,246,0.2); border-left-color: var(--purple); }
+    .alert.purple strong { color: #c4b5fd; }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+    .info-card { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: var(--radius); padding: 18px; }
+    .info-card .icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .info-card h4 { color: var(--white); font-size: 0.9rem; margin-bottom: 5px; }
+    .info-card p { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 8px 0 8px 26px; position: relative; color: var(--text-muted); font-size: 0.88rem; border-bottom: 1px solid rgba(30,41,59,0.5); }
+    .checklist li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+    .checklist li:last-child { border-bottom: none; }
+    .warn-list { list-style: none; padding: 0; }
+    .warn-list li { padding: 8px 0 8px 26px; position: relative; color: var(--text-muted); font-size: 0.88rem; border-bottom: 1px solid rgba(30,41,59,0.5); }
+    .warn-list li::before { content: '⚠'; position: absolute; left: 0; color: #f59e0b; font-size: 0.8rem; }
+    .warn-list li:last-child { border-bottom: none; }
+    .step-block { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 14px; overflow: hidden; }
+    .step-block-head { display: flex; align-items: center; gap: 14px; padding: 14px 20px; background: var(--card2); }
+    .step-num { width: 32px; height: 32px; background: var(--orange); color: white; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 0.8rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-block-head strong { color: var(--white); font-size: 0.95rem; font-family: 'Unbounded', sans-serif; font-weight: 600; }
+    .step-block-body { padding: 16px 20px; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+    .step-block-body p { margin-bottom: 0.75rem; }
+    .step-block-body p:last-child { margin-bottom: 0; }
+    .code-block { background: #0a0f1e; border: 1px solid #1e293b; border-radius: 8px; padding: 12px 16px; font-family: 'Courier New', monospace; font-size: 0.8rem; color: #94a3b8; margin: 10px 0; overflow-x: auto; }
+    .code-block .prompt { color: var(--orange); }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-family: 'Unbounded', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--white); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-q::after { content: '+'; color: var(--orange); font-size: 1.3rem; font-weight: 400; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { display: none; padding-top: 10px; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+    .summary-cta { background: linear-gradient(135deg, var(--card) 0%, #120a1a 100%); border: 1px solid rgba(249,115,22,0.3); border-radius: var(--radius); padding: 28px 32px; text-align: center; margin: 36px 0; }
+    .summary-cta h2 { color: var(--white); margin-bottom: 10px; font-size: 1.3rem; }
+    .summary-cta p { color: var(--text-muted); max-width: 520px; margin: 0 auto 20px; font-size: 0.9rem; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-secondary { background: transparent; color: var(--orange); border: 1px solid var(--orange); padding: 9px 18px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; display: inline-block; }
+    .btn-secondary:hover { background: var(--orange); color: white; text-decoration: none; }
+    .conclusion-card { background: var(--card); border: 1px solid rgba(249,115,22,0.25); border-radius: var(--radius); padding: 28px; }
+    .conclusion-card h2 { color: var(--white); margin-bottom: 14px; }
+    footer { background: #070d1a; border-top: 1px solid var(--border); padding: 36px 0 20px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: 28px; margin-bottom: 32px; }
+    .footer-brand p { font-size: 0.83rem; color: var(--text-muted); margin-top: 10px; }
+    .footer-col h4 { font-family: 'Unbounded', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 7px; }
+    .footer-col a { color: var(--text-muted); font-size: 0.83rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.78rem; color: var(--text-muted); }
+    .footer-bottom a { color: var(--text-muted); }
+    .footer-bottom a:hover { color: var(--orange); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--dark2); padding: 14px 20px; border-bottom: 1px solid var(--border); z-index: 99; }
+      .burger { display: block; }
+      .toplist-card { grid-template-columns: 40px 1fr; }
+      .card-right { flex-direction: row; align-items: center; grid-column: 1 / -1; justify-content: flex-end; }
+      .pros-cons { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .toplist-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="#f97316"/>
+        <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+        <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+        <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+        <circle cx="30" cy="25.5" r="5" fill="white"/>
+        <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="logo-text">VPS<span>Хостинг</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#chto-takoe">Что такое</a></li>
+      <li><a href="#rating">Рейтинг</a></li>
+      <li><a href="#obzory">Обзоры</a></li>
+      <li><a href="#resursy">Ресурсы</a></li>
+      <li><a href="#nastrojka">Установка</a></li>
+      <li><a href="#optimizaciya">Оптимизация</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#rating" class="nav-cta">Выбрать VPS →</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Главная</a> / VPS для OpenClaw</div>
+    <div class="hero-badge">🤖 Новинка 2025–2026</div>
+    <h1>Лучшие <span>VPS для OpenClaw</span> в 2026 году</h1>
+    <p class="hero-sub">В этом материале вы узнаете, какие VPS серверы лучше всего подходят для хостинга OpenClaw в 2026 году — самостоятельного AI-агента, который работает в Telegram, WhatsApp и управляет браузером автоматически. Сравниваем провайдеров, объясняем требования к серверу, пошаговую установку и оптимизацию. Аренда VPS с OpenClaw от 299 рублей в месяц с поддержкой из России.</p>
+    <div class="hero-meta">
+      <span>🖥 8 провайдеров</span>
+      <span>🤖 AI-агент 24/7</span>
+      <span>🐧 Ubuntu / Docker</span>
+      <span>💳 Оплата из РФ</span>
+    </div>
+  </div>
+</section>
+
+<!-- TOPLIST -->
+<section id="rating">
+  <div class="container">
+    <div class="section-label">Рейтинг</div>
+    <h2>ТОП-8 VPS для OpenClaw в 2026 году</h2>
+    <p style="color:var(--text-muted); margin-bottom: 28px;">OpenClaw требует минимум 2 vCPU и 4 ГБ RAM для базовой работы, NVMe-диск для быстрых операций с Docker и стабильный аптайм 99.9%+. Для браузерной автоматизации с Chromium — от 8 ГБ RAM. Все провайдеры ниже принимают оплату из России.</p>
+
+    <div class="toplist-card top1">
+      <div class="card-number">1</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">is*hosting</span><span class="ribbon">★ Выбор редакции</span></div>
+        <p class="card-desc">44 страны, NVMe, KVM — идеальный VPS с OpenClaw благодаря максимальному выбору локации для снижения задержки до мессенджер-серверов. Тест 7 дней бесплатно.</p>
+        <div class="card-features"><span class="feat">🌍 44 страны</span><span class="feat">⚡ NVMe SSD</span><span class="feat">🐧 Ubuntu 22.04</span><span class="feat">🐳 Docker</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">💳 Оплата из РФ</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.6/10</div><a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">2</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">AdminVPS</span><span class="ribbon green">Поддержка 24/7 RU</span></div>
+        <p class="card-desc">Серверы в Европе, русская поддержка 24/7 и бесплатные бэкапы — надёжная основа для постоянно работающего AI-агента с помощью в настройке на русском языке.</p>
+        <div class="card-features"><span class="feat">🇩🇪 Германия</span><span class="feat">🇳🇱 Нидерланды</span><span class="feat">⚡ NVMe</span><span class="feat">🔄 Бэкапы включены</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">🇷🇺 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.4/10</div><a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">3</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Timeweb Cloud</span><span class="ribbon teal">Удобная панель</span></div>
+        <p class="card-desc">Почасовая оплата и удобная панель с поддержкой Docker — быстро запустить OpenClaw на VPS и протестировать без месячных обязательств.</p>
+        <div class="card-features"><span class="feat">🇫🇮 Финляндия</span><span class="feat">⏰ Почасовая оплата</span><span class="feat">⚡ NVMe</span><span class="feat">🐳 Docker</span><span class="feat">🖥 Удобная панель</span><span class="feat">🇷🇺 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 9.1/10</div><a href="https://timeweb.cloud/?i=122157" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">4</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Fornex</span><span class="ribbon blue">ЕС юрисдикция</span></div>
+        <p class="card-desc">Испанская юрисдикция и серверы в Европе — для тех, кому важно, чтобы данные AI-агента хранились под действием европейского права (GDPR).</p>
+        <div class="card-features"><span class="feat">🇩🇪🇳🇱🇨🇭 3 локации ЕС</span><span class="feat">⚖️ Испания (GDPR)</span><span class="feat">🛡 DDoS защита</span><span class="feat">🆓 Тест 7 дней</span><span class="feat">🐧 Ubuntu</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.9/10</div><a href="https://fornex.com/c/fn8i35/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">5</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Ufo.hosting</span><span class="ribbon purple">Глобальная сеть</span></div>
+        <p class="card-desc">Широкий выбор глобальных локаций — выберите сервер ближе к пользователям вашего агента для минимального пинга при ответах через мессенджеры.</p>
+        <div class="card-features"><span class="feat">🌏 Глобальные локации</span><span class="feat">⚡ NVMe SSD</span><span class="feat">🛡 DDoS защита</span><span class="feat">🐧 Ubuntu</span><span class="feat">💳 Оплата из РФ</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.7/10</div><a href="https://ufo.hosting/?from=934984" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">6</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Beget</span><span class="ribbon slate">Надёжность</span></div>
+        <p class="card-desc">Надёжный российский провайдер с автобэкапами — для агентов, работающих с российскими сервисами и не требующих зарубежного IP.</p>
+        <div class="card-features"><span class="feat">🇷🇺 Россия</span><span class="feat">🔄 Автобэкапы</span><span class="feat">⚡ NVMe</span><span class="feat">🛡 DDoS</span><span class="feat">🇷🇺 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.4/10</div><a href="https://beget.com/ru" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">7</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">Spaceweb</span><span class="ribbon slate">Стабильность</span></div>
+        <p class="card-desc">15+ лет на рынке, прозрачные тарифы и поддержка 24/7. Подходит для OpenClaw-агентов без требований к зарубежной локации.</p>
+        <div class="card-features"><span class="feat">🇷🇺 Россия</span><span class="feat">⚡ SSD</span><span class="feat">🛡 DDoS</span><span class="feat">🐧 Ubuntu</span><span class="feat">💬 Поддержка 24/7</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 8.1/10</div><a href="https://sweb.ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="toplist-card">
+      <div class="card-number">8</div>
+      <div class="card-body">
+        <div class="card-top"><span class="card-name">The Hosting</span><span class="ribbon slate">Бюджетный старт</span></div>
+        <p class="card-desc">Доступный вариант для первого знакомства с OpenClaw — минимальные расходы для тестирования агента на небольшой нагрузке.</p>
+        <div class="card-features"><span class="feat">💰 от 250 ₽/мес</span><span class="feat">⚡ SSD</span><span class="feat">🐧 Ubuntu</span><span class="feat">🛡 DDoS</span><span class="feat">🇷🇺 Поддержка</span></div>
+      </div>
+      <div class="card-right"><div class="card-rating">⭐ 7.8/10</div><a href="https://the.hosting/ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS OPENCLAW -->
+<section id="chto-takoe">
+  <div class="container">
+    <div class="section-label">Что такое OpenClaw</div>
+    <h2>OpenClaw: персональный AI-агент на вашем сервере</h2>
+    <p>OpenClaw — это платформа для запуска самостоятельного AI-ассистента на собственном сервере. Созданный в конце 2025 года (первоначально под именами ClawdBot и MoltBot), OpenClaw быстро стал одним из самых обсуждаемых open-source AI-проектов: за первые месяцы собрал десятки тысяч звёзд на GitHub и активное сообщество на Reddit.</p>
+    <p>В отличие от облачных ассистентов, OpenClaw работает на <em>вашем</em> железе — VPS или домашнем сервере. Вы общаетесь с ним через Telegram, WhatsApp, Slack, Discord или другие мессенджеры, а агент выполняет задачи: просматривает веб-страницы, управляет файлами, запускает скрипты, автоматизирует рабочие процессы, взаимодействует с внешними API через систему расширяемых «Skills». Для вывода используются модели Claude, GPT-4, DeepSeek или локальные через Ollama — OpenClaw обеспечивает «тело», а LLM — «мозг».</p>
+
+    <div class="alert purple"><strong>🤖 Почему VPS, а не домашний компьютер?</strong> OpenClaw должен работать 24/7 — принимать сообщения и выполнять задачи даже когда вы спите или ноутбук выключен. VPS в профессиональном дата-центре обеспечивает постоянный аптайм, статический IP и стабильное сетевое соединение без вашего участия.</div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="icon">💬</div>
+        <h4>Мультиканальный ввод</h4>
+        <p>Telegram, WhatsApp, Slack, Discord, Signal, iMessage — общайтесь с агентом из любого удобного мессенджера, агент помнит контекст между сессиями.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🌐</div>
+        <h4>Браузерная автоматизация</h4>
+        <p>Управляет Chromium-браузером: заходит на сайты, кликает, заполняет формы, парсит данные с JS-тяжёлых страниц, обходит базовые защиты.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🔧</div>
+        <h4>Система Skills</h4>
+        <p>Расширяется через SKILL.md-файлы: веб-скрапинг, поиск, работа с базами данных, API-интеграции, управление файлами и автоматизация задач.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🔒</div>
+        <h4>Данные под вашим контролем</h4>
+        <p>Вся история переписки, файлы и конфигурация хранятся на вашем сервере. Никаких данных в облаках третьих сторон без вашего ведома.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="obzory">
+  <div class="container">
+    <div class="section-label">Обзоры</div>
+    <h2>Подробные обзоры провайдеров</h2>
+    <p style="color:var(--text-muted); margin-bottom: 28px;">Детальный разбор каждого провайдера с учётом специфики хостинга OpenClaw: объём RAM, тип диска, поддержка Docker, аптайм и возможности масштабирования при росте нагрузки агента.</p>
+
+    <!-- 1 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">1</div><div class="review-title-block"><h3>is*hosting</h3><div class="review-subtitle">Максимальный выбор локаций для AI-агента любого масштаба</div></div><div class="review-rating-badge">⭐ 9.6/10</div></div>
+      <p class="review-desc">is*hosting — эстонский провайдер с серверами в 44 странах. VPS с OpenClaw на этой платформе даёт уникальную гибкость: можно разместить агент в Финляндии для минимального пинга из России, в Германии для доступа к европейским сервисам или в Нидерландах для нейтральной юрисдикции. KVM-виртуализация с NVMe гарантирует быстрый запуск Docker-контейнеров и отзывчивость при обработке браузерных задач. Тест 7 дней без предоплаты позволяет проверить производительность под реальной нагрузкой агента.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>44 страны, 50+ городов</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🐧 ОС: <span>Ubuntu 22.04, Debian, +</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Базовая фильтрация</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней (Linux)</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, СБП, крипта</span></div>
+        <div class="kf-item">📞 Поддержка: <span>EN / частично RU</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Максимальный выбор локаций</li><li>KVM + NVMe — быстрые Docker-операции</li><li>Тест 7 дней без предоплаты</li><li>IPv6 /64 бесплатно</li><li>Оплата криптовалютой</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Поддержка преимущественно на английском</li><li>Стартовый тариф 512 МБ RAM — мало для OpenClaw, нужен тариф от 4 ГБ</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>~370 ₽/мес</strong> (для OpenClaw от ~900 ₽/мес за 4 ГБ)</div><a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">2</div><div class="review-title-block"><h3>AdminVPS</h3><div class="review-subtitle">Русскоязычная поддержка 24/7 поможет настроить агента</div></div><div class="review-rating-badge">⭐ 9.4/10</div></div>
+      <p class="review-desc">AdminVPS — отличный выбор для тех, кто впервые разворачивает OpenClaw и хочет помощи на русском языке. Поддержка 24/7 реально помогает с техническими вопросами: настройкой Docker, открытием портов для WebSocket-соединений агента, проблемами с зависимостями. Серверы в Германии и Нидерландах обеспечивают хорошее соединение с инфраструктурой Telegram и WhatsApp. Ежедневные бэкапы защитят состояние агента и его память при любых сбоях.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>РФ, DE, NL, FI, BY, KZ</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🐧 ОС: <span>Ubuntu 22.04, Debian</span></div>
+        <div class="kf-item">🛡 DDoS защита: <span>Anti-DDoS включён</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней</span></div>
+        <div class="kf-item">🔄 Бэкапы: <span>Ежедневные, бесплатно</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Поддержка на русском 24/7 с помощью в настройке</li><li>Ежедневные бэкапы без доплаты</li><li>Европейские серверы для доступа к мессенджерам</li><li>Tier III, аптайм 99.9%</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Меньше международных локаций, чем у is*hosting</li><li>Панель управления устаревшая</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>299 ₽/мес</strong> (для OpenClaw от ~600 ₽/мес за 4 ГБ)</div><a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">3</div><div class="review-title-block"><h3>Timeweb Cloud</h3><div class="review-subtitle">Почасовая оплата для тестирования и масштабирования агента</div></div><div class="review-rating-badge">⭐ 9.1/10</div></div>
+      <p class="review-desc">Timeweb Cloud выделяется удобнейшей панелью управления и почасовой тарификацией. Запустить OpenClaw для теста на несколько часов, оценить потребление ресурсов под реальной нагрузкой и оплатить лишь фактически использованное время — идеальный сценарий. Нативная поддержка Docker и большой выбор готовых образов Ubuntu упрощают первоначальную настройку. Финляндская локация даёт минимальный пинг из России.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия, Финляндия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM / Cloud</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🐧 ОС: <span>Ubuntu, Debian, Fedora, +10</span></div>
+        <div class="kf-item">⏰ Тарификация: <span>Почасовая</span></div>
+        <div class="kf-item">🐳 Docker: <span>Нативная поддержка</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, СБП</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Лучшая панель управления в рейтинге</li><li>Почасовая оплата — тест без обязательств</li><li>Нативный Docker, широкий выбор образов</li><li>Масштабирование ресурсов в один клик</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только одна европейская локация</li><li>Ограниченный трафик на базовых тарифах</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>290 ₽/мес</strong> (для OpenClaw от ~700 ₽/мес за 4 ГБ)</div><a href="https://timeweb.cloud/?i=122157" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 4 compact -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">4</div><div class="review-title-block"><h3>Fornex</h3><div class="review-subtitle">Европейская юрисдикция — данные агента под GDPR</div></div><div class="review-rating-badge">⭐ 8.9/10</div></div>
+      <p class="review-desc">Fornex — провайдер с испанской юрисдикцией и серверами в Германии, Нидерландах и Швейцарии. Для OpenClaw-агентов, которые обрабатывают персональные или корпоративные данные, хранение state и workspace под GDPR — значимое преимущество. Надёжная репутация среди российских компаний подтверждает стабильность для постоянно работающих сервисов.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>DE, NL, CH, RU, UA</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🐧 ОС: <span>Ubuntu, Debian, CentOS</span></div>
+        <div class="kf-item">⚖️ Юрисдикция: <span>Испания (GDPR)</span></div>
+        <div class="kf-item">🆓 Тест: <span>7 дней</span></div>
+        <div class="kf-item">🛡 DDoS: <span>Включён</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU / EN</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Европейская юрисдикция (GDPR)</li><li>3 европейских локации на выбор</li><li>Стабильная репутация среди компаний</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>SSD, а не NVMe на стартовых тарифах</li><li>Цены выше конкурентов</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>374 ₽/мес</strong></div><a href="https://fornex.com/c/fn8i35/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 5 compact -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">5</div><div class="review-title-block"><h3>Ufo.hosting</h3><div class="review-subtitle">Глобальная сеть для нестандартных локаций агента</div></div><div class="review-rating-badge">⭐ 8.7/10</div></div>
+      <p class="review-desc">Ufo.hosting предлагает серверы по всему миру — полезно, если агент обслуживает пользователей в Азии или Америке и важен пинг при отправке ответов через мессенджеры. NVMe-диски обеспечивают хорошую производительность Docker-контейнеров. Оплата из России без иностранных карт.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Глобальная сеть</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🐧 ОС: <span>Ubuntu, Debian, CentOS</span></div>
+        <div class="kf-item">🛡 DDoS: <span>Включён</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ, крипта</span></div>
+        <div class="kf-item">🆓 Тест: <span>—</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU / EN</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Большой выбор глобальных локаций</li><li>NVMe на всех тарифах</li><li>Оплата из России</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Нет тестового периода</li><li>Поддержка менее оперативная</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>490 ₽/мес</strong></div><a href="https://ufo.hosting/?from=934984" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <!-- 6-8 compact -->
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">6</div><div class="review-title-block"><h3>Beget</h3><div class="review-subtitle">Надёжный российский VPS для локальных агентов</div></div><div class="review-rating-badge">⭐ 8.4/10</div></div>
+      <p class="review-desc">Beget подходит для OpenClaw-агентов, которые работают с российскими API, сервисами и базами данных без требований к зарубежному IP. Автобэкапы и S3-хранилище включены — удобно для регулярного снятия снапшотов workspace агента. Поддержка NVMe обеспечивает быстрые операции с Docker.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>NVMe SSD</span></div>
+        <div class="kf-item">🔄 Бэкапы: <span>Автоматические</span></div>
+        <div class="kf-item">☁️ S3: <span>Хранилище включено</span></div>
+        <div class="kf-item">🛡 DDoS: <span>Включён</span></div>
+        <div class="kf-item">💳 Оплата: <span>Все способы РФ</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Надёжность 10+ лет</li><li>Автобэкапы и S3 включены</li><li>NVMe на всех тарифах</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>Агент ограничен российскими IP</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>350 ₽/мес</strong></div><a href="https://beget.com/ru" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">7</div><div class="review-title-block"><h3>Spaceweb</h3><div class="review-subtitle">Стабильный хостинг для некритичных агентов</div></div><div class="review-rating-badge">⭐ 8.1/10</div></div>
+      <p class="review-desc">Spaceweb предлагает KVM-серверы с Ubuntu и SSD. Прозрачные тарифы и поддержка 24/7 на русском. Серверы только в России — для агентов, работающих с российскими пользователями без требований к зарубежному IP. SSD вместо NVMe может замедлить Docker-операции при высокой нагрузке.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🐧 ОС: <span>Ubuntu, Debian, CentOS</span></div>
+        <div class="kf-item">🛡 DDoS: <span>Бесплатно</span></div>
+        <div class="kf-item">💳 Оплата: <span>Все способы РФ</span></div>
+        <div class="kf-item">🏢 На рынке: <span>С 2005 года</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU 24/7</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>15+ лет — проверенная стабильность</li><li>Прозрачные тарифы</li><li>Поддержка 24/7 на русском</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>SSD, а не NVMe</li><li>Только российские серверы</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>389 ₽/мес</strong></div><a href="https://sweb.ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header"><div class="review-num">8</div><div class="review-title-block"><h3>The Hosting</h3><div class="review-subtitle">Бюджетный старт для первого знакомства с OpenClaw</div></div><div class="review-rating-badge">⭐ 7.8/10</div></div>
+      <p class="review-desc">The Hosting — доступный вариант для знакомства с OpenClaw на практике. На базовых тарифах с 1–2 ГБ RAM агент будет работать в ограниченном режиме (без браузерной автоматизации), но для тестирования текстовых навыков и базовых Skills вполне достаточно. Для продуктивного использования рекомендуем провайдеров из топ-5.</p>
+      <div class="key-features"><h4>Ключевые характеристики</h4><div class="kf-grid">
+        <div class="kf-item">🌍 Локации: <span>Россия</span></div>
+        <div class="kf-item">🖥 Виртуализация: <span>KVM</span></div>
+        <div class="kf-item">💾 Диск: <span>SSD</span></div>
+        <div class="kf-item">🐧 ОС: <span>Ubuntu, Debian</span></div>
+        <div class="kf-item">🛡 DDoS: <span>Базовая</span></div>
+        <div class="kf-item">💰 Цена: <span>от 250 ₽/мес</span></div>
+        <div class="kf-item">💳 Оплата: <span>Карты РФ</span></div>
+        <div class="kf-item">📞 Поддержка: <span>RU</span></div>
+      </div></div>
+      <div class="pros-cons">
+        <div class="pros"><h4>✓ Плюсы</h4><ul><li>Самая низкая цена в рейтинге</li><li>KVM + Ubuntu</li><li>Простой старт</li></ul></div>
+        <div class="cons"><h4>✗ Минусы</h4><ul><li>Только российские серверы</li><li>Базовые тарифы малы для OpenClaw</li><li>Нет гарантированного SLA</li></ul></div>
+      </div>
+      <div class="review-footer"><div class="review-price">от <strong>250 ₽/мес</strong></div><a href="https://the.hosting/ru/" target="_blank" rel="nofollow" class="btn-cta">Перейти на сайт</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resursy">
+  <div class="container">
+    <div class="section-label">Требования</div>
+    <h2>Что важно для OpenClaw: CPU, диски, сеть и Anti-DDoS</h2>
+    <p>OpenClaw — не типичное приложение, и его профиль нагрузки отличается от веб-сервера или базы данных. Понимание реальных требований к ресурсам поможет не переплатить за ненужные мощности и не столкнуться с нехваткой RAM в самый неподходящий момент.</p>
+
+    <h3>Профиль нагрузки OpenClaw: как оценить ресурсы</h3>
+    <p>OpenClaw не выполняет inference на вашем сервере — LLM-запросы уходят в API (Anthropic, OpenAI, DeepSeek). Ваш VPS обрабатывает только: Gateway-процесс, WebSocket-соединения с мессенджерами, работу браузера Chromium (при браузерной автоматизации), файловые операции в workspace агента и Docker-контейнеры. Это формирует специфический профиль:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Компонент</th><th>CPU</th><th>RAM</th><th>Диск I/O</th><th>Сеть</th></tr></thead>
+        <tbody>
+          <tr><td>Gateway + WebSocket</td><td class="td-yes">Низкий</td><td>200–500 МБ</td><td class="td-yes">Низкий</td><td>Постоянное соединение</td></tr>
+          <tr><td>Обработка текстовых Skills</td><td class="td-yes">Низкий</td><td>300–600 МБ</td><td class="td-yes">Низкий</td><td>API-запросы (1–5 КБ)</td></tr>
+          <tr><td>Docker-образы (установка)</td><td>Средний</td><td>1–2 ГБ</td><td class="td-mark">⚡ Высокий (NVMe!)</td><td>2–8 ГБ однократно</td></tr>
+          <tr><td>Chromium (одна сессия)</td><td>Средний</td><td class="td-mark">2–4 ГБ</td><td>Средний</td><td>Загрузка страниц</td></tr>
+          <tr><td>Несколько браузерных сессий</td><td class="td-no">Высокий</td><td class="td-no">4–8+ ГБ</td><td>Высокий</td><td>Значительный трафик</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top: 28px;">Рекомендованные конфигурации</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Сценарий использования</th><th>CPU</th><th>RAM</th><th>Диск</th><th>Провайдер</th></tr></thead>
+        <tbody>
+          <tr><td>Личный ассистент (только текст)</td><td>2 vCPU</td><td class="td-mark">4 ГБ</td><td>40 ГБ NVMe</td><td>AdminVPS, is*hosting</td></tr>
+          <tr><td>Браузерная автоматизация</td><td>2–4 vCPU</td><td class="td-mark">8 ГБ</td><td>60 ГБ NVMe</td><td>is*hosting, Timeweb</td></tr>
+          <tr><td>Несколько агентов / Skills</td><td>4 vCPU</td><td class="td-mark">16 ГБ</td><td>80 ГБ NVMe</td><td>is*hosting, Fornex</td></tr>
+          <tr><td>Тестирование (минимум)</td><td>1–2 vCPU</td><td>2 ГБ</td><td>20 ГБ SSD</td><td>Любой из рейтинга</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert"><strong>💡 Ключевой вывод по ресурсам:</strong> Стартовые тарифы за 250–370 ₽/мес (512 МБ RAM) не подходят для OpenClaw. Минимальная рабочая конфигурация — 2 vCPU и 4 ГБ RAM. Для браузерной автоматизации с Chromium — 8 ГБ, иначе Chromium будет постоянно убиваться OOM-killer'ом. NVMe диск — не опция, а необходимость: Docker-операции на SATA SSD работают в 3–5 раз медленнее.</div>
+
+    <h3>Сеть и Anti-DDoS: почему это важно для AI-агента</h3>
+    <p>OpenClaw поддерживает постоянные WebSocket-соединения с серверами Telegram, WhatsApp и других мессенджеров. Это означает, что качество сети важнее, чем для обычного веб-сервера с HTTP-запросами. Нестабильная сеть приведёт к постоянным разрывам соединения и потере сообщений.</p>
+    <p>Anti-DDoS защита критична по другой причине: агент с публичным IP, особенно если он слушает входящие подключения для Control UI, будет периодически получать мусорный трафик. Базовая L3/L4 фильтрация, которую предоставляют все провайдеры рейтинга, достаточна для защиты личного агента от автоматических атак.</p>
+    <p>Дополнительная рекомендация из документации OpenClaw: держите Gateway на loopback-адресе и открывайте доступ только через SSH-туннель или Tailscale. Это снижает поверхность атаки до нуля — не нужно открывать никакие порты Control UI наружу.</p>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="nastrojka">
+  <div class="container">
+    <div class="section-label">Установка</div>
+    <h2>Как установить OpenClaw на VPS: пошаговое руководство</h2>
+    <p>После получения VPS (Ubuntu 22.04 LTS, минимум 4 ГБ RAM) выполните следующие шаги. Весь процесс займёт 10–15 минут.</p>
+
+    <div class="step-block">
+      <div class="step-block-head"><div class="step-num">1</div><strong>Подготовьте сервер</strong></div>
+      <div class="step-block-body">
+        <p>Подключитесь по SSH и обновите систему:</p>
+        <div class="code-block"><span class="prompt">$</span> ssh root@ВАШ_IP<br><span class="prompt">$</span> apt update && apt upgrade -y && reboot</div>
+        <p>После перезагрузки установите Node.js 20 LTS и npm — OpenClaw требует Node.js 18+ для работы:</p>
+        <div class="code-block"><span class="prompt">$</span> curl -fsSL https://deb.nodesource.com/setup_20.x | bash -<br><span class="prompt">$</span> apt install -y nodejs</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-block-head"><div class="step-num">2</div><strong>Установите Docker (необходим для браузерной автоматизации)</strong></div>
+      <div class="step-block-body">
+        <p>Docker нужен для запуска Chromium в изолированной среде и для ряда Skills:</p>
+        <div class="code-block"><span class="prompt">$</span> curl -fsSL https://get.docker.com | bash<br><span class="prompt">$</span> usermod -aG docker $USER</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-block-head"><div class="step-num">3</div><strong>Установите OpenClaw и запустите онбординг</strong></div>
+      <div class="step-block-body">
+        <p>Установите OpenClaw глобально и запустите встроенный wizard настройки:</p>
+        <div class="code-block"><span class="prompt">$</span> npm install -g openclaw@latest<br><span class="prompt">$</span> openclaw onboard --install-daemon</div>
+        <p>Wizard попросит выбрать: API-ключ модели (Anthropic Claude, OpenAI GPT, DeepSeek или локальная через Ollama), мессенджер для подключения (Telegram, WhatsApp, Slack и др.) и базовые настройки безопасности.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-block-head"><div class="step-num">4</div><strong>Подключите Telegram-бота (или другой мессенджер)</strong></div>
+      <div class="step-block-body">
+        <p>Для подключения Telegram: создайте бота через @BotFather, получите токен и введите его при онбординге. После этого напишите боту в Telegram — агент должен ответить. Для проверки отправьте: <code style="background:#0a0f1e; padding:1px 6px; border-radius:4px; color:#f97316; font-size:0.85em;">Который час?</code></p>
+        <p>Для WhatsApp онбординг предложит отсканировать QR-код через приложение WhatsApp на телефоне.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-block-head"><div class="step-num">5</div><strong>Настройте автозапуск и мониторинг</strong></div>
+      <div class="step-block-body">
+        <p>Флаг <code style="background:#0a0f1e; padding:1px 6px; border-radius:4px; color:#f97316; font-size:0.85em;">--install-daemon</code> создаёт systemd-сервис. Убедитесь, что он запущен и настроен на автостарт:</p>
+        <div class="code-block"><span class="prompt">$</span> systemctl status openclaw<br><span class="prompt">$</span> systemctl enable openclaw</div>
+        <p>Проверьте логи при проблемах: <code style="background:#0a0f1e; padding:1px 6px; border-radius:4px; color:#f97316; font-size:0.85em;">journalctl -u openclaw -f</code></p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-block-head"><div class="step-num">6</div><strong>Защитите сервер</strong></div>
+      <div class="step-block-body">
+        <p>Настройте файрвол — OpenClaw по умолчанию слушает на loopback, наружу выставлять Control UI не нужно:</p>
+        <div class="code-block"><span class="prompt">$</span> apt install ufw fail2ban -y<br><span class="prompt">$</span> ufw allow 2222/tcp && ufw enable<br><span class="prompt">$</span> sed -i 's/#Port 22/Port 2222/' /etc/ssh/sshd_config && service ssh restart</div>
+        <p>Для удалённого управления агентом используйте SSH-туннель или Tailscale — не открывайте порты Control UI напрямую.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPTIMIZATION -->
+<section id="optimizaciya">
+  <div class="container">
+    <div class="section-label">Оптимизация</div>
+    <h2>Оптимизация VPS для OpenClaw: от ОС до сетевых параметров</h2>
+    <p>Правильная настройка сервера после установки OpenClaw значительно улучшает стабильность и производительность агента. Ниже — практические советы по системному и сетевому тюнингу, бэкапам и типичным ошибкам.</p>
+
+    <h3>Системный тюнинг: практические советы</h3>
+    <ul class="checklist">
+      <li><strong>Swap-файл обязателен:</strong> даже при 4 ГБ RAM создайте swap 4–8 ГБ. Chromium и Docker-образы потребляют память пиково — без swap OOM-killer убьёт процесс агента в самый неподходящий момент. <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">fallocate -l 4G /swapfile && mkswap /swapfile && swapon /swapfile</code></li>
+      <li><strong>Настройте swappiness:</strong> добавьте <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">vm.swappiness=10</code> в <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">/etc/sysctl.conf</code> — это снизит агрессивность использования swap и улучшит отзывчивость при нормальной нагрузке.</li>
+      <li><strong>Дисковое пространство растёт со временем:</strong> Docker-образы, логи агента и workspace накапливаются. Настройте ротацию логов через logrotate и ежемесячную очистку неиспользуемых Docker-образов: <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">docker system prune -f</code></li>
+      <li><strong>Snap-версия Chromium не работает с OpenClaw:</strong> на Ubuntu установите Chromium из официального репозитория Google, а не через snap. Snap-изоляция блокирует доступ агента к файловой системе браузера.</li>
+      <li><strong>Ограничьте ресурсы Docker-контейнеров:</strong> задайте лимиты памяти в docker-compose, чтобы один упавший контейнер не занял весь RAM сервера.</li>
+    </ul>
+
+    <h3>Сетевой тюнинг: TCP-параметры для WebSocket</h3>
+    <p>OpenClaw использует постоянные WebSocket-соединения. Добавьте в <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">/etc/sysctl.conf</code> следующие параметры для улучшения стабильности долгих соединений:</p>
+    <div class="code-block">
+      <span style="color:#475569;"># Увеличить буферы TCP для WebSocket</span><br>
+      net.core.rmem_max = 16777216<br>
+      net.core.wmem_max = 16777216<br>
+      <span style="color:#475569;"># Уменьшить время ожидания для закрытых соединений</span><br>
+      net.ipv4.tcp_fin_timeout = 30<br>
+      <span style="color:#475569;"># Включить keepalive для обнаружения разрывов</span><br>
+      net.ipv4.tcp_keepalive_time = 60<br>
+      net.ipv4.tcp_keepalive_intvl = 10<br>
+      net.ipv4.tcp_keepalive_probes = 6
+    </div>
+    <p style="color:var(--text-muted); font-size:0.88rem;">Примените изменения: <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">sysctl -p</code></p>
+
+    <h3>Бэкапы и мониторинг агента</h3>
+    <p>Состояние OpenClaw — это его память, конфигурация Skills и файлы workspace. Потеря этих данных означает, что агент «забудет» всё, что узнал. Настройте регулярные бэкапы директории OpenClaw:</p>
+    <ul class="checklist">
+      <li><strong>Директория состояния</strong> обычно находится в <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">~/.openclaw</code> — именно её нужно бэкапить. У провайдеров с автобэкапами (AdminVPS, Beget) это происходит автоматически.</li>
+      <li><strong>Мониторинг процесса:</strong> настройте внешний пинг через UptimeRobot или аналог — агент должен периодически отвечать на тестовые сообщения. Если перестал отвечать — systemd или сам агент завис.</li>
+      <li><strong>Репутация IP-адреса</strong> важна для браузерной автоматизации. Дата-центровые IP нередко попадают в блок-листы сайтов с Anti-Bot защитой. Если агент активно парсит данные — рассмотрите резидентные прокси (Decodo Skill для OpenClaw) вместо прямого IP сервера.</li>
+    </ul>
+
+    <h3>Типичные ошибки и как их избежать</h3>
+    <ul class="warn-list">
+      <li><strong>Слишком мало RAM:</strong> берут минимальный тариф (512 МБ–1 ГБ) — агент запускается, но Chromium падает при первом же браузерном запросе. Минимум для работы — 4 ГБ.</li>
+      <li><strong>SATA SSD вместо NVMe:</strong> Docker-образы тянутся медленно, контейнеры стартуют по 30–60 секунд вместо 3–5. Проверяйте тип диска у провайдера до оплаты.</li>
+      <li><strong>Открытый Control UI наружу:</strong> привязка Gateway к 0.0.0.0 без аутентификации — прямой путь к компромиссу агента. Всегда используйте SSH-туннель или Tailscale.</li>
+      <li><strong>Игнорирование лимитов токенов LLM API:</strong> агент, оставленный без надзора, может уйти в петлю и потратить значительный бюджет API-токенов за ночь. Устанавливайте лимиты расходов в настройках провайдера модели.</li>
+      <li><strong>Snap-Chromium на Ubuntu:</strong> snap-изоляция ломает доступ к профилям браузера. Используйте deb-пакет от Google или устанавливайте Chromium через Docker-образ.</li>
+      <li><strong>Отсутствие мониторинга:</strong> агент молча падает, пользователи не получают ответов, а хозяин узнаёт об этом через сутки. Настройте алерты.</li>
+    </ul>
+
+    <h3>Мини-чеклист развёртывания OpenClaw на VPS</h3>
+    <ul class="checklist">
+      <li>VPS с Ubuntu 22.04, минимум 4 ГБ RAM, NVMe диск, KVM-виртуализация</li>
+      <li>Node.js 20 LTS установлен, версия проверена: <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">node --version</code></li>
+      <li>Docker установлен и работает: <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">docker ps</code> не выдаёт ошибку</li>
+      <li>Swap-файл создан и активен: <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">swapon --show</code></li>
+      <li>OpenClaw установлен, онбординг завершён, демон запущен</li>
+      <li>Агент отвечает на тестовое сообщение в мессенджере</li>
+      <li>Firewall настроен: SSH на нестандартном порту, остальные порты закрыты</li>
+      <li>Бэкап <code style="background:#0a0f1e; padding:2px 8px; border-radius:4px; color:#f97316; font-size:0.82em;">~/.openclaw</code> настроен (автоматически или вручную)</li>
+      <li>Мониторинг аптайма агента настроен (UptimeRobot или аналог)</li>
+    </ul>
+  </div>
+</section>
+
+<div class="container">
+  <div class="summary-cta">
+    <h2>Готовы запустить свой AI-агент на VPS?</h2>
+    <p>Начните с бесплатного теста. is*hosting даёт 7 дней без предоплаты, AdminVPS — 7 дней с поддержкой на русском. Выбирайте тариф от 4 ГБ RAM для стабильной работы OpenClaw.</p>
+    <div class="cta-btns">
+      <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">is*hosting — тест 7 дней →</a>
+      <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-secondary">AdminVPS — от 299 ₽ →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Часто задаваемые вопросы</h2>
+
+    <div class="faq-item open">
+      <div class="faq-q">Что такое OpenClaw и зачем ему нужен VPS?</div>
+      <div class="faq-a">OpenClaw — это open-source платформа для запуска персонального AI-ассистента на собственном сервере. Агент подключается к Telegram, WhatsApp и другим мессенджерам, управляет браузером Chromium для веб-автоматизации и выполняет задачи через расширяемую систему Skills. VPS нужен, потому что агент должен работать 24/7 — принимать сообщения и выполнять задачи даже когда ваш компьютер выключен. Профессиональный дата-центр обеспечивает постоянный аптайм, статичный IP и стабильное сетевое соединение с серверами мессенджеров.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Какие минимальные характеристики VPS нужны для OpenClaw?</div>
+      <div class="faq-a">Минимальная рабочая конфигурация: 2 vCPU, 4 ГБ RAM, 40 ГБ NVMe, Ubuntu 22.04. Стартовые тарифы с 512 МБ–1 ГБ RAM не подходят — этого достаточно только для самого Gateway, но Chromium и Docker-образы потребуют значительно больше. Для браузерной автоматизации с одной сессией Chromium — 8 ГБ RAM. NVMe-диск обязателен: Docker-операции на обычном SATA SSD работают в разы медленнее и ухудшают отзывчивость агента.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Что такое VPS с OpenClaw и чем он отличается от обычного хостинга?</div>
+      <div class="faq-a">VPS с OpenClaw — это виртуальный сервер, на котором развёрнут и круглосуточно работает OpenClaw-агент. В отличие от обычного хостинга, VPS предоставляет root-доступ, возможность установки Docker и Node.js, постоянные процессы и выделенные ресурсы без влияния соседей. Обычный shared-хостинг для OpenClaw не подходит — он не позволяет запускать долгоживущие процессы, устанавливать произвольное ПО и требует KVM-виртуализации для корректной работы Chromium.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Нужна ли GPU для работы OpenClaw?</div>
+      <div class="faq-a">Нет. OpenClaw не выполняет AI-inference на вашем сервере — LLM-запросы уходят во внешний API (Anthropic Claude, OpenAI GPT или другие). GPU нужна только если вы хотите запускать локальные модели через Ollama непосредственно на своём сервере — это отдельный сценарий, значительно дороже. Для стандартного использования OpenClaw с API-моделями достаточно обычного CPU-сервера с 4–8 ГБ RAM.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Можно ли запустить OpenClaw на российском VPS?</div>
+      <div class="faq-a">Технически да — OpenClaw работает на любом Linux VPS с Node.js и Docker. Однако есть нюанс: если агент использует браузерную автоматизацию или подключается к мессенджерам, которые ограничены в России (Telegram частично, WhatsApp), лучше разместить его на зарубежном VPS. Провайдеры AdminVPS и is*hosting предлагают серверы в Германии и Нидерландах с оплатой из России — это оптимальный компромисс.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Сколько стоит VPS для OpenClaw в месяц?</div>
+      <div class="faq-a">VPS с нужной для OpenClaw конфигурацией (4 ГБ RAM, 2 vCPU, NVMe) стоит от 600 до 1 200 ₽/мес в зависимости от провайдера и локации. Это только стоимость сервера — к ней добавляется стоимость API-ключей LLM-провайдера (обычно 500–2 000 ₽/мес при умеренном использовании). По данным сообщества r/openclaw, суммарный бюджет для личного агента составляет 1 000–3 000 ₽/мес при разумном использовании.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section>
+  <div class="container">
+    <div class="section-label">Заключение</div>
+    <div class="conclusion-card">
+      <h2>Итоги: Лучший VPS для OpenClaw в 2026 году</h2>
+      <p>OpenClaw — одна из самых интересных open-source AI-разработок 2025–2026 годов. Персональный AI-агент, работающий 24/7 на вашем сервере и доступный через привычные мессенджеры, открывает принципиально новые сценарии автоматизации: от личного ассистента и браузерного агента до командного инструмента для разработчиков.</p>
+      <p>Ключевые выводы по выбору VPS для OpenClaw:</p>
+      <ul class="checklist">
+        <li><strong>Не экономьте на RAM:</strong> 4 ГБ — минимум, 8 ГБ — если нужна браузерная автоматизация. Стартовые тарифы за 300 ₽/мес не подходят.</li>
+        <li><strong>NVMe-диск обязателен:</strong> Docker-операции требуют высокого IOPS. SATA SSD замедляет запуск контейнеров и снижает отзывчивость агента.</li>
+        <li><strong>Зарубежный VPS предпочтительнее:</strong> для стабильного подключения к Telegram, WhatsApp и международным API выбирайте Германию, Нидерланды или Финляндию.</li>
+        <li><strong>Лучший общий выбор:</strong> is*hosting — 44 локации, NVMe, тест 7 дней. Выбирайте тариф от 4 ГБ RAM.</li>
+        <li><strong>Лучший с русской поддержкой:</strong> AdminVPS — Германия/Нидерланды, поддержка 24/7, бесплатные бэкапы.</li>
+        <li><strong>Лучший для тестирования:</strong> Timeweb Cloud — почасовая оплата, удобная панель, быстрый деплой.</li>
+        <li><strong>Лучший с GDPR:</strong> Fornex — испанская юрисдикция, данные агента под европейским правом.</li>
+      </ul>
+      <p>Начните с тестового периода у is*hosting или AdminVPS — 7 дней достаточно, чтобы установить OpenClaw, настроить подключение к мессенджеру, добавить Skills и оценить стабильность работы агента под реальной нагрузкой.</p>
+      <div class="cta-btns" style="margin-top:20px; justify-content:flex-start;">
+        <a href="https://ishosting.com/affiliate/NTEyMSM2" target="_blank" rel="nofollow" class="btn-cta">is*hosting — тест 7 дней →</a>
+        <a href="https://my.adminvps.ru/aff.php?aff=28491" target="_blank" rel="nofollow" class="btn-secondary">AdminVPS — от 299 ₽ →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="38" rx="9" fill="#f97316"/>
+            <rect x="8" y="10" width="22" height="3" rx="1.5" fill="white"/>
+            <rect x="8" y="17" width="22" height="3" rx="1.5" fill="white" opacity="0.7"/>
+            <rect x="8" y="24" width="14" height="3" rx="1.5" fill="white" opacity="0.4"/>
+            <circle cx="30" cy="25.5" r="5" fill="white"/>
+            <path d="M28 25.5L29.5 27L32 24" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="logo-text">VPS<span>Хостинг</span></div>
+        </a>
+        <p>Независимый рейтинг VPS серверов для России.<br>📧 <a href="mailto:petriliin76@gmail.com">petriliin76@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>VPS по назначению</h4>
+        <ul>
+          <li><a href="/vps-dlya-vpn/">VPS для VPN</a></li>
+          <li><a href="/vps-dlya-telegram/">VPS для Телеграм</a></li>
+          <li><a href="/vps-dlya-treydinga/">VPS для Трейдинга</a></li>
+          <li><a href="/vps-dlya-routera/">VPS для Роутера</a></li>
+          <li><a href="/vps-dlya-forex/">VPS для Forex</a></li>
+          <li><a href="/vps-dlya-pk/">VPS для ПК</a></li>
+          <li><a href="/vps-dlya-openclaw/">VPS для Openclaw</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Провайдеры</h4>
+        <ul>
+          <li><a href="https://ishosting.com/affiliate/NTEyMSM2" rel="nofollow">is*hosting</a></li>
+          <li><a href="https://my.adminvps.ru/aff.php?aff=28491" rel="nofollow">AdminVPS</a></li>
+          <li><a href="https://timeweb.cloud/?i=122157" rel="nofollow">Timeweb Cloud</a></li>
+          <li><a href="https://fornex.com/c/fn8i35/" rel="nofollow">Fornex</a></li>
+          <li><a href="https://ufo.hosting/?from=934984" rel="nofollow">Ufo.hosting</a></li>
+          <li><a href="https://beget.com/ru" rel="nofollow">Beget</a></li>
+          <li><a href="https://sweb.ru/" rel="nofollow">Spaceweb</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about/">О нас</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 VPSХостинг.ru</div>
+      <div><a href="/about/">О нас</a> · <a href="/privacy/">Конфиденциальность</a> · <a href="mailto:petriliin76@gmail.com">Контакты</a></div>
+      <div style="font-size:0.72rem; color:#475569;">Сайт содержит партнёрские ссылки</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burgerBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
